@@ -91,12 +91,12 @@ class PaintingCell: UITableViewCell
         addSubview(paintingImageView)
         addSubview(likeButton)
         
-        paintingImageView.topAnchor.constraint(equalTo: topAnchor, constant: 0).isActive = true
+        paintingImageView.topAnchor.constraint(equalTo: topAnchor, constant: 20).isActive = true
         paintingImageView.leftAnchor.constraint(equalTo: leftAnchor, constant: 0).isActive = true
         paintingImageView.rightAnchor.constraint(equalTo: rightAnchor, constant: 0).isActive = true
         paintingImageView.heightAnchor.constraint(equalToConstant: 440).isActive = true
         
-        likeButton.topAnchor.constraint(equalTo: paintingImageView.bottomAnchor, constant: 5).isActive = true
+        likeButton.topAnchor.constraint(equalTo: paintingImageView.bottomAnchor, constant: 20).isActive = true
         likeButton.leftAnchor.constraint(equalTo: leftAnchor, constant: 30).isActive = true
         likeButton.rightAnchor.constraint(equalTo: rightAnchor, constant: -30).isActive = true
         likeButton.heightAnchor.constraint(equalToConstant: 50).isActive = true

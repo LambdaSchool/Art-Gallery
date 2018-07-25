@@ -21,6 +21,7 @@ class ArtGalleryController: UIViewController, UITableViewDelegate, UITableViewDa
             tv.backgroundColor = .white
             tv.translatesAutoresizingMaskIntoConstraints = false
             tv.allowsSelection = false
+            tv.separatorStyle = .none
             
             return tv
     }()
@@ -60,7 +61,7 @@ class ArtGalleryController: UIViewController, UITableViewDelegate, UITableViewDa
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat
     {
-        return 500
+        return 550
     }
     
     //MARK: - Functions
