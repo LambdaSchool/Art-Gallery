@@ -8,7 +8,7 @@
 
 import UIKit
 
-class Painting {
+class Painting: Equatable {
     let image: UIImage
     var isLiked = false
     
