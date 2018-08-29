@@ -60,12 +60,12 @@
 		469AAC40210258C200C0D421 /* ArtGallery */ = {
 			isa = PBXGroup;
 			children = (
-				D86DF8432137374300A6C7CC /* PaintingTableViewCell.swift */,
 				469AAC41210258C200C0D421 /* AppDelegate.swift */,
 				469AAC43210258C200C0D421 /* ViewController.swift */,
 				469AAC45210258C200C0D421 /* Main.storyboard */,
 				D86DF83F21372F9500A6C7CC /* Painting.swift */,
 				D86DF841213731A800A6C7CC /* PaintingController.swift */,
+				D86DF8432137374300A6C7CC /* PaintingTableViewCell.swift */,
 				469AAC48210258C300C0D421 /* Assets.xcassets */,
 				469AAC4A210258C300C0D421 /* LaunchScreen.storyboard */,
 				469AAC4D210258C300C0D421 /* Info.plist */,
