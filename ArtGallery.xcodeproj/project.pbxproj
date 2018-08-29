@@ -14,6 +14,7 @@
 		96C667DF2137240F008CEEF9 /* PaintingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C667DD2137240F008CEEF9 /* PaintingController.swift */; };
 		96C667E02137240F008CEEF9 /* Painting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C667DE2137240F008CEEF9 /* Painting.swift */; };
 		96C667E2213727CA008CEEF9 /* PaintingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C667E1213727CA008CEEF9 /* PaintingTableViewCell.swift */; };
+		96C667E4213729C3008CEEF9 /* PaintingListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C667E3213729C3008CEEF9 /* PaintingListViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		96C667DD2137240F008CEEF9 /* PaintingController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaintingController.swift; sourceTree = "<group>"; };
 		96C667DE2137240F008CEEF9 /* Painting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Painting.swift; sourceTree = "<group>"; };
 		96C667E1213727CA008CEEF9 /* PaintingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaintingTableViewCell.swift; sourceTree = "<group>"; };
+		96C667E3213729C3008CEEF9 /* PaintingListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaintingListViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 				469AAC41210258C200C0D421 /* AppDelegate.swift */,
 				96C667DE2137240F008CEEF9 /* Painting.swift */,
 				96C667DD2137240F008CEEF9 /* PaintingController.swift */,
+				96C667E3213729C3008CEEF9 /* PaintingListViewController.swift */,
 				96C667E1213727CA008CEEF9 /* PaintingTableViewCell.swift */,
 				469AAC45210258C200C0D421 /* Main.storyboard */,
 				469AAC48210258C300C0D421 /* Assets.xcassets */,
@@ -141,6 +144,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96C667E4213729C3008CEEF9 /* PaintingListViewController.swift in Sources */,
 				96C667DF2137240F008CEEF9 /* PaintingController.swift in Sources */,
 				469AAC42210258C200C0D421 /* AppDelegate.swift in Sources */,
 				96C667E02137240F008CEEF9 /* Painting.swift in Sources */,

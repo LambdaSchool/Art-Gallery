@@ -1,44 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Za9-OY-dJE">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.13.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Za9-OY-dJE">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.9"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Art Gallery-->
+        <!--🖼 Art Gallery-->
         <scene sceneID="BWj-FQ-sTP">
             <objects>
-                <viewController id="q2b-Rc-Ku6" sceneMemberID="viewController">
+                <viewController id="q2b-Rc-Ku6" customClass="PaintingListViewController" customModule="ArtGallery" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XwX-K7-2h3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="270" estimatedRowHeight="220" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Acm-Wd-zxi">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="312" estimatedRowHeight="312" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Acm-Wd-zxi">
                                 <rect key="frame" x="0.0" y="116" width="375" height="551"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="separatorInset" minX="15" minY="0.0" maxX="15" maxY="0.0"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PaintingCell" rowHeight="270" id="Cyl-M6-RAV" customClass="PaintingTableViewCell" customModule="ArtGallery" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="270"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PaintingCell" rowHeight="312" id="Cyl-M6-RAV" customClass="PaintingTableViewCell" customModule="ArtGallery" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="312"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Cyl-M6-RAV" id="PKo-dG-inE">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="269.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="311.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gkd-uT-d9F">
-                                                    <rect key="frame" x="15" y="11" width="345" height="212"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gkd-uT-d9F">
+                                                    <rect key="frame" x="15" y="19" width="345" height="230"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                            <integer key="value" value="6"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
                                                 </imageView>
                                                 <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rAq-jj-ZAo" userLabel="Like Button">
-                                                    <rect key="frame" x="270" y="229" width="90" height="30"/>
+                                                    <rect key="frame" x="147.5" y="260" width="80" height="34"/>
                                                     <color key="backgroundColor" red="0.018645260483026505" green="0.47766226530075073" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="90" id="BN5-5s-xGB"/>
-                                                        <constraint firstAttribute="height" constant="30" id="k7L-Eh-S2l"/>
+                                                        <constraint firstAttribute="width" constant="80" id="LWB-us-RPc"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                                                     <state key="normal" title="👍 LIKE">
@@ -55,12 +59,13 @@
                                                 </button>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="gkd-uT-d9F" firstAttribute="top" secondItem="PKo-dG-inE" secondAttribute="topMargin" id="2zn-sg-3h4"/>
-                                                <constraint firstItem="rAq-jj-ZAo" firstAttribute="trailing" secondItem="PKo-dG-inE" secondAttribute="trailingMargin" id="OVl-YI-AgO"/>
+                                                <constraint firstItem="gkd-uT-d9F" firstAttribute="top" secondItem="PKo-dG-inE" secondAttribute="topMargin" constant="8" id="2zn-sg-3h4"/>
+                                                <constraint firstItem="rAq-jj-ZAo" firstAttribute="centerX" secondItem="PKo-dG-inE" secondAttribute="centerX" id="5qQ-cS-eRu"/>
                                                 <constraint firstItem="gkd-uT-d9F" firstAttribute="leading" secondItem="PKo-dG-inE" secondAttribute="leadingMargin" id="VaY-mL-dy9"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="rAq-jj-ZAo" secondAttribute="bottom" constant="7" id="c5D-Ap-qDZ"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="gkd-uT-d9F" secondAttribute="trailing" id="dpi-De-m2w"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="gkd-uT-d9F" secondAttribute="bottom" constant="36" id="g22-f8-WVd"/>
-                                                <constraint firstItem="rAq-jj-ZAo" firstAttribute="bottom" secondItem="PKo-dG-inE" secondAttribute="bottomMargin" id="uzN-5s-1Ce"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="gkd-uT-d9F" secondAttribute="bottom" constant="52" id="g22-f8-WVd"/>
+                                                <constraint firstItem="rAq-jj-ZAo" firstAttribute="top" secondItem="gkd-uT-d9F" secondAttribute="bottom" constant="11" id="mm1-0G-cMR"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -84,7 +89,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="hp9-Fc-hcz"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Art Gallery" id="lSM-Lw-dk5"/>
+                    <navigationItem key="navigationItem" title="🖼 Art Gallery" id="lSM-Lw-dk5"/>
+                    <connections>
+                        <outlet property="tableView" destination="Acm-Wd-zxi" id="UtA-LO-bJu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FdU-tN-A6w" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
