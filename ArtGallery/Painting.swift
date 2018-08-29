@@ -7,3 +7,17 @@
 //
 
 import Foundation
+import UIKit
+
+class Painting {
+    let image: UIImage
+    var isLiked: Bool
+    
+    
+    init(of image: UIImage, isLiked: Bool = true){
+        self.image = image
+        self.isLiked = isLiked
+    }
+    
+    
+}
