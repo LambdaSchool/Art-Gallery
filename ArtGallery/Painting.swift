@@ -9,6 +9,13 @@
 import UIKit
 
 class Painting: Equatable {
+    static func == (lhs: Painting, rhs: Painting) -> Bool {
+        if lhs.image == rhs.image && lhs.isLiked == rhs.isLiked {
+            return true
+        }
+        return false
+    }
+    
     let image: UIImage
     var isLiked = false
     
