@@ -8,19 +8,21 @@
 
 import UIKit
 
-class PaintingListViewController: UIViewController, UITableViewDataSource, PaintingTableViewCellDelegate {
+class PaintingListViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, PaintingTableViewCellDelegate {
 
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //Set tableView's data source
+        //Set tableView's data source and delegate
         tableView.dataSource = self
+        tableView.delegate = self
     }
     
     @IBOutlet weak var tableView: UITableView!
     let paintingController = PaintingController()
     
-    // Mark: - PaintingTableViewCell Delegate
+    // MARK: - PaintingTableViewCell Delegate
     
     func likeButtonWasTapped(on cell: PaintingTableViewCell) {
         
@@ -32,7 +34,12 @@ class PaintingListViewController: UIViewController, UITableViewDataSource, Paint
         
     }
     
-    // Mark: - Tableview Data Source
+    // MARK: - Tableview Delegate
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 240
+    }
+    
+    // MARK: - Tableview Data Source
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return paintingController.paintings.count

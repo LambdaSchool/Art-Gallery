@@ -29,6 +29,9 @@ class PaintingTableViewCell: UITableViewCell {
         guard let painting = painting else { return }
         paintingImageView.image = painting.image
         likeButton.setTitle(painting.isLiked ? "Unlike?" : "Like", for: .normal)
+        if painting.isLiked {
+            paintingImageView.superview?.superview?.backgroundColor? = .orange
+        }
     }
     
     @IBAction func likePainting(_ sender: UIButton) {
