@@ -15,6 +15,7 @@ class PaintingController {
         loadPaintingsFromAssets()
     }
     
+    //Cycle through and load all the paintings into the paintings array.
     func loadPaintingsFromAssets() {
         for i in 1...12 {
             let string = "Image\(i)"
@@ -25,6 +26,7 @@ class PaintingController {
     }
     
     func toggleIsLiked(for painting: Painting) {
+        //Make sure you can get an index for the painting, then toggle the isLiked property
         guard let index = paintings.index(of: painting) else { return }
         paintings[index].isLiked = !paintings[index].isLiked
     }
