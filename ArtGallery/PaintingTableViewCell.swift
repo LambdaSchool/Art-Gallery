@@ -8,10 +8,14 @@
 
 import UIKit
 
+protocol PaintingTableViewCellDelegate: class {
+    func likeButtonWasTapped(on cell: PaintingTableViewCell)
+}
+
 class PaintingTableViewCell: UITableViewCell {
     
     @IBAction func likeButtonTapped(_ sender: Any) {
-        
+        delegate?.likeButtonWasTapped(on: self)
     }
     
     func updateViews() {
@@ -21,6 +25,7 @@ class PaintingTableViewCell: UITableViewCell {
     }
     
     var painting: Painting? { didSet { updateViews() }}
+    weak var delegate: PaintingTableViewCellDelegate?
 
     @IBOutlet weak var paintingImageView: UIImageView!
     @IBOutlet weak var likeButton: UIButton!
