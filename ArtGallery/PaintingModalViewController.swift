@@ -11,6 +11,7 @@ import UIKit
 class PaintingModalViewController: UIViewController {
 
     override func viewDidLoad() {
+        super.viewDidLoad()
         updateViews()
     }
     

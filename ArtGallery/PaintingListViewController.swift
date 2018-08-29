@@ -41,11 +41,14 @@ class PaintingListViewController: UIViewController, UITableViewDelegate, UITable
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
         if segue.identifier == "ShowModal" {
-            guard let modalViewController = segue.destination as? PaintingModalViewController else { return }
-            guard let indexPath = tableView.indexPathForSelectedRow else { return }
+            
+            guard let destination = segue.destination as? PaintingModalViewController,
+                  let indexPath = tableView.indexPathForSelectedRow else { return }
+            
             let painting = paintingController.paintings[indexPath.row]
-            modalViewController.painting = painting
+            destination.painting = painting
         }
     }
     
