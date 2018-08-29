@@ -1,24 +1,172 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.13.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Za9-OY-dJE">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.9"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--🖼 Art Gallery-->
+        <scene sceneID="BWj-FQ-sTP">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                <viewController id="q2b-Rc-Ku6" customClass="PaintingListViewController" customModule="ArtGallery" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="XwX-K7-2h3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="312" estimatedRowHeight="312" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Acm-Wd-zxi">
+                                <rect key="frame" x="0.0" y="116" width="375" height="551"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="separatorInset" minX="15" minY="0.0" maxX="15" maxY="0.0"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PaintingCell" rowHeight="312" id="Cyl-M6-RAV" customClass="PaintingTableViewCell" customModule="ArtGallery" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="312"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Cyl-M6-RAV" id="PKo-dG-inE">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="311.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gkd-uT-d9F">
+                                                    <rect key="frame" x="15" y="19" width="345" height="230"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                            <integer key="value" value="6"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </imageView>
+                                                <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rAq-jj-ZAo" userLabel="Like Button">
+                                                    <rect key="frame" x="132.5" y="259" width="110" height="38"/>
+                                                    <color key="backgroundColor" red="0.018645260483026505" green="0.47766226530075073" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="110" id="LWB-us-RPc"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                    <state key="normal" title="👍 LIKE">
+                                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </state>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                            <integer key="value" value="6"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                    <connections>
+                                                        <action selector="likeButtonTapped:" destination="Cyl-M6-RAV" eventType="touchUpInside" id="AUM-N4-0h6"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="gkd-uT-d9F" firstAttribute="top" secondItem="PKo-dG-inE" secondAttribute="topMargin" constant="8" id="2zn-sg-3h4"/>
+                                                <constraint firstItem="rAq-jj-ZAo" firstAttribute="centerX" secondItem="PKo-dG-inE" secondAttribute="centerX" id="5qQ-cS-eRu"/>
+                                                <constraint firstItem="gkd-uT-d9F" firstAttribute="leading" secondItem="PKo-dG-inE" secondAttribute="leadingMargin" id="VaY-mL-dy9"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="rAq-jj-ZAo" secondAttribute="bottom" constant="4" id="c5D-Ap-qDZ"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="gkd-uT-d9F" secondAttribute="trailing" id="dpi-De-m2w"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="gkd-uT-d9F" secondAttribute="bottom" constant="52" id="g22-f8-WVd"/>
+                                                <constraint firstItem="rAq-jj-ZAo" firstAttribute="top" secondItem="gkd-uT-d9F" secondAttribute="bottom" constant="10" id="mm1-0G-cMR"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="likeButton" destination="rAq-jj-ZAo" id="N2C-fI-FOo"/>
+                                            <outlet property="paintingImageView" destination="gkd-uT-d9F" id="jnZ-f5-Vc3"/>
+                                            <segue destination="kUj-KR-RKr" kind="presentation" identifier="ShowModal" id="ilw-sH-JUq"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="q2b-Rc-Ku6" id="D1w-r6-J4P"/>
+                                    <outlet property="delegate" destination="q2b-Rc-Ku6" id="9kb-5B-KGZ"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Acm-Wd-zxi" firstAttribute="leading" secondItem="hp9-Fc-hcz" secondAttribute="leading" id="0Uh-Hi-y0e"/>
+                            <constraint firstItem="Acm-Wd-zxi" firstAttribute="top" secondItem="hp9-Fc-hcz" secondAttribute="top" id="8PJ-6h-4gt"/>
+                            <constraint firstItem="Acm-Wd-zxi" firstAttribute="bottom" secondItem="hp9-Fc-hcz" secondAttribute="bottom" id="Gcb-rH-og3"/>
+                            <constraint firstItem="Acm-Wd-zxi" firstAttribute="trailing" secondItem="hp9-Fc-hcz" secondAttribute="trailing" id="ZEU-V4-ubS"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="hp9-Fc-hcz"/>
                     </view>
+                    <navigationItem key="navigationItem" title="🖼 Art Gallery" id="lSM-Lw-dk5"/>
+                    <connections>
+                        <outlet property="tableView" destination="Acm-Wd-zxi" id="UtA-LO-bJu"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FdU-tN-A6w" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1076" y="94.902548725637189"/>
+        </scene>
+        <!--Painting Modal View Controller-->
+        <scene sceneID="tnY-Tr-PrW">
+            <objects>
+                <viewController id="kUj-KR-RKr" customClass="PaintingModalViewController" customModule="ArtGallery" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6AH-WX-MEk">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QnI-4a-Y2S" userLabel="Close Painting Button">
+                                <rect key="frame" x="100" y="585" width="175" height="38"/>
+                                <color key="backgroundColor" red="0.018645260479999998" green="0.4776622653" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="175" id="DaY-wo-vEd"/>
+                                    <constraint firstAttribute="height" constant="38" id="juV-cR-8O7"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                <state key="normal" title="❌ CLOSE PAINTING">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="closeModalButton:" destination="kUj-KR-RKr" eventType="touchUpInside" id="Ya2-C6-KaH"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="auX-fJ-THg">
+                                <rect key="frame" x="0.0" y="110" width="375" height="385"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="auX-fJ-THg" firstAttribute="trailing" secondItem="iCf-JJ-dU9" secondAttribute="trailing" id="HmY-Mz-7Tq"/>
+                            <constraint firstItem="QnI-4a-Y2S" firstAttribute="top" secondItem="auX-fJ-THg" secondAttribute="bottom" constant="90" id="ZEp-RL-iI3"/>
+                            <constraint firstItem="auX-fJ-THg" firstAttribute="top" secondItem="iCf-JJ-dU9" secondAttribute="top" constant="90" id="dKJ-7a-hV0"/>
+                            <constraint firstItem="iCf-JJ-dU9" firstAttribute="bottom" secondItem="QnI-4a-Y2S" secondAttribute="bottom" constant="44" id="gEB-ps-foo"/>
+                            <constraint firstItem="QnI-4a-Y2S" firstAttribute="centerX" secondItem="6AH-WX-MEk" secondAttribute="centerX" id="hKT-yf-KmZ"/>
+                            <constraint firstItem="auX-fJ-THg" firstAttribute="leading" secondItem="iCf-JJ-dU9" secondAttribute="leading" id="jR1-01-7tP"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="iCf-JJ-dU9"/>
+                    </view>
+                    <connections>
+                        <outlet property="paintingImageView" destination="auX-fJ-THg" id="9WR-PK-Sz5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XQn-xY-ALS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1913" y="95"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Efj-Ic-9m4">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Za9-OY-dJE" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="oge-lU-Pnu">
+                        <rect key="frame" x="0.0" y="20" width="375" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="q2b-Rc-Ku6" kind="relationship" relationship="rootViewController" id="W0L-Wq-hjc"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EpL-4L-S2G" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="94.902548725637189"/>
         </scene>
     </scenes>
 </document>
