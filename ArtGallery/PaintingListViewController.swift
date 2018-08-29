@@ -30,7 +30,7 @@ class PaintingListViewController: UIViewController, UITableViewDataSource, UITab
     
     @IBAction func tappedPainting(_ sender: UITapGestureRecognizer) {
         let location = sender.location(in: self.tableView)
-        guard let indexPath = tableView.indexPathForRow(at: location), let cell = tableView.cellForRow(at: indexPath) else { return }
+        guard let indexPath = tableView.indexPathForRow(at: location), let cell = tableView.cellForRow(at: indexPath) as? PaintingTableViewCell else { return }
         
         performSegue(withIdentifier: PropertyKeys.paintingDetailSegue, sender: cell)
     }
@@ -44,13 +44,16 @@ class PaintingListViewController: UIViewController, UITableViewDataSource, UITab
         paintingController.toggleIsLiked(for: painting)
         
         //Reload the row
-        tableView.reloadRows(at: [indexPath], with: .automatic)
+        tableView.reloadRows(at: [indexPath], with: .fade)
     }
     
     // MARK: - Tableview Delegate
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        //Set height for rows. For now, the arbitrary 240 pixels. Here is where I will attempt to make custom row heights based on the image later.
-        return 240
+        //Set height for rows. Get the painting, so you can get its ratio
+        let painting = paintingController.paintings[indexPath.row]
+        //Calculate the height for the row from the ratio and the width of the table view.
+        let height = (tableView.frame.width - 16) * painting.ratio + 46
+        return height
     }
     
     // MARK: - Tableview Data Source

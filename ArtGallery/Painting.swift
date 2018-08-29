@@ -19,6 +19,12 @@ class Painting: Equatable {
     let image: UIImage
     var isLiked = false
     
+    var ratio: CGFloat {
+        get {
+            return image.size.height / image.size.width
+        }
+    }
+    
     init (image: UIImage) {
         self.image = image
     }
