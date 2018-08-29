@@ -10,6 +10,11 @@ import UIKit
 
 class PaintingListViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, PaintingTableViewCellDelegate {
     
+    struct PropertyKeys {
+        static let paintingDetailSegue = "PaintingDetailSegue"
+        static let paintingCellIdentifier = "PaintingCell"
+    }
+    
     //MARK: - Lifecycle Methods
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,6 +27,13 @@ class PaintingListViewController: UIViewController, UITableViewDataSource, UITab
     // MARK: - Properties
     @IBOutlet weak var tableView: UITableView!
     let paintingController = PaintingController()
+    
+    @IBAction func tappedPainting(_ sender: UITapGestureRecognizer) {
+        let location = sender.location(in: self.tableView)
+        guard let indexPath = tableView.indexPathForRow(at: location), let cell = tableView.cellForRow(at: indexPath) else { return }
+        
+        performSegue(withIdentifier: PropertyKeys.paintingDetailSegue, sender: cell)
+    }
     
     // MARK: - PaintingTableViewCell Delegate
     func likeButtonWasTapped(on cell: PaintingTableViewCell) {
@@ -48,7 +60,7 @@ class PaintingListViewController: UIViewController, UITableViewDataSource, UITab
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         //Deque a cell and make sure it can be cast as a PaintingTableViewCell
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "PaintingCell", for: indexPath) as? PaintingTableViewCell else { return UITableViewCell() }
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: PropertyKeys.paintingCellIdentifier, for: indexPath) as? PaintingTableViewCell else { return UITableViewCell() }
         
         //Get the painting from the paintingController
         let painting = paintingController.paintings[indexPath.row]
@@ -58,6 +70,14 @@ class PaintingListViewController: UIViewController, UITableViewDataSource, UITab
         cell.delegate = self
         
         return cell
+    }
+    
+    // MARK: - Navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == PropertyKeys.paintingDetailSegue {
+            guard let destinationVC = segue.destination as? PaintingDetailViewController, let cell = sender as? PaintingTableViewCell, let painting = cell.painting else { return }
+            destinationVC.painting = painting
+        }
     }
     
 }
