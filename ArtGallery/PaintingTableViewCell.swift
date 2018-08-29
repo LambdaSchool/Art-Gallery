@@ -21,7 +21,7 @@ class PaintingTableViewCell: UITableViewCell {
     func updateViews() {
         guard let painting = painting else { return }
         paintingImageView.image = painting.image
-        likeButton.titleLabel?.text = painting.isLiked ? "👎 UNLIKE" : "👍 LIKE"
+        likeButton.titleLabel?.text = painting.isLiked ? "👎" : "👍"
     }
     
     var painting: Painting? { didSet { updateViews() }}

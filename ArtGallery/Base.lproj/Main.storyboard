@@ -40,13 +40,13 @@
                                                     </userDefinedRuntimeAttributes>
                                                 </imageView>
                                                 <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rAq-jj-ZAo" userLabel="Like Button">
-                                                    <rect key="frame" x="147.5" y="260" width="80" height="34"/>
+                                                    <rect key="frame" x="152.5" y="259" width="70" height="38"/>
                                                     <color key="backgroundColor" red="0.018645260483026505" green="0.47766226530075073" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="80" id="LWB-us-RPc"/>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="70" id="LWB-us-RPc"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
-                                                    <state key="normal" title="👍 LIKE">
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                                    <state key="normal" title="👍">
                                                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </state>
                                                     <userDefinedRuntimeAttributes>
@@ -63,10 +63,10 @@
                                                 <constraint firstItem="gkd-uT-d9F" firstAttribute="top" secondItem="PKo-dG-inE" secondAttribute="topMargin" constant="8" id="2zn-sg-3h4"/>
                                                 <constraint firstItem="rAq-jj-ZAo" firstAttribute="centerX" secondItem="PKo-dG-inE" secondAttribute="centerX" id="5qQ-cS-eRu"/>
                                                 <constraint firstItem="gkd-uT-d9F" firstAttribute="leading" secondItem="PKo-dG-inE" secondAttribute="leadingMargin" id="VaY-mL-dy9"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="rAq-jj-ZAo" secondAttribute="bottom" constant="7" id="c5D-Ap-qDZ"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="rAq-jj-ZAo" secondAttribute="bottom" constant="4" id="c5D-Ap-qDZ"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="gkd-uT-d9F" secondAttribute="trailing" id="dpi-De-m2w"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="gkd-uT-d9F" secondAttribute="bottom" constant="52" id="g22-f8-WVd"/>
-                                                <constraint firstItem="rAq-jj-ZAo" firstAttribute="top" secondItem="gkd-uT-d9F" secondAttribute="bottom" constant="11" id="mm1-0G-cMR"/>
+                                                <constraint firstItem="rAq-jj-ZAo" firstAttribute="top" secondItem="gkd-uT-d9F" secondAttribute="bottom" constant="10" id="mm1-0G-cMR"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
