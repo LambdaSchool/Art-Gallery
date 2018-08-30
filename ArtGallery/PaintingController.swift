@@ -11,30 +11,21 @@ import UIKit
 
 class PaintingController {
     
-    private(set) var paintings: [Painting] = []
+    var paintings: [Painting] = []
     
-    
-    func loadPaintingsFromAssets(_ image: UIImage!) {
+    func loadPaintingsFromAssets(){
         
-        var image = Painting(image: image)
-        var imageName: String
-        
-        for a in 1...12 {
+        for index in 1...12 {
             
-            imageName = "image \(a)"
-            image = Painting(image: UIImage(named: imageName)!)
-            paintings.append(image)
+            let imageName = "image\(index)"
+            guard let newImage = UIImage(named: imageName ) else { return }
+            let newPainting = Painting(image: newImage)
+            paintings.append(newPainting)
         }
     }
     
     func toggleIsLiked(for painting: Painting) {
         
-        if painting.isLiked == true {
-            
-            painting.isLiked = false
-        } else if painting.isLiked == false {
-            
-            painting.isLiked = true
-        }
+        painting.isLiked = !painting.isLiked
     }
 }
