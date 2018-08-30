@@ -8,28 +8,44 @@
 
 import UIKit
 
-class PaintingListViewController: UIViewController {
-
+class PaintingListViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, PaintingTableViewCellDelegate {
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        paintingList.reloadData()
+        
+    }
+    func likeButtonTapped(on cell: PaintingTableViewCell) {
+        guard let indexPath = paintingList.indexPath(for: cell) else { return }
+        let painting = paintingController.paintings[indexPath.row]
+        paintingController.toggleIsLiked(painting: painting)
+        paintingList.reloadRows(at: [indexPath], with: .automatic)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        paintingList.dataSource = self
 
         // Do any additional setup after loading the view.
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return paintingController.paintings.count
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "PaintingCell", for: indexPath) as? PaintingTableViewCell else { return UITableViewCell() }
+        let painting = paintingController.paintings[indexPath.row]
+        cell.delegate = self
+        cell.imageView?.image = painting.image
+        painting.isLiked ? (cell.likeButton?.setTitle("Unlike", for: .normal)) : (cell.likeButton?.setTitle("Like", for: .normal))
+        print(painting.isLiked)
+        //painting.isLiked ? (cell.textLabel?.text = "Unlike") : (cell.textLabel?.text = "Like")
+        return cell
     }
-    */
-
+    
+    
+    @IBOutlet weak var paintingList: UITableView!
+    let paintingController = PaintingController()
 }
