@@ -17,7 +17,7 @@ class PaintingController {
         
         for x in 1...12 {
             
-            let imageName = "Image \(x)"
+            let imageName = "Image\(x)"
             
             guard let newimage = UIImage(named: imageName) else {return}
             
@@ -29,6 +29,7 @@ class PaintingController {
     
     init() {
         loadPaintingsFromAssets()
+        print(paintings.count)
     }
     
     func toggleIsLiked (for painting: Painting){

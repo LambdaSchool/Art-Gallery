@@ -15,18 +15,22 @@ class PaintingTableViewCell: UITableViewCell {
     @IBOutlet weak var likeButton: UIButton!
     
     var painting: Painting?{
-        didSet {updateViews()}
+        didSet {
+            updateViews()
+        }
     }
     
     func updateViews(){
         
         guard let painting = painting else {return}
-        
+
         paintingImage.image = painting.image
+        
+        
         if painting.isLiked {
-            likeButton.titleLabel = "💔 Unlike"
+            likeButton.setTitle("💔", for: UIControlState.normal)
         } else {
-            likeButton.titleLabel = "❤️ Like"
+            likeButton.setTitle("❤️", for: UIControlState.normal)
         }
         
     }

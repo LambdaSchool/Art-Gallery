@@ -14,31 +14,35 @@
         <!--Art Gallery-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ArtGallery" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="PaintingListViewController" customModule="ArtGallery" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="0be-b2-PHv">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="300" estimatedRowHeight="300" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="0be-b2-PHv">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="PaintingCell" rowHeight="245" id="4ZG-0M-SNh" customClass="PaintingTableViewCell" customModule="ArtGallery" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="245"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="4ZG-0M-SNh" id="POJ-NS-Qk9">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="4ZG-0M-SNh" id="POJ-NS-Qk9">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="244.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aev-1d-sRv">
-                                                    <rect key="frame" x="14" y="17" width="347" height="193"/>
+                                                <stackView opaque="NO" contentMode="scaleAspectFit" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="LrN-xF-13y">
+                                                    <rect key="frame" x="11" y="11" width="349" height="166"/>
+                                                    <subviews>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aev-1d-sRv">
+                                                            <rect key="frame" x="0.0" y="0.0" width="349" height="166"/>
+                                                        </imageView>
+                                                    </subviews>
+                                                </stackView>
+                                                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6tz-Se-Nza">
+                                                    <rect key="frame" x="27" y="185" width="321" height="49"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="193" id="PYq-Cb-T1t"/>
+                                                        <constraint firstAttribute="height" constant="49" id="HyD-Rk-7by"/>
                                                     </constraints>
-                                                </imageView>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6tz-Se-Nza">
-                                                    <rect key="frame" x="14" y="210" width="347" height="34"/>
                                                     <state key="normal" title="❤️">
                                                         <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
@@ -48,28 +52,39 @@
                                                 </button>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="aev-1d-sRv" firstAttribute="leading" secondItem="POJ-NS-Qk9" secondAttribute="leadingMargin" constant="-1" id="8yt-TD-USA"/>
-                                                <constraint firstItem="6tz-Se-Nza" firstAttribute="top" secondItem="aev-1d-sRv" secondAttribute="bottom" id="N5v-nI-icp"/>
-                                                <constraint firstItem="aev-1d-sRv" firstAttribute="trailing" secondItem="6tz-Se-Nza" secondAttribute="trailing" id="OAa-U2-D7Q"/>
-                                                <constraint firstItem="aev-1d-sRv" firstAttribute="centerX" secondItem="POJ-NS-Qk9" secondAttribute="centerX" id="QIg-Es-9Hw"/>
-                                                <constraint firstItem="aev-1d-sRv" firstAttribute="leading" secondItem="6tz-Se-Nza" secondAttribute="leading" id="qhZ-Yh-fuz"/>
-                                                <constraint firstItem="aev-1d-sRv" firstAttribute="top" secondItem="POJ-NS-Qk9" secondAttribute="topMargin" constant="6" id="uvy-e5-Hf1"/>
+                                                <constraint firstItem="6tz-Se-Nza" firstAttribute="top" secondItem="LrN-xF-13y" secondAttribute="bottom" constant="8" symbolic="YES" id="IXx-jW-uIK"/>
+                                                <constraint firstItem="6tz-Se-Nza" firstAttribute="centerX" secondItem="POJ-NS-Qk9" secondAttribute="centerX" id="KO9-jx-iXt"/>
+                                                <constraint firstItem="6tz-Se-Nza" firstAttribute="leading" secondItem="POJ-NS-Qk9" secondAttribute="leadingMargin" constant="11" id="fcD-mp-Xbz"/>
+                                                <constraint firstItem="6tz-Se-Nza" firstAttribute="top" secondItem="LrN-xF-13y" secondAttribute="bottom" constant="8" id="o8e-TJ-Rvc"/>
+                                                <constraint firstItem="6tz-Se-Nza" firstAttribute="bottom" secondItem="POJ-NS-Qk9" secondAttribute="bottomMargin" id="rPw-Kt-NG9"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="likeButton" destination="6tz-Se-Nza" id="i6t-HH-2aw"/>
-                                            <outlet property="likeButtonPressed" destination="6tz-Se-Nza" id="BUR-Kx-XtG"/>
                                             <outlet property="paintingImage" destination="aev-1d-sRv" id="PHF-TG-Uz3"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <sections/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="rud-qE-LTc"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Ep7-bs-CZn"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="0be-b2-PHv" secondAttribute="trailing" id="BYl-Ud-l5T"/>
+                            <constraint firstItem="0be-b2-PHv" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="OXN-fT-ETR"/>
+                            <constraint firstItem="0be-b2-PHv" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Zki-V8-v9M"/>
+                            <constraint firstItem="0be-b2-PHv" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="vxu-L5-TOk"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="Art Gallery" id="tLX-bA-DrY"/>
+                    <connections>
+                        <outlet property="paintingTableView" destination="0be-b2-PHv" id="IHD-5b-wp6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
