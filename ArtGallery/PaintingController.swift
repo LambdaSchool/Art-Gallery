@@ -13,10 +13,8 @@ class PaintingController {
     
     ///CRUD for databases and model controllers this is usually the four functions -- Create-Read-Update-Delete
     
+    init(){ self.loadPaintingsFromAssets() }
     
-    init(){
-        self.loadPaintingsFromAssets()
-    }
     
     var paintings: [Painting] = []
     
@@ -26,6 +24,15 @@ class PaintingController {
             guard let paintingFromAsset = UIImage(named: indexString) else {return}
             let newPaintingObject = Painting(of: paintingFromAsset)
             paintings.append(newPaintingObject)
+        }
+    }
+    
+    func toggleIsLiked(for painting: Painting)  {
+        
+        if painting.isLiked == false {
+            painting.isLiked = true
+        } else if painting.isLiked == false {
+            painting.isLiked = false
         }
     }
 }
