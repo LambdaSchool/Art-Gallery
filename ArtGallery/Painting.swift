@@ -12,10 +12,9 @@ import UIKit
 class Painting {
     
     let image: UIImage
-    var isLiked: Bool
+    var isLiked = false
     
-    init(image: UIImage, isLiked: Bool = false) {
-        
+    init(image: UIImage, isLiked: Bool){
         self.image = image
         self.isLiked = isLiked
     }
