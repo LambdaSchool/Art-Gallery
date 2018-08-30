@@ -10,10 +10,10 @@ import UIKit
 
 class Painting {
     let image: UIImage
-    var isLinked: Bool = false
+    var isLiked: Bool = false
     
-    init(imagePainting: UIImage, isLinked: Bool) {
+    init(imagePainting: UIImage, isLiked: Bool) {
         self.image = imagePainting
-        self.isLinked = isLinked
+        self.isLiked = false
     }
 }
