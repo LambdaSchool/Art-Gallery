@@ -20,10 +20,11 @@ class PaintingTableViewCell: UITableViewCell {
         painting.isLiked ? likeButton.setTitle("Unlike", for: .normal) : likeButton.setTitle("Like", for: .normal)
     }
     
+    
     @IBAction func likeButtonTapped(_ sender: Any) {
         delegate?.likeButtonTapped(on: self)
+        
     }
-    
     weak var delegate: PaintingTableViewCellDelegate?
     
     @IBOutlet weak var paintingImage: UIImageView!

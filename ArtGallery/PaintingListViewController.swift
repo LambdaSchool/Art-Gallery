@@ -9,18 +9,20 @@
 import UIKit
 
 class PaintingListViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, PaintingTableViewCellDelegate {
+    func likeButtonTapped(on cell: PaintingTableViewCell) {
+        guard let indexPath = paintingList.indexPath(for: cell) else { return }
+        let painting = paintingController.paintings[indexPath.row]
+        paintingController.toggleIsLiked(painting: painting)
+        paintingList.reloadRows(at: [indexPath], with: .fade)
+    }
+    
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         paintingList.reloadData()
         
     }
-    func likeButtonTapped(on cell: PaintingTableViewCell) {
-        guard let indexPath = paintingList.indexPath(for: cell) else { return }
-        let painting = paintingController.paintings[indexPath.row]
-        paintingController.toggleIsLiked(painting: painting)
-        paintingList.reloadRows(at: [indexPath], with: .automatic)
-    }
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,9 +40,8 @@ class PaintingListViewController: UIViewController, UITableViewDataSource, UITab
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "PaintingCell", for: indexPath) as? PaintingTableViewCell else { return UITableViewCell() }
         let painting = paintingController.paintings[indexPath.row]
         cell.delegate = self
-        cell.imageView?.image = painting.image
+        cell.painting = painting
         painting.isLiked ? (cell.likeButton?.setTitle("Unlike", for: .normal)) : (cell.likeButton?.setTitle("Like", for: .normal))
-        print(painting.isLiked)
         //painting.isLiked ? (cell.textLabel?.text = "Unlike") : (cell.textLabel?.text = "Like")
         return cell
     }
