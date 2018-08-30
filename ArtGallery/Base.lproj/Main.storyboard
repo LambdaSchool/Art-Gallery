@@ -23,7 +23,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PictureCell" rowHeight="196" id="w8m-M2-qa2">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PictureCell" rowHeight="196" id="w8m-M2-qa2" customClass="PaintingTableViewCell" customModule="ArtGallery" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="196"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="w8m-M2-qa2" id="Uiv-lp-BZx">
@@ -38,9 +38,16 @@
                                                     <rect key="frame" x="164" y="140" width="46" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <state key="normal" title="Button"/>
+                                                    <connections>
+                                                        <action selector="likeButton:" destination="w8m-M2-qa2" eventType="touchUpInside" id="a3m-Xn-56x"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="button" destination="z9p-So-akc" id="KmK-Nl-gKQ"/>
+                                            <outlet property="paintingImageView" destination="Rx5-2N-gdY" id="a3y-Mg-JOS"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -52,7 +59,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="885.60000000000002" y="-296.40179910044981"/>
+            <point key="canvasLocation" x="1086" y="-361"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="KOM-Pb-8nj">
