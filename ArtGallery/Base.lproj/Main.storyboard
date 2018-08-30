@@ -55,9 +55,14 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="imageViewCell" destination="Jcl-vw-qqh" id="94P-1H-oKE"/>
+                                            <outlet property="likeButtonOutlet" destination="rTg-Wv-drX" id="voM-Bk-5r5"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="aQD-Zg-AZe" id="qYa-q4-3lJ"/>
+                                    <outlet property="delegate" destination="aQD-Zg-AZe" id="mzL-w0-NSA"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

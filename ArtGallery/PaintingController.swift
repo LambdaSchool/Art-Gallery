@@ -13,6 +13,7 @@ class PaintingController {
     
     private(set) var paintings: [Painting] = []
     
+    
     func loadPaintingsFromAssets(_ image: UIImage!) {
         
         var image = Painting(image: image)

@@ -8,12 +8,24 @@
 
 import UIKit
 
-class PaintingListViewController: UIViewController, UITableViewDataSource {
+class PaintingListViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, PaintingTableViewCellDelegate {
+    
+    func likeButtonWasTapped(on cell: PaintingTableViewCell) {
+       
+        guard let indexPath = paintingTableView.indexPath(for: cell) else { return }
+        let painting = paintingController.paintings[indexPath.row]
+        paintingController.toggleIsLiked(for: painting)
+        
+        paintingTableView.reloadRows(at: [indexPath], with: .none)
+        
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         paintingTableView.dataSource = self
+        paintingTableView.delegate = self
         
     }
 
@@ -31,6 +43,7 @@ class PaintingListViewController: UIViewController, UITableViewDataSource {
         let painting = paintingController.paintings[indexPath.row]
         cell.painting = painting
         
+        cell.delegate = self
         return cell
     }
     
