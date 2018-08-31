@@ -2,7 +2,7 @@
 //  Painting.swift
 //  ArtGallery
 //
-//  Created by Ilgar Ilyasov on 8/29/18.
+//  Created by Ilgar Ilyasov on 8/30/18.
 //  Copyright © 2018 Lambda School. All rights reserved.
 //
 
