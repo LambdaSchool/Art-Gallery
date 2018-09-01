@@ -58,16 +58,24 @@
 		469AAC40210258C200C0D421 /* ArtGallery */ = {
 			isa = PBXGroup;
 			children = (
-				469AAC41210258C200C0D421 /* AppDelegate.swift */,
-				469AAC43210258C200C0D421 /* ViewController.swift */,
 				C3129F4221384480008458B3 /* Painting.swift */,
-				C3129F4421384490008458B3 /* PaintingController.swift */,
+				C34E770A213AF8B300D6FE6C /* View Controllers */,
 				C3129F4021384454008458B3 /* Main.storyboard */,
+				469AAC41210258C200C0D421 /* AppDelegate.swift */,
 				469AAC48210258C300C0D421 /* Assets.xcassets */,
 				469AAC4A210258C300C0D421 /* LaunchScreen.storyboard */,
 				469AAC4D210258C300C0D421 /* Info.plist */,
 			);
 			path = ArtGallery;
+			sourceTree = "<group>";
+		};
+		C34E770A213AF8B300D6FE6C /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				469AAC43210258C200C0D421 /* ViewController.swift */,
+				C3129F4421384490008458B3 /* PaintingController.swift */,
+			);
+			path = "View Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
