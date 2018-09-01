@@ -17,7 +17,7 @@ class PaintingController {
             
             guard let image = UIImage(named: nameOfPainting) else {return}
             
-            let painting = Painting(imagePainting: image, isLiked: false)
+            let painting = Painting(image: image, isLiked: false)
             
             paintings.append(painting)
 
@@ -26,7 +26,7 @@ class PaintingController {
 
 
     func toggleIsLiked(for painting: Painting){
-        painting.isLiked = !(painting.isLiked)
+        painting.isLiked = (painting.isLiked!)
     }
 
     var paintings: [Painting] = []
