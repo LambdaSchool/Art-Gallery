@@ -9,8 +9,7 @@ import Foundation
 import UIKit
 
 class PaintingController {
-    var paintings:[Painting] = []
-
+    
     func loadPaintingsFromAssets(){
         for i in 1...12 {
             
@@ -21,10 +20,8 @@ class PaintingController {
             let painting = Painting(imagePainting: image, isLiked: false)
             
             paintings.append(painting)
-            
-            
+
         }
-    
     }
 
 
@@ -32,5 +29,6 @@ class PaintingController {
         painting.isLiked = !(painting.isLiked)
     }
 
+    var paintings: [Painting] = []
     
 }
