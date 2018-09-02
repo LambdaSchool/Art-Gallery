@@ -6,6 +6,7 @@
 //  Copyright © 2018 Lambda School. All rights reserved.
 //
 
+import Foundation
 import UIKit
 
 class PaintingTableViewCell: UITableViewCell {
@@ -18,11 +19,11 @@ class PaintingTableViewCell: UITableViewCell {
         
     }
 
-    @IBOutlet weak var paintingImageView: UIImageView!
-    @IBAction func touchIsLiked(_ sender: UIButton) {
     
+    @IBOutlet weak var paintingImageView: UIImageView!
+    
+    @IBAction func likeButton(_ sender: Any) {
     }
-
     
     var painting: Painting? {
         didSet {

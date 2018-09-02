@@ -13,7 +13,7 @@
         <!--Art Gallery-->
         <scene sceneID="0GW-O7-Hfw">
             <objects>
-                <viewController id="txP-B6-dVE" sceneMemberID="viewController">
+                <viewController id="txP-B6-dVE" customClass="PaintingListViewController" customModule="ArtGallery" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tt5-zg-fXE">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -23,24 +23,30 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PaintingCell" rowHeight="248" id="oIY-nF-31z">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="248"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PaintingCell" rowHeight="251" id="oIY-nF-31z" customClass="PaintingTableViewCell" customModule="ArtGallery" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="251"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="oIY-nF-31z" id="5ua-Dv-Xei">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="247.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="250.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eOu-94-qLb">
                                                     <rect key="frame" x="164" y="182" width="46" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <state key="normal" title="Button"/>
+                                                    <connections>
+                                                        <action selector="likeButton:" destination="oIY-nF-31z" eventType="touchUpInside" id="BbE-yW-fEJ"/>
+                                                    </connections>
                                                 </button>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Jsj-Vr-OV3">
-                                                    <rect key="frame" x="67" y="36" width="240" height="128"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dYS-A5-yKQ">
+                                                    <rect key="frame" x="67" y="30" width="248" height="144"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="paintingImageView" destination="dYS-A5-yKQ" id="a2w-De-PgO"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -49,10 +55,13 @@
                         <viewLayoutGuide key="safeArea" id="D6L-OA-9dS"/>
                     </view>
                     <navigationItem key="navigationItem" title="Art Gallery" id="PUW-q7-muC"/>
+                    <connections>
+                        <outlet property="tableView" destination="wdS-Iv-vqi" id="9dc-5X-hO9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qL4-Rt-5PX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="783.20000000000005" y="134.48275862068968"/>
+            <point key="canvasLocation" x="781.60000000000002" y="139.880059970015"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="yZj-DA-icP">

@@ -8,16 +8,13 @@
 
 import UIKit
 
-class PaintingListViewController: UIViewController, UITableViewDataSource {
+class PaintingListViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
  
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self
-        tableView.delegate = (self as! UITableViewDelegate)
-        
+        tableView.delegate = self
     }
-    
-    
     
     // MARK - UITableViewDataSource
     
@@ -27,7 +24,7 @@ class PaintingListViewController: UIViewController, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "PaintingTableCell", for: indexPath) as? PaintingTableViewCell else { return UITableViewCell()}
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "PaintingCell", for: indexPath) as? PaintingTableViewCell else { return UITableViewCell()}
         
         // get an instance of painting from paintingController and pass it to cell
         
@@ -42,18 +39,15 @@ class PaintingListViewController: UIViewController, UITableViewDataSource {
     @IBOutlet weak var tableView: UITableView!
     
     
+    
     // MARK: - Navigation
-
     // In a storyboard-based application, you will often want to do a little preparation before navigation
    // override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
     
     
- 
-    
-    
     let paintingController = PaintingController()
-    let paintingListViewController = PaintingListViewController()
+    // let paintingListViewController = PaintingListViewController()
     
 }
