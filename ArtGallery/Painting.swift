@@ -9,11 +9,11 @@ import Foundation
 import UIKit
 
 class Painting {
-    let image: UIImage
+    let image: UIImage?
     var isLiked: Bool = false
     
-    init(imagePainting: UIImage, isLiked: Bool) {
-        self.image = imagePainting
+    init(image: UIImage, isLiked: Bool) {
+        self.image = image
         self.isLiked = false
     }
 }

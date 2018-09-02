@@ -23,7 +23,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PaintingTableCell" rowHeight="330" id="oNI-8z-Yn5">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PaintingTableCell" rowHeight="330" id="oNI-8z-Yn5" customClass="PaintingTableViewCell" customModule="ArtGallery" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="330"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="oNI-8z-Yn5" id="yYY-eY-hBW">
@@ -34,6 +34,9 @@
                                                     <rect key="frame" x="164" y="282" width="46" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <state key="normal" title="Button"/>
+                                                    <connections>
+                                                        <action selector="touchIsLiked:" destination="oNI-8z-Yn5" eventType="touchUpInside" id="VcW-tp-cel"/>
+                                                    </connections>
                                                 </button>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uIx-lG-BMB">
                                                     <rect key="frame" x="37" y="24" width="300" height="250"/>
@@ -41,6 +44,9 @@
                                                 </imageView>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="pictureImageView" destination="uIx-lG-BMB" id="t3x-vd-w1I"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>

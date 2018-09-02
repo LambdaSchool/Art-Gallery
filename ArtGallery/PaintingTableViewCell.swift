@@ -12,15 +12,22 @@ class PaintingTableViewCell: UITableViewCell {
     
     func updateViews(){
         
+        guard let painting = painting else {return}
+        
+        pictureImageView.image = painting.image
+        
     }
-    
-    
-    @IBOutlet weak var artPicture: UIImageView!
-    
+
+    @IBOutlet weak var pictureImageView: UIImageView!
     @IBAction func touchIsLiked(_ sender: UIButton) {
     
     }
 
     
-    let painting: [Painting?] = []
+    var painting: Painting? {
+        didSet {
+            updateViews()
+        }
+    }
+    
 }

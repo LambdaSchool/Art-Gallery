@@ -10,6 +10,7 @@ import UIKit
 
 class PaintingController {
     
+        
     func loadPaintingsFromAssets(){
         for i in 1...12 {
             
@@ -26,7 +27,7 @@ class PaintingController {
 
 
     func toggleIsLiked(for painting: Painting){
-        painting.isLiked = (painting.isLiked!)
+        painting.isLiked = !(painting.isLiked)
     }
 
     var paintings: [Painting] = []
