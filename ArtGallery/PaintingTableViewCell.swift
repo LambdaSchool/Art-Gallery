@@ -14,11 +14,11 @@ class PaintingTableViewCell: UITableViewCell {
         
         guard let painting = painting else {return}
         
-        pictureImageView.image = painting.image
+        paintingImageView.image = painting.image
         
     }
 
-    @IBOutlet weak var pictureImageView: UIImageView!
+    @IBOutlet weak var paintingImageView: UIImageView!
     @IBAction func touchIsLiked(_ sender: UIButton) {
     
     }
