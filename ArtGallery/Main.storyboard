@@ -32,7 +32,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="250.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dYS-A5-yKQ">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dYS-A5-yKQ">
                                                     <rect key="frame" x="76" y="36" width="231" height="166"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="dYS-A5-yKQ" secondAttribute="height" multiplier="231:166" id="BOB-mF-oyN"/>

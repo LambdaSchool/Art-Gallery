@@ -23,11 +23,9 @@ class PaintingListViewController: UIViewController, UITableViewDataSource, UITab
         
         print("I was clicked")
         
-      
-        
     }
     
- 
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self
@@ -46,7 +44,6 @@ class PaintingListViewController: UIViewController, UITableViewDataSource, UITab
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "PaintingCell", for: indexPath) as? PaintingTableViewCell else { return UITableViewCell()}
         
         // get an instance of painting from paintingController and pass it to cell
-        
         let painting = paintingController.paintings[indexPath.row]
         
         cell.painting = painting
@@ -55,24 +52,14 @@ class PaintingListViewController: UIViewController, UITableViewDataSource, UITab
        // Added Text Label to toggle.
        // painting.isLiked ? (cell.textLabel?.text = "Unlike") : (cell.textLabel?.text = "Like")
         
-       // lets try button label to toggle - Doesn't work
-       // painting.isLiked ? (cell.likeButton?.setTitle = "Unlike", for .normal) : (cell.likeButton?.setTitle("Like", for: .normal))
-        
+       // lets try button label to toggle -  works
+        painting.isLiked ? (cell.likeButton.setTitle("Unlike", for: .normal)) : (cell.likeButton.setTitle("Like", for: .normal))
         
         return cell
     }
     
   
     @IBOutlet weak var tableView: UITableView!
-    
-    
-    
-    // MARK: - Navigation
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-   // override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    
     
     let paintingController = PaintingController()
     // let paintingListViewController = PaintingListViewController()

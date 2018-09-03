@@ -15,19 +15,18 @@ class PaintingTableViewCell: UITableViewCell, PaintingTableViewCellDelegate {
     func likeButtonWasTapped(on cell: PaintingTableViewCell) {
         
     }
-    
-    
+   
     
     func updateViews(){
-        
-        guard let painting = painting else {return}
-        
-        paintingImageView.image = painting.image
-        
-        painting.isLiked ? likeButton.setTitle("I like a alot", for: .normal) : likeButton.setTitle("I HATE IT", for: .normal)
-    }
 
-   
+       guard let painting = painting else {return}
+
+       paintingImageView.image = painting.image
+
+      //  painting.isLiked ? likeButton.setTitle("Like 😀", for: .normal) : likeButton.setTitle("Unlike 🤨", for: .normal)
+   }
+
+    
     
     @IBOutlet weak var likeButton: UIButton!
     
