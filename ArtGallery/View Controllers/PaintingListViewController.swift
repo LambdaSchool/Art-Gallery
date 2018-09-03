@@ -14,6 +14,8 @@ class PaintingListViewController: UIViewController, UITableViewDataSource, UITab
     
     func likeButtonWasTapped(on cell: PaintingTableViewCell) {
         
+        print("I was clicked")
+        
        // tableView.indexPath(for: PaintingTableViewCell)
         
     }
@@ -23,6 +25,7 @@ class PaintingListViewController: UIViewController, UITableViewDataSource, UITab
         super.viewDidLoad()
         tableView.dataSource = self
         tableView.delegate = self
+        tableView.reloadData()
     }
     
     // MARK - UITableViewDataSource
@@ -40,6 +43,7 @@ class PaintingListViewController: UIViewController, UITableViewDataSource, UITab
         let painting = paintingController.paintings[indexPath.row]
         
         cell.painting = painting
+        cell.delegate = self
         
         return cell
     }
