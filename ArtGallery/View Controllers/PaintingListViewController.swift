@@ -52,6 +52,13 @@ class PaintingListViewController: UIViewController, UITableViewDataSource, UITab
         cell.painting = painting
         cell.delegate = self
         
+       // Added Text Label to toggle.
+       // painting.isLiked ? (cell.textLabel?.text = "Unlike") : (cell.textLabel?.text = "Like")
+        
+       // lets try button label to toggle - Doesn't work
+       // painting.isLiked ? (cell.likeButton?.setTitle = "Unlike", for .normal) : (cell.likeButton?.setTitle("Like", for: .normal))
+        
+        
         return cell
     }
     

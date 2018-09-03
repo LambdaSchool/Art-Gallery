@@ -24,12 +24,16 @@ class PaintingTableViewCell: UITableViewCell, PaintingTableViewCellDelegate {
         
         paintingImageView.image = painting.image
         
+        painting.isLiked ? likeButton.setTitle("I like a alot", for: .normal) : likeButton.setTitle("I HATE IT", for: .normal)
     }
 
+   
+    
+    @IBOutlet weak var likeButton: UIButton!
     
     @IBOutlet weak var paintingImageView: UIImageView!
     
-    @IBAction func likeButton(_ sender: Any) {
+    @IBAction func likeButtonTapped(_ sender: Any) {
         
         delegate?.likeButtonWasTapped(on: self)
     

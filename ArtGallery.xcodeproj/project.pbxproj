@@ -15,7 +15,6 @@
 		C32132FB213D94AC00D6551A /* PaintingTableViewCellDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32132FA213D94AC00D6551A /* PaintingTableViewCellDelegate.swift */; };
 		C34E770C213AFF8000D6FE6C /* PaintingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34E770B213AFF8000D6FE6C /* PaintingTableViewCell.swift */; };
 		C34E770E213B63BD00D6FE6C /* PaintingListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34E770D213B63BC00D6FE6C /* PaintingListViewController.swift */; };
-		C34E7710213B768200D6FE6C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34E770F213B768200D6FE6C /* ViewController.swift */; };
 		C3792826213C2436009B6539 /* PaintingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3792825213C2436009B6539 /* PaintingController.swift */; };
 /* End PBXBuildFile section */
 
@@ -30,7 +29,6 @@
 		C32132FA213D94AC00D6551A /* PaintingTableViewCellDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaintingTableViewCellDelegate.swift; sourceTree = "<group>"; };
 		C34E770B213AFF8000D6FE6C /* PaintingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaintingTableViewCell.swift; sourceTree = "<group>"; };
 		C34E770D213B63BC00D6FE6C /* PaintingListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaintingListViewController.swift; sourceTree = "<group>"; };
-		C34E770F213B768200D6FE6C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		C3792825213C2436009B6539 /* PaintingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaintingController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -81,7 +79,6 @@
 				C34E770B213AFF8000D6FE6C /* PaintingTableViewCell.swift */,
 				C34E770D213B63BC00D6FE6C /* PaintingListViewController.swift */,
 				C32132FA213D94AC00D6551A /* PaintingTableViewCellDelegate.swift */,
-				C34E770F213B768200D6FE6C /* ViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -167,7 +164,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				C32132FB213D94AC00D6551A /* PaintingTableViewCellDelegate.swift in Sources */,
-				C34E7710213B768200D6FE6C /* ViewController.swift in Sources */,
 				C3792826213C2436009B6539 /* PaintingController.swift in Sources */,
 				C3129F4321384480008458B3 /* Painting.swift in Sources */,
 				C34E770C213AFF8000D6FE6C /* PaintingTableViewCell.swift in Sources */,

@@ -33,31 +33,36 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dYS-A5-yKQ">
-                                                    <rect key="frame" x="77" y="36" width="231" height="165.5"/>
+                                                    <rect key="frame" x="76" y="36" width="231" height="166"/>
                                                     <constraints>
+                                                        <constraint firstAttribute="width" secondItem="dYS-A5-yKQ" secondAttribute="height" multiplier="231:166" id="BOB-mF-oyN"/>
                                                         <constraint firstAttribute="width" secondItem="dYS-A5-yKQ" secondAttribute="height" multiplier="83:48" constant="-32.458333333333343" id="Cx3-iM-rq9"/>
                                                         <constraint firstAttribute="width" secondItem="dYS-A5-yKQ" secondAttribute="height" multiplier="102:73" id="IqR-yA-nF6"/>
+                                                        <constraint firstAttribute="height" constant="166" id="qJu-9Z-dS9"/>
                                                     </constraints>
                                                 </imageView>
-                                                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eOu-94-qLb">
-                                                    <rect key="frame" x="177" y="210" width="30" height="30"/>
-                                                    <state key="normal" title="Like"/>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ffE-V9-ZLR">
+                                                    <rect key="frame" x="163.5" y="210" width="46" height="30"/>
+                                                    <state key="normal" title="Button"/>
                                                     <connections>
-                                                        <action selector="likeButton:" destination="oIY-nF-31z" eventType="touchUpInside" id="BbE-yW-fEJ"/>
+                                                        <action selector="likeButtonTapped:" destination="oIY-nF-31z" eventType="touchUpInside" id="VVd-FG-Pwq"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstItem="ffE-V9-ZLR" firstAttribute="centerX" secondItem="5ua-Dv-Xei" secondAttribute="centerX" id="BCD-jr-gjZ"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="dYS-A5-yKQ" secondAttribute="trailing" constant="51" id="OEq-Oe-wto"/>
                                                 <constraint firstItem="dYS-A5-yKQ" firstAttribute="leading" secondItem="5ua-Dv-Xei" secondAttribute="leadingMargin" constant="62" id="UGO-iI-bfY"/>
-                                                <constraint firstItem="eOu-94-qLb" firstAttribute="centerX" secondItem="5ua-Dv-Xei" secondAttribute="centerX" id="a85-4z-2NA"/>
+                                                <constraint firstItem="dYS-A5-yKQ" firstAttribute="leading" secondItem="5ua-Dv-Xei" secondAttribute="leadingMargin" constant="61" id="VDX-No-w14"/>
+                                                <constraint firstItem="ffE-V9-ZLR" firstAttribute="top" secondItem="dYS-A5-yKQ" secondAttribute="bottom" constant="8" symbolic="YES" id="bE9-CK-tBO"/>
                                                 <constraint firstItem="dYS-A5-yKQ" firstAttribute="top" secondItem="5ua-Dv-Xei" secondAttribute="topMargin" constant="25" id="bZe-ot-DRT"/>
-                                                <constraint firstItem="eOu-94-qLb" firstAttribute="top" secondItem="dYS-A5-yKQ" secondAttribute="bottom" constant="-0.5" id="jwn-Bq-kZy"/>
-                                                <constraint firstItem="dYS-A5-yKQ" firstAttribute="centerX" secondItem="eOu-94-qLb" secondAttribute="centerX" id="nbV-CX-Ycf"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="eOu-94-qLb" secondAttribute="bottom" constant="9" id="pSC-Ps-wt4"/>
+                                                <constraint firstItem="ffE-V9-ZLR" firstAttribute="top" secondItem="dYS-A5-yKQ" secondAttribute="bottom" constant="8" id="nNT-sR-RmL"/>
+                                                <constraint firstItem="ffE-V9-ZLR" firstAttribute="bottom" secondItem="5ua-Dv-Xei" secondAttribute="bottomMargin" id="sDE-Kv-1vS"/>
                                                 <constraint firstItem="dYS-A5-yKQ" firstAttribute="top" secondItem="5ua-Dv-Xei" secondAttribute="topMargin" constant="25" id="z98-DS-Vjg"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="likeButton" destination="ffE-V9-ZLR" id="UJe-dV-ocJ"/>
                                             <outlet property="paintingImageView" destination="dYS-A5-yKQ" id="a2w-De-PgO"/>
                                         </connections>
                                     </tableViewCell>
