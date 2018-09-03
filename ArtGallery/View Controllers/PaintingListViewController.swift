@@ -8,7 +8,16 @@
 
 import UIKit
 
-class PaintingListViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class PaintingListViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, PaintingTableViewCellDelegate {
+    
+    var delegate: PaintingTableViewCellDelegate?
+    
+    func likeButtonWasTapped(on cell: PaintingTableViewCell) {
+        
+       // tableView.indexPath(for: PaintingTableViewCell)
+        
+    }
+    
  
     override func viewDidLoad() {
         super.viewDidLoad()

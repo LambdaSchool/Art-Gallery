@@ -9,7 +9,14 @@
 import Foundation
 import UIKit
 
-class PaintingTableViewCell: UITableViewCell {
+class PaintingTableViewCell: UITableViewCell, PaintingTableViewCellDelegate {
+    var delegate: PaintingTableViewCellDelegate?
+    
+    func likeButtonWasTapped(on cell: PaintingTableViewCell) {
+        
+    }
+    
+    
     
     func updateViews(){
         
@@ -23,6 +30,9 @@ class PaintingTableViewCell: UITableViewCell {
     @IBOutlet weak var paintingImageView: UIImageView!
     
     @IBAction func likeButton(_ sender: Any) {
+        
+        delegate?.likeButtonWasTapped(on: self)
+    
     }
     
     var painting: Painting? {
@@ -30,5 +40,7 @@ class PaintingTableViewCell: UITableViewCell {
             updateViews()
         }
     }
+    
+   
     
 }
