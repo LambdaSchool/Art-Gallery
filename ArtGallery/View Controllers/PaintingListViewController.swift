@@ -12,11 +12,18 @@ class PaintingListViewController: UIViewController, UITableViewDataSource, UITab
     
     var delegate: PaintingTableViewCellDelegate?
     
+    // what we want to happen when Cell is interacted with
+    
     func likeButtonWasTapped(on cell: PaintingTableViewCell) {
+        
+        guard let indexPath = tableView.indexPath(for: cell) else {return}
+        let painting = paintingController.paintings[indexPath.row]
+        paintingController.toggleIsLiked(painting: painting)
+        tableView.reloadRows(at: [indexPath], with: .fade)
         
         print("I was clicked")
         
-       // tableView.indexPath(for: PaintingTableViewCell)
+      
         
     }
     

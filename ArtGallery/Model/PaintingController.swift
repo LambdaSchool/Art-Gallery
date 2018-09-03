@@ -31,6 +31,13 @@ class PaintingController {
         }
     }
     
+    func toggleIsLiked(painting: Painting){
+        
+        painting.isLiked = !painting.isLiked
+        
+    }
+    
+    
     var paintings: [Painting] = []
     
 }
