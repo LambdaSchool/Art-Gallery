@@ -10,7 +10,7 @@ import UIKit
 
 class PaintingListViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, PaintingTableViewCellDelegate {
     
-    var delegate: PaintingTableViewCellDelegate?
+   // var delegate: PaintingTableViewCellDelegate?  
     
     // what we want to happen when Cell is interacted with
     
@@ -18,7 +18,7 @@ class PaintingListViewController: UIViewController, UITableViewDataSource, UITab
         guard let indexPath = tableView.indexPath(for: cell) else {return}
             let painting = paintingController.paintings[indexPath.row]
             paintingController.toggleIsLiked(painting: painting)
-            tableView.reloadRows(at: [indexPath], with: .fade)
+            tableView.reloadRows(at: [indexPath], with: .bottom)
         
         // testing if information was passed by clicking button
         print("I was clicked")
@@ -47,12 +47,13 @@ class PaintingListViewController: UIViewController, UITableViewDataSource, UITab
         
         cell.painting = painting
         cell.delegate = self   // if you comment this out.. the button wont work.
+        //cell.updateViews()   // Perferable way
         
        // Added Text Label to toggle.
        // painting.isLiked ? (cell.textLabel?.text = "Unlike") : (cell.textLabel?.text = "Like")
         
        // lets try button label to toggle -  works
-        painting.isLiked ? (cell.likeButton.setTitle("Unlike", for: .normal)) : (cell.likeButton.setTitle("Like", for: .normal))
+       // painting.isLiked ? (cell.likeButton.setTitle("Unlike", for: .normal)) : (cell.likeButton.setTitle("Like", for: .normal))
         
         return cell
     }
