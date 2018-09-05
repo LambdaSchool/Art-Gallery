@@ -18,26 +18,20 @@ class PaintingController {
     }
     
     func loadPaintingsFromAssets(){
-        
-        for index in 1...12 {
-            
+        for index in 1...100 {
+            // local var
             let paintingName = "Image\(index)"
-            
             guard let image = UIImage(named: paintingName) else {return}
-            
             let painting = Painting(image: image, isLiked: false)
-            
             paintings.append(painting)
         }
     }
     
     func toggleIsLiked(painting: Painting){
-        
         painting.isLiked = !painting.isLiked
-        
     }
     
-    
+    // global
     var paintings: [Painting] = []
     
 }

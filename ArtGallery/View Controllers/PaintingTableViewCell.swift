@@ -18,24 +18,18 @@ class PaintingTableViewCell: UITableViewCell, PaintingTableViewCellDelegate {
    
     
     func updateViews(){
-
-       guard let painting = painting else {return}
-
-       paintingImageView.image = painting.image
-
-      //  painting.isLiked ? likeButton.setTitle("Like 😀", for: .normal) : likeButton.setTitle("Unlike 🤨", for: .normal)
+        guard let painting = painting else {return}
+            paintingImageView.image = painting.image
+            painting.isLiked ? likeButton.setTitle("Like 😀", for: .normal) :likeButton.setTitle("Unlike 🤨", for: .normal)
    }
 
     
     
     @IBOutlet weak var likeButton: UIButton!
-    
     @IBOutlet weak var paintingImageView: UIImageView!
     
     @IBAction func likeButtonTapped(_ sender: Any) {
-        
         delegate?.likeButtonWasTapped(on: self)
-    
     }
     
     var painting: Painting? {
@@ -43,7 +37,4 @@ class PaintingTableViewCell: UITableViewCell, PaintingTableViewCellDelegate {
             updateViews()
         }
     }
-    
-   
-    
 }

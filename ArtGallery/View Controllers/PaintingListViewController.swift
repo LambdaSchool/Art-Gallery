@@ -15,12 +15,12 @@ class PaintingListViewController: UIViewController, UITableViewDataSource, UITab
     // what we want to happen when Cell is interacted with
     
     func likeButtonWasTapped(on cell: PaintingTableViewCell) {
-        
         guard let indexPath = tableView.indexPath(for: cell) else {return}
-        let painting = paintingController.paintings[indexPath.row]
-        paintingController.toggleIsLiked(painting: painting)
-        tableView.reloadRows(at: [indexPath], with: .fade)
+            let painting = paintingController.paintings[indexPath.row]
+            paintingController.toggleIsLiked(painting: painting)
+            tableView.reloadRows(at: [indexPath], with: .fade)
         
+        // testing if information was passed by clicking button
         print("I was clicked")
         
     }
@@ -35,9 +35,8 @@ class PaintingListViewController: UIViewController, UITableViewDataSource, UITab
     
     // MARK - UITableViewDataSource
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return paintingController.paintings.count
-    
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -47,7 +46,7 @@ class PaintingListViewController: UIViewController, UITableViewDataSource, UITab
         let painting = paintingController.paintings[indexPath.row]
         
         cell.painting = painting
-        cell.delegate = self
+        cell.delegate = self   // if you comment this out.. the button wont work.
         
        // Added Text Label to toggle.
        // painting.isLiked ? (cell.textLabel?.text = "Unlike") : (cell.textLabel?.text = "Like")
@@ -57,7 +56,6 @@ class PaintingListViewController: UIViewController, UITableViewDataSource, UITab
         
         return cell
     }
-    
   
     @IBOutlet weak var tableView: UITableView!
     
@@ -65,3 +63,7 @@ class PaintingListViewController: UIViewController, UITableViewDataSource, UITab
     // let paintingListViewController = PaintingListViewController()
     
 }
+
+
+
+
