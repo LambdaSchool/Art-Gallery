@@ -1,6 +1,6 @@
 import UIKit
 
-class ViewController: UIViewController {
+class PaintingViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -8,5 +8,10 @@ class ViewController: UIViewController {
     }
 
 
+    @IBOutlet weak var tableView: PaintingTableViewCell!
+    
+    override func viewWillAppear(_ animated: Bool) {
+        <#code#>
+    }
 }
 
