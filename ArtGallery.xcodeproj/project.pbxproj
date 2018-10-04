@@ -15,7 +15,7 @@
 		7B2D6BBC21655C6700A3B19F /* PaintingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B2D6BB521655C6700A3B19F /* PaintingViewController.swift */; };
 		7B2D6BBD21655C6700A3B19F /* PaintingTableViewCellDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B2D6BB621655C6700A3B19F /* PaintingTableViewCellDelegate.swift */; };
 		7B2D6BBE21655C6700A3B19F /* PaintingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B2D6BB721655C6700A3B19F /* PaintingTableViewCell.swift */; };
-		7B2D6BC121655C7300A3B19F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B2D6BBF21655C7300A3B19F /* Main.storyboard */; };
+		7BBBEEBD2165AAD900B8AF13 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BBBEEBB2165AAD900B8AF13 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,7 +29,7 @@
 		7B2D6BB521655C6700A3B19F /* PaintingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaintingViewController.swift; sourceTree = "<group>"; };
 		7B2D6BB621655C6700A3B19F /* PaintingTableViewCellDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaintingTableViewCellDelegate.swift; sourceTree = "<group>"; };
 		7B2D6BB721655C6700A3B19F /* PaintingTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaintingTableViewCell.swift; sourceTree = "<group>"; };
-		7B2D6BC021655C7300A3B19F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = ../../../Desktop/Color/Color/Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		7BBBEEBC2165AAD900B8AF13 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,7 +69,7 @@
 				7B2D6BB721655C6700A3B19F /* PaintingTableViewCell.swift */,
 				7B2D6BB621655C6700A3B19F /* PaintingTableViewCellDelegate.swift */,
 				7B2D6BB521655C6700A3B19F /* PaintingViewController.swift */,
-				7B2D6BBF21655C7300A3B19F /* Main.storyboard */,
+				7BBBEEBB2165AAD900B8AF13 /* Main.storyboard */,
 				469AAC4A210258C300C0D421 /* LaunchScreen.storyboard */,
 				469AAC4D210258C300C0D421 /* Info.plist */,
 			);
@@ -135,7 +135,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7B2D6BC121655C7300A3B19F /* Main.storyboard in Resources */,
+				7BBBEEBD2165AAD900B8AF13 /* Main.storyboard in Resources */,
 				469AAC4C210258C300C0D421 /* LaunchScreen.storyboard in Resources */,
 				469AAC49210258C300C0D421 /* Assets.xcassets in Resources */,
 			);
@@ -168,10 +168,10 @@
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
-		7B2D6BBF21655C7300A3B19F /* Main.storyboard */ = {
+		7BBBEEBB2165AAD900B8AF13 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				7B2D6BC021655C7300A3B19F /* Base */,
+				7BBBEEBC2165AAD900B8AF13 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
