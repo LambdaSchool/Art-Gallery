@@ -23,13 +23,12 @@
 		469AAC48210258C300C0D421 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		469AAC4B210258C300C0D421 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		469AAC4D210258C300C0D421 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7B2D6BB021655C6500A3B19F /* ArtGallery-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ArtGallery-Bridging-Header.h"; sourceTree = "<group>"; };
-		7B2D6BB221655C6600A3B19F /* PaintingModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PaintingModel.swift; path = ../../../Desktop/Color/Color/PaintingModel.swift; sourceTree = "<group>"; };
-		7B2D6BB321655C6600A3B19F /* Painting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Painting.swift; path = ../../../Desktop/Color/Color/Painting.swift; sourceTree = "<group>"; };
-		7B2D6BB421655C6600A3B19F /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = ../../../Desktop/Color/Color/AppDelegate.swift; sourceTree = "<group>"; };
-		7B2D6BB521655C6700A3B19F /* PaintingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PaintingViewController.swift; path = ../../../Desktop/Color/Color/PaintingViewController.swift; sourceTree = "<group>"; };
-		7B2D6BB621655C6700A3B19F /* PaintingTableViewCellDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PaintingTableViewCellDelegate.swift; path = ../../../Desktop/Color/Color/PaintingTableViewCellDelegate.swift; sourceTree = "<group>"; };
-		7B2D6BB721655C6700A3B19F /* PaintingTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PaintingTableViewCell.swift; path = ../../../Desktop/Color/Color/PaintingTableViewCell.swift; sourceTree = "<group>"; };
+		7B2D6BB221655C6600A3B19F /* PaintingModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaintingModel.swift; sourceTree = "<group>"; };
+		7B2D6BB321655C6600A3B19F /* Painting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Painting.swift; sourceTree = "<group>"; };
+		7B2D6BB421655C6600A3B19F /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		7B2D6BB521655C6700A3B19F /* PaintingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaintingViewController.swift; sourceTree = "<group>"; };
+		7B2D6BB621655C6700A3B19F /* PaintingTableViewCellDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaintingTableViewCellDelegate.swift; sourceTree = "<group>"; };
+		7B2D6BB721655C6700A3B19F /* PaintingTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaintingTableViewCell.swift; sourceTree = "<group>"; };
 		7B2D6BC021655C7300A3B19F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = ../../../Desktop/Color/Color/Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -73,7 +72,6 @@
 				7B2D6BBF21655C7300A3B19F /* Main.storyboard */,
 				469AAC4A210258C300C0D421 /* LaunchScreen.storyboard */,
 				469AAC4D210258C300C0D421 /* Info.plist */,
-				7B2D6BB021655C6500A3B19F /* ArtGallery-Bridging-Header.h */,
 			);
 			path = ArtGallery;
 			sourceTree = "<group>";
