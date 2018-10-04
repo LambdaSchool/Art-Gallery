@@ -1,6 +1,6 @@
 import UIKit
 
-class PaintingTableViewCell: UITableView {
+class PaintingTableViewCell: UITableViewCell {
     
     
     

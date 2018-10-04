@@ -4,7 +4,6 @@ class PaintingModel: NSObject, UITableViewDataSource, PaintingTableViewCellDeleg
     
     var paintings: [Painting] = []
     
-    weak var tableView: UITableView?
     
     override init() {
         loadPaintingsFromAssets()
@@ -17,6 +16,23 @@ class PaintingModel: NSObject, UITableViewDataSource, PaintingTableViewCellDeleg
             let painting = Painting(image: UIImage)
             paintings.append(painting)
         }
+    }
+    
+    weak var tableView: UITableView?
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        self.tableView = tableView
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        <#code#>
+    }
+    
+    let reuseIdentifier = "cell"
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        <#code#>
     }
     
 }
