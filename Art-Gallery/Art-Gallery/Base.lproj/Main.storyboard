@@ -40,6 +40,9 @@
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VeF-Bl-P4h">
                                                             <rect key="frame" x="0.0" y="276" width="295" height="23.5"/>
                                                             <state key="normal" title="Button"/>
+                                                            <connections>
+                                                                <action selector="toggledAppreciation:" destination="Gj4-zT-dWl" eventType="touchUpInside" id="w8q-2G-FUJ"/>
+                                                            </connections>
                                                         </button>
                                                     </subviews>
                                                 </stackView>
@@ -51,6 +54,10 @@
                                                 <constraint firstAttribute="bottom" secondItem="Bti-b0-Qwf" secondAttribute="bottom" id="rzB-l3-orx"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="likeButton" destination="VeF-Bl-P4h" id="jNe-nU-HGP"/>
+                                            <outlet property="portraitView" destination="SQD-fm-clY" id="ddn-rn-KZ7"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
