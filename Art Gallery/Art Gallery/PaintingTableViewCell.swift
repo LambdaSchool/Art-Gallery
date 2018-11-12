@@ -9,5 +9,10 @@ class PaintingTableViewCell: UITableView, UITableViewDataSource, UITableViewDele
         <#code#>
     }
     
+    let model = PaintingModel()
+    
+    @IBAction func toggledAppreciation(_ sender: Any) {
+        model.tappedLikeButton(on: self)
+    }
     
 }

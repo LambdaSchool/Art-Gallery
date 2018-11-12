@@ -1,12 +1,17 @@
 import UIKit
 
-class PaintingModel : NSObject, UITableViewDataSource, PaintingTableViewCellDelegate {
+class PaintingModel : NSObject, UITableViewDataSource, UITableViewDelegate, PaintingTableViewCellDelegate {
+    
+    let reuseIdentifier = "cell"
+    
     func tappedLikeButton(on cell: PaintingTableViewCell) {
-        <#code#>
-    }
+        }
+        /*navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(stopEditingTable(_:)))
+ 
+        
+    }*/
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        <#code#>
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -31,4 +36,5 @@ class PaintingModel : NSObject, UITableViewDataSource, PaintingTableViewCellDele
         
     }
 }
+    
 }

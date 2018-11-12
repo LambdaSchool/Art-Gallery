@@ -10,6 +10,14 @@ class PaintingViewController: UIViewController {
     @IBOutlet weak var tableView: PaintingTableViewCell!
     
     
+    
+    
+    weak var dontKnow: PaintingTableViewCellDelegate?
+    
+    @IBOutlet weak var likeButton: UIButton!
+    
+    @IBOutlet weak var portraitView: UIImageView!
+    
 
 }
 
