@@ -43,6 +43,9 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="Lambda Gallery" id="ICb-8b-lYb"/>
+                    <connections>
+                        <outlet property="tableView" destination="EMq-BJ-hLS" id="wMi-3B-gTB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

@@ -60,8 +60,8 @@
 			children = (
 				D1E440622199DFD0001B4101 /* AppDelegate.swift */,
 				D1E440642199DFD0001B4101 /* PaintingViewController.swift */,
-				D1E440662199DFD0001B4101 /* Main.storyboard */,
 				D1E440742199E07C001B4101 /* PaintingTableViewCell.swift */,
+				D1E440662199DFD0001B4101 /* Main.storyboard */,
 				D1E440762199E176001B4101 /* PaintingAssets.xcassets */,
 				D1E440692199DFD1001B4101 /* Assets.xcassets */,
 				D1E4406B2199DFD1001B4101 /* LaunchScreen.storyboard */,
