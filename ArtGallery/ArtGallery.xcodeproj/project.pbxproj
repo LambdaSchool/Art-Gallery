@@ -13,6 +13,7 @@
 		D1E4406A2199DFD1001B4101 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D1E440692199DFD1001B4101 /* Assets.xcassets */; };
 		D1E4406D2199DFD1001B4101 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1E4406B2199DFD1001B4101 /* LaunchScreen.storyboard */; };
 		D1E440752199E07C001B4101 /* PaintingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E440742199E07C001B4101 /* PaintingTableViewCell.swift */; };
+		D1E440772199E176001B4101 /* PaintingAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D1E440762199E176001B4101 /* PaintingAssets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		D1E4406C2199DFD1001B4101 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D1E4406E2199DFD1001B4101 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D1E440742199E07C001B4101 /* PaintingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaintingTableViewCell.swift; sourceTree = "<group>"; };
+		D1E440762199E176001B4101 /* PaintingAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = PaintingAssets.xcassets; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 				D1E440642199DFD0001B4101 /* PaintingViewController.swift */,
 				D1E440662199DFD0001B4101 /* Main.storyboard */,
 				D1E440742199E07C001B4101 /* PaintingTableViewCell.swift */,
+				D1E440762199E176001B4101 /* PaintingAssets.xcassets */,
 				D1E440692199DFD1001B4101 /* Assets.xcassets */,
 				D1E4406B2199DFD1001B4101 /* LaunchScreen.storyboard */,
 				D1E4406E2199DFD1001B4101 /* Info.plist */,
@@ -125,6 +128,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D1E440772199E176001B4101 /* PaintingAssets.xcassets in Resources */,
 				D1E4406D2199DFD1001B4101 /* LaunchScreen.storyboard in Resources */,
 				D1E4406A2199DFD1001B4101 /* Assets.xcassets in Resources */,
 				D1E440682199DFD0001B4101 /* Main.storyboard in Resources */,
