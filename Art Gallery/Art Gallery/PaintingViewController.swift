@@ -10,6 +10,6 @@ class PaintingViewController: UIViewController {
     @IBOutlet weak var tableView: PaintingTableViewCell!
     
     
-    
+
 }
 

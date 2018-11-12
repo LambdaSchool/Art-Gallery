@@ -22,6 +22,13 @@ class PaintingModel : NSObject, UITableViewDataSource, PaintingTableViewCellDele
         self.range = range
     }
     
-    
-    
+    func  addPainting() -> [Painting] {
+        for count in 1...12 {
+            let imageName = "image\(count)"
+            if let image = UIImage(named: imageName) {
+                paintings.append(Painting(image: image))
+        }
+        
+    }
+}
 }
