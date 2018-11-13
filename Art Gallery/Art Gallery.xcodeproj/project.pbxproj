@@ -15,6 +15,7 @@
 		A201A264219A46C10037DEB5 /* Painting.swift in Sources */ = {isa = PBXBuildFile; fileRef = A201A263219A46C10037DEB5 /* Painting.swift */; };
 		A201A266219A46E00037DEB5 /* PaintingTableViewCellDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A201A265219A46E00037DEB5 /* PaintingTableViewCellDelegate.swift */; };
 		A201A268219A47200037DEB5 /* PaintingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A201A267219A47200037DEB5 /* PaintingModel.swift */; };
+		A289DD26219AA8D000FD0E37 /* PaintingAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A289DD25219AA8D000FD0E37 /* PaintingAssets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		A201A263219A46C10037DEB5 /* Painting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Painting.swift; sourceTree = "<group>"; };
 		A201A265219A46E00037DEB5 /* PaintingTableViewCellDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaintingTableViewCellDelegate.swift; sourceTree = "<group>"; };
 		A201A267219A47200037DEB5 /* PaintingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaintingModel.swift; sourceTree = "<group>"; };
+		A289DD25219AA8D000FD0E37 /* PaintingAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = PaintingAssets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +69,7 @@
 				A201A267219A47200037DEB5 /* PaintingModel.swift */,
 				A201A261219A45140037DEB5 /* PaintingTableViewCell.swift */,
 				A201A253219A43DD0037DEB5 /* Main.storyboard */,
+				A289DD25219AA8D000FD0E37 /* PaintingAssets.xcassets */,
 				A201A256219A43DE0037DEB5 /* Assets.xcassets */,
 				A201A25B219A43DE0037DEB5 /* Info.plist */,
 			);
@@ -131,6 +134,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A289DD26219AA8D000FD0E37 /* PaintingAssets.xcassets in Resources */,
 				A201A257219A43DE0037DEB5 /* Assets.xcassets in Resources */,
 				A201A255219A43DD0037DEB5 /* Main.storyboard in Resources */,
 			);
@@ -223,6 +227,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_ENABLE_BATCH_MODE = NO;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -277,6 +282,7 @@
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_ENABLE_BATCH_MODE = NO;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -292,8 +298,10 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				NEW_SETTING = "";
 				PRODUCT_BUNDLE_IDENTIFIER = "MuffBubbles.Art-Gallery";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ENABLE_BATCH_MODE = NO;
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -309,8 +317,10 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				NEW_SETTING = "";
 				PRODUCT_BUNDLE_IDENTIFIER = "MuffBubbles.Art-Gallery";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ENABLE_BATCH_MODE = NO;
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
