@@ -22,7 +22,7 @@
                                 <rect key="frame" x="20" y="84" width="335" height="563"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="0X7-I7-Wu6" customClass="PaintingTableViewCell" customModule="ArtGallery" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleAspectFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="0X7-I7-Wu6" customClass="PaintingTableViewCell" customModule="ArtGallery" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="335" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="0X7-I7-Wu6" id="CNm-JY-aVo">
@@ -44,17 +44,13 @@
                                                             </connections>
                                                         </button>
                                                     </subviews>
-                                                    <constraints>
-                                                        <constraint firstItem="dDr-O2-Oif" firstAttribute="leading" secondItem="fdN-M6-fZf" secondAttribute="leading" constant="40" id="A7d-Tx-sDr"/>
-                                                    </constraints>
                                                 </stackView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="bottom" secondItem="fdN-M6-fZf" secondAttribute="bottom" constant="-281.5" id="6Z2-Jg-hcY"/>
-                                                <constraint firstAttribute="bottom" secondItem="fdN-M6-fZf" secondAttribute="bottom" constant="20" id="EkC-vz-7El"/>
-                                                <constraint firstItem="fdN-M6-fZf" firstAttribute="top" secondItem="CNm-JY-aVo" secondAttribute="top" constant="20" id="ViA-Bv-fqU"/>
-                                                <constraint firstItem="fdN-M6-fZf" firstAttribute="leading" secondItem="CNm-JY-aVo" secondAttribute="leading" id="hDK-Ab-Mbb"/>
-                                                <constraint firstAttribute="trailing" secondItem="fdN-M6-fZf" secondAttribute="trailing" id="k7I-K3-l4b"/>
+                                                <constraint firstAttribute="trailing" secondItem="fdN-M6-fZf" secondAttribute="trailing" id="4AM-jx-ybI"/>
+                                                <constraint firstAttribute="bottom" secondItem="fdN-M6-fZf" secondAttribute="bottom" constant="20" id="6uI-09-BQn"/>
+                                                <constraint firstItem="fdN-M6-fZf" firstAttribute="top" secondItem="CNm-JY-aVo" secondAttribute="top" constant="20" id="7bo-BV-lWr"/>
+                                                <constraint firstItem="fdN-M6-fZf" firstAttribute="leading" secondItem="CNm-JY-aVo" secondAttribute="leading" id="xCj-RK-nwe"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -63,6 +59,9 @@
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="hLA-9I-6Nc" id="vIq-Ez-rf9"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

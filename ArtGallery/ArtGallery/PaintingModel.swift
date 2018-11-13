@@ -5,32 +5,8 @@ import UIKit
 
 class PaintingModel: NSObject, UITableViewDataSource, PaintingTableViewCellDelegate {
     
-    
     weak var tableView: UITableView?
-    let reuseIdentifier = "cell"
     var paintings: [Painting] = []
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return paintings.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let reuseIndentifier = "cell"
-        let cell = tableView.dequeueReusableCell(withIdentifier: reuseIndentifier, for: indexPath)
-        
-        cell.textLabel?.text = "Like"
-        cell.imageView?.image = paintings[2].image
-        
-        return cell
-    }
-    
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return tableView.numberOfSections
-    }
-    
-    func tappedLikeButton(on cell: PaintingTableViewCell) {
-        cell.likeButton.titleLabel?.text = "Liked"
-    }
     
     override init(){
         
@@ -46,5 +22,40 @@ class PaintingModel: NSObject, UITableViewDataSource, PaintingTableViewCellDeleg
             paintings.append(Painting(image))
         }
     }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return paintings.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let reuseIdentifier = "cell"
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier) as? PaintingTableViewCell else {
+            fatalError("Could not instantiate guaranteed cell type")
+        }
+        cell.degelateVariable = self
+        cell.protraitView.image = paintings[indexPath.row].image
+        //cell.paintingView.image = #imageLiteral(resourceName: "Image6") //ojb c = only good for hacking
+        let title = "😎"
+        cell.likeButton?.setTitle(title, for: .normal)
+        cell.likeButton.alpha = paintings[indexPath.row].isLiked ? 1.0 : 0.33
+        
+        return cell
+        
+    }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        self.tableView = tableView
+        return 1
+    }
+    
+    func tappedLikeButton(on cell: PaintingTableViewCell) {
+        guard let indexPath = tableView?.indexPath(for: cell)
+            else { fatalError("Non-existent cell!!??") }
+        
+        paintings[indexPath.row].isLiked.toggle()
+        cell.likeButton.alpha = paintings[indexPath.row].isLiked ? 1.0 : 0.33
+    }
+    
+
     
 }
