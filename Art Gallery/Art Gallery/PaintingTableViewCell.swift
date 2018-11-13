@@ -1,18 +1,24 @@
 import UIKit
 
-class PaintingTableViewCell: UITableView, UITableViewDataSource, UITableViewDelegate{
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        <#code#>
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        <#code#>
-    }
+class PaintingTableViewCell: UITableViewCell {
     
     let model = PaintingModel()
+
+    @IBOutlet weak var portraitView: UIImageView!
+    
+    
+    @IBOutlet weak var likeButton: UIButton!
+    
+    weak var paintingViewCellDelegate: PaintingTableViewCellDelegate?
+    
     
     @IBAction func toggledAppreciation(_ sender: Any) {
         model.tappedLikeButton(on: self)
     }
+    
+    
+    
+    
+    
     
 }
