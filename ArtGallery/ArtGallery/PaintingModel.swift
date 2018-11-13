@@ -34,8 +34,8 @@ class PaintingModel: NSObject, UITableViewDataSource, PaintingTableViewCellDeleg
         }
         cell.degelateVariable = self
         cell.protraitView.image = paintings[indexPath.row].image
-        //cell.paintingView.image = #imageLiteral(resourceName: "Image6") //ojb c = only good for hacking
-        let title = "😎"
+        
+        let title = "Like"
         cell.likeButton?.setTitle(title, for: .normal)
         cell.likeButton.alpha = paintings[indexPath.row].isLiked ? 1.0 : 0.33
         
