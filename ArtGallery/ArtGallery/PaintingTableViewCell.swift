@@ -10,6 +10,14 @@ import UIKit
 
 class PaintingTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var protraitView: UIImageView!
+    @IBOutlet weak var likeButton: UIButton!
+    weak var degelateVariable: PaintingTableViewCellDelegate?
+    
+    @IBAction func toggledAppreciation(_ sender: Any) {
+        //
+        degelateVariable?.tappedLikeButton(on: self)
+    }
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
