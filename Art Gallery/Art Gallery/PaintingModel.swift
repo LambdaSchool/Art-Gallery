@@ -1,6 +1,9 @@
 import UIKit
 
 class PaintingModel : NSObject, UITableViewDataSource, PaintingTableViewCellDelegate {
+
+    
+    
     
     let reuseIdentifier = "cell"
     
@@ -36,11 +39,15 @@ class PaintingModel : NSObject, UITableViewDataSource, PaintingTableViewCellDele
         
     }
     
+    
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return (imageArray.count - 1)
+        return collectPaintingArray().count
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    
+    func collectPaintingArray() -> [Painting] {
+        
         for counter in 1 ... 12 {
             let imageName = "image\(counter)"
             if let image = UIImage(named: imageName) {
@@ -49,14 +56,18 @@ class PaintingModel : NSObject, UITableViewDataSource, PaintingTableViewCellDele
             
         }
         for index in imageArray {
-            var painting = Painting(index, false)
+            let painting = Painting(index, false)
             paintings.append(painting)
         }
-        print(paintings)
+        return paintings
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
         
         
 let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier, for: indexPath)
-        cell.imageView?.image = paintings[indexPath.row].image
+        cell.imageView?.image = collectPaintingArray()[indexPath.row].image
         return cell
         
     }
