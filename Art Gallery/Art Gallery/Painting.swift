@@ -1,6 +1,6 @@
 import UIKit
 
-struct Painting {
+struct Painting: Equatable {
     // Should these be optionals?
     let image: UIImage
     var isLiked: Bool

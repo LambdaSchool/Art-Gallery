@@ -2,8 +2,26 @@ import UIKit
 
 class PaintingModel: NSObject, UITableViewDataSource, PaintingTableViewCellDelegate {
     func tappedLikeButton(on cell: PaintingTableViewCell) {
-        <#code#>
+        guard let painting = cell.painting else { return }
+        toggleIsLiked(painting)
+        let title = painting.isLiked ? "Unlike" : "Like"
+        
+        cell.likeButton.setTitle(title, for: .normal)
+        // UIControl.normal
+  
     }
+    
+    func toggleIsLiked(_ painting: Painting) {
+        guard let index = paintings.index(of: painting) else { return }
+        paintings[index].isLiked.toggle()
+    }
+    
+    // Alternate way
+    //    guard let indexPath = tableView?.indexPath(for:cell) els {fatalError(“Error message”)}
+    //// The error message could be more specific. It says how the cell does not exist.
+    //    paintings[indexPath.row].isLiked?.toggle()
+    //}
+    
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         <#code#>
@@ -13,7 +31,7 @@ class PaintingModel: NSObject, UITableViewDataSource, PaintingTableViewCellDeleg
         <#code#>
     }
     
-    weak var tableView: PaintingTableViewCell?
+    weak var tableView: UITableView?
     
     var paintings: [Painting] = []
     
