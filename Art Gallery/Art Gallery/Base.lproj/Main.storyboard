@@ -17,40 +17,52 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="3Qm-gW-pbM">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="3Qm-gW-pbM">
                                 <rect key="frame" x="20" y="20" width="335" height="647"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="8Sk-NI-QLo" customClass="PaintingTableViewCell" customModule="Art_Gallery" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="335" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="310" id="8Sk-NI-QLo" customClass="PaintingTableViewCell" customModule="Art_Gallery" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="335" height="310"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="8Sk-NI-QLo" id="wVc-id-C1Y">
-                                            <rect key="frame" x="0.0" y="0.0" width="335" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="335" height="309.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="pmD-LX-lZN">
-                                                    <rect key="frame" x="20" y="0.0" width="295" height="43.5"/>
+                                                    <rect key="frame" x="20" y="0.0" width="295" height="309.5"/>
                                                     <subviews>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="suk-7P-iRE">
-                                                            <rect key="frame" x="0.0" y="0.0" width="295" height="0.0"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="295" height="250"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="250" id="ZTT-sH-tnm"/>
+                                                            </constraints>
                                                         </imageView>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yJL-KC-bdQ">
-                                                            <rect key="frame" x="0.0" y="20" width="295" height="23.5"/>
+                                                            <rect key="frame" x="0.0" y="270" width="295" height="39.5"/>
                                                             <state key="normal" title="Button"/>
                                                             <connections>
                                                                 <action selector="toggledAppreciation:" destination="3Qm-gW-pbM" eventType="touchUpInside" id="W5b-TH-5qg"/>
                                                             </connections>
                                                         </button>
                                                     </subviews>
+                                                    <constraints>
+                                                        <constraint firstItem="yJL-KC-bdQ" firstAttribute="top" secondItem="suk-7P-iRE" secondAttribute="bottom" constant="20" id="nbB-WL-iOU"/>
+                                                        <constraint firstItem="suk-7P-iRE" firstAttribute="leading" secondItem="pmD-LX-lZN" secondAttribute="leading" id="tTQ-ic-HoR"/>
+                                                        <constraint firstAttribute="trailing" secondItem="suk-7P-iRE" secondAttribute="trailing" id="vTf-Qb-XHq"/>
+                                                    </constraints>
                                                 </stackView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="bottom" secondItem="pmD-LX-lZN" secondAttribute="bottom" id="3O9-ZW-Jy6"/>
-                                                <constraint firstAttribute="trailing" secondItem="pmD-LX-lZN" secondAttribute="trailing" constant="20" id="fsW-X2-LFh"/>
-                                                <constraint firstItem="pmD-LX-lZN" firstAttribute="top" secondItem="wVc-id-C1Y" secondAttribute="top" id="oe7-0F-akB"/>
-                                                <constraint firstItem="pmD-LX-lZN" firstAttribute="leading" secondItem="wVc-id-C1Y" secondAttribute="leading" constant="20" id="yaY-nI-UxO"/>
+                                                <constraint firstItem="pmD-LX-lZN" firstAttribute="top" secondItem="wVc-id-C1Y" secondAttribute="top" id="0Td-IZ-rhb"/>
+                                                <constraint firstItem="pmD-LX-lZN" firstAttribute="centerX" secondItem="wVc-id-C1Y" secondAttribute="centerX" id="NWh-SL-Yww"/>
+                                                <constraint firstAttribute="bottom" secondItem="pmD-LX-lZN" secondAttribute="bottom" id="NuY-e4-l2W"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="likeButton" destination="yJL-KC-bdQ" id="bb1-ew-zY2"/>
+                                            <outlet property="portraitView" destination="suk-7P-iRE" id="6dD-A2-buf"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -59,12 +71,6 @@
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="3Qm-gW-pbM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Crd-03-aQe"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="3Qm-gW-pbM" secondAttribute="trailing" constant="20" id="S1y-zd-okD"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="3Qm-gW-pbM" secondAttribute="bottom" id="WOX-Qk-7Li"/>
-                            <constraint firstItem="3Qm-gW-pbM" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="a3f-iu-BMA"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
@@ -74,6 +80,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <customObject id="TfT-aC-77r" customClass="PaintingModel" customModule="Art_Gallery" customModuleProvider="target"/>
             </objects>
+            <point key="canvasLocation" x="132" y="133.5832083958021"/>
         </scene>
     </scenes>
 </document>

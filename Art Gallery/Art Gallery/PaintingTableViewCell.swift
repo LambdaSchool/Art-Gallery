@@ -9,7 +9,7 @@ class PaintingTableViewCell: UITableViewCell {
     
     @IBOutlet weak var likeButton: UIButton!
     
-    weak var paintingViewCellDelegate: PaintingTableViewCellDelegate?
+    weak var delegate: PaintingTableViewCellDelegate?
     
     
     @IBAction func toggledAppreciation(_ sender: Any) {

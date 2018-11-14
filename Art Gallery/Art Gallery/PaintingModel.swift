@@ -1,76 +1,47 @@
 import UIKit
 
 class PaintingModel : NSObject, UITableViewDataSource, PaintingTableViewCellDelegate {
-
     
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return paintings.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier, for: indexPath) as? PaintingTableViewCell else {return UITableViewCell()}
+        cell.imageView?.image = paintings[indexPath.row].image
+        cell.delegate = self
+        return cell
+    }
+    
+    weak var tableView : UITableView?
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        self.tableView = tableView
+        return 1
+    }
     
     
     let reuseIdentifier = "cell"
     
     var paintings : [Painting] = []
-    var imageArray: [UIImage] = []
-    var painting = Painting(nil, false)
-    
-    //func collectPaintingsInArray() -> [Painting] {
-    /*for counter in 1 ... 12 {
-    let imageName = "image\(counter)"
-    if let image = UIImage(named: imageName) {
-    imageArray.append(image)
-    }
-    
-    }
-    for index in imageArray {
-    var painting = Painting(index, false)
-    paintings.append(painting)
-    }
-    print(paintings)
-    return paintings*/
-    //}
     
     
     func tappedLikeButton(on cell: PaintingTableViewCell) {
-        if painting.isLiked == false {
-            painting.isLiked = true
-            cell.likeButton.setTitle("Unlike", for: .normal)
-        } else {
-            painting.isLiked = true
-            cell.likeButton.setTitle("Like", for: .normal)
-        }
-        
+        guard let indexPath = tableView?.indexPath(for: cell) else {fatalError("The cell does not exist(tappedLikeButton)")}
+        paintings[indexPath.row].isLiked.toggle()
     }
     
     
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return collectPaintingArray().count
-    }
-    
-    
-    func collectPaintingArray() -> [Painting] {
+    override init() {
         
         for counter in 1 ... 12 {
-            let imageName = "image\(counter)"
+            let imageName = "Image\(counter)"
             if let image = UIImage(named: imageName) {
-                imageArray.append(image)
+                let painting = Painting(image)
+                paintings.append(painting)
             }
             
         }
-        for index in imageArray {
-            let painting = Painting(index, false)
-            paintings.append(painting)
-        }
-        return paintings
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        
-        
-let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier, for: indexPath)
-        cell.imageView?.image = collectPaintingArray()[indexPath.row].image
-        return cell
         
     }
-    
-    
 }
