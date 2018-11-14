@@ -22,22 +22,40 @@
                                 <rect key="frame" x="20" y="64" width="335" height="603"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="0ye-kS-Nb0" customClass="PaintingTableViewCell" customModule="Art_Gallery" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="335" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="348" id="0ye-kS-Nb0" customClass="PaintingTableViewCell" customModule="Art_Gallery" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="335" height="348"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="0ye-kS-Nb0" id="f45-fM-uRf">
-                                            <rect key="frame" x="0.0" y="0.0" width="335" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="335" height="347.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7iw-cC-Ehp">
-                                                    <rect key="frame" x="152" y="6" width="30" height="30"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <state key="normal" title="Like"/>
-                                                </button>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="UqH-7K-2Ow">
+                                                    <rect key="frame" x="20" y="11" width="295" height="326"/>
+                                                    <subviews>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ogU-m1-uH4" userLabel="Portrait View">
+                                                            <rect key="frame" x="0.0" y="0.0" width="295" height="256"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="256" id="TBR-04-T9G"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7iw-cC-Ehp">
+                                                            <rect key="frame" x="132.5" y="276" width="30" height="50"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                            <state key="normal" title="Like"/>
+                                                        </button>
+                                                    </subviews>
+                                                </stackView>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="UqH-7K-2Ow" secondAttribute="trailing" constant="20" id="79I-vQ-l5K"/>
+                                                <constraint firstItem="UqH-7K-2Ow" firstAttribute="top" secondItem="f45-fM-uRf" secondAttribute="topMargin" id="9Je-Vs-hDK"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="UqH-7K-2Ow" secondAttribute="bottom" id="S3O-q8-uxS"/>
+                                                <constraint firstItem="UqH-7K-2Ow" firstAttribute="leading" secondItem="f45-fM-uRf" secondAttribute="leading" constant="20" id="aX4-GV-pFb"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="likeButton" destination="7iw-cC-Ehp" id="8JM-nX-4Zg"/>
+                                            <outlet property="likeButton" destination="7iw-cC-Ehp" id="a19-Ez-fD0"/>
+                                            <outlet property="portraitView" destination="ogU-m1-uH4" id="LJf-oD-czW"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
