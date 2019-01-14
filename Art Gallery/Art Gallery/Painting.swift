@@ -13,5 +13,5 @@ import UIKit
 
 struct Painting{
     let image : UIImage
-    let isLiked : Bool = false
+    var isLiked : Bool = false
 }
