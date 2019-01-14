@@ -22,15 +22,50 @@
                                 <rect key="frame" x="20" y="20" width="335" height="647"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="8bD-dl-fqz">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="8bD-dl-fqz" customClass="PaintingTableViewCell" customModule="Art_Gallery" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="335" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="8bD-dl-fqz" id="Sz7-8a-ZrZ" customClass="PaintingTableViewCell">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="8bD-dl-fqz" id="Sz7-8a-ZrZ">
                                             <rect key="frame" x="0.0" y="0.0" width="335" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="kHM-qt-8IZ">
+                                                    <rect key="frame" x="20" y="0.0" width="295" height="43.5"/>
+                                                    <subviews>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="U34-vd-dKb">
+                                                            <rect key="frame" x="0.0" y="0.0" width="295" height="0.0"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="256" id="cKf-tF-3bs"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yBo-p1-qTA">
+                                                            <rect key="frame" x="0.0" y="20" width="295" height="23.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                            <state key="normal" title="Like"/>
+                                                            <connections>
+                                                                <action selector="toggleAppreciation:" destination="8bD-dl-fqz" eventType="touchUpInside" id="HgH-B4-k4I"/>
+                                                            </connections>
+                                                        </button>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="kHM-qt-8IZ" firstAttribute="top" secondItem="Sz7-8a-ZrZ" secondAttribute="top" id="Pd2-nl-jzm"/>
+                                                <constraint firstAttribute="bottom" secondItem="kHM-qt-8IZ" secondAttribute="bottom" id="SJY-Jf-Vco"/>
+                                                <constraint firstItem="kHM-qt-8IZ" firstAttribute="leading" secondItem="Sz7-8a-ZrZ" secondAttribute="leading" constant="20" id="kty-4e-7Uz"/>
+                                                <constraint firstAttribute="trailing" secondItem="kHM-qt-8IZ" secondAttribute="trailing" constant="20" id="obs-gO-w95"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="button" destination="yBo-p1-qTA" id="8mj-QI-OWh"/>
+                                            <outlet property="imageToShow" destination="U34-vd-dKb" id="rNG-0B-fS0"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="gi2-Sp-8fK"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="j5k-Ks-Win"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

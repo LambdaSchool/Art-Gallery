@@ -9,7 +9,14 @@
 import UIKit
 
 class PaintingTableViewCell: UITableViewCell {
-
+    
+    @IBOutlet weak var imageToShow: UIImageView!
+    @IBOutlet weak var button: UIButton!
+    
+    @IBAction func toggleAppreciation(_ sender: Any) {
+        
+    }
+    
     
 
 }
