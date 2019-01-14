@@ -11,24 +11,38 @@ import UIKit
 
 class PaintingsModel : NSObject, UITableViewDataSource, PaintingTableViewCellDelegate {
     func tappedLikeButton(on cell: PaintingTableViewCell) {
-        
+        guard let indexPath = tableView?.indexPath(for: cell)
+            else { fatalError("No cell")}
+        paintings[indexPath.row].isLiked.toggle()
+        cell.likeButton.alpha = paintings[indexPath.row].isLiked ? 1.0 : 0.33
     }
     
+    let reuseIdentifier = "cell"
     
     var paintings : [Painting] = []
     
-    weak var myTableView : UITableView?
+    weak var tableView : UITableView?
+    
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        self.tableView = tableView
+        return 1
+    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return paintings.count
-        myTableView = tableView
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "ImageCell", for: indexPath)
-        guard let paintingCell = cell as? PaintingTableViewCell else { return cell }
-        tableView.reloadData()
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? PaintingTableViewCell else { fatalError("No cell")}
         
+        cell.delegate = self
+        let painting = paintings[indexPath.row]
+        cell.imageView?.image = painting.image
+        cell.likeButton.alpha = paintings[indexPath.row].isLiked ? 1.0 : 0.33
+        
+        
+        return cell
     }
     
     override init() {
