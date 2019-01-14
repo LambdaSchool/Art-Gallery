@@ -19,8 +19,12 @@ class PaintingViewController: UIViewController {
         tableView.reloadData()
     }
    
+    weak var delegate: PaintingTableViewCellDelegate?
     
+    @IBOutlet weak var portraitView: UIImageView!
     @IBOutlet weak var tableView: UITableView!
+    
+    @IBOutlet weak var likeButton: UIButton!
     
 }
 

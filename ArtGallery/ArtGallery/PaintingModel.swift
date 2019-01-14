@@ -12,27 +12,42 @@ import UIKit
 class PaintingModel: NSObject, UITableViewDataSource, PaintingTableViewCellDelegate {
     
     func tappedLikeButton(on cell: PaintingTableViewCell) {
-        <#code#>
+        if isLiked == false {
+            
+        }
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        <#code#>
+        
+        
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        <#code#>
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
     }
     
-    weak var tableView: PaintingViewController?
+    func numberOfSections(in tableView: UITableView) -> Int {
+        weak var tableView: PaintingViewController?
+    }
+    
+    func loadImages() {
+        for n in 1...12 {
+            let imageName = "image\(n)"
+            if let imagePic = UIImage(named: imageName) {
+                // Initialize a painting
+                var painting = Painting(image: imagePic, isLiked: false)
+                // Add it to the paintings array
+                paintings.append(painting)
+            }
+        }
+    }
+    
     
     var paintings: [Painting] = []
     
-    for n in 1...12) {
-        let imageName = "image\(n)"
-        if let image = UIImage(named: imageName) {
-    // Initialize a painting
-        image = Painting(
-    // Add it to the paintings array
+    override init() {
+        loadImages()
     }
-    }
+    
+    
 }

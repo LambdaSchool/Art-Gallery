@@ -9,12 +9,19 @@
 import UIKit
 
 class PaintingTableViewCell: UITableViewCell {
-
+    
+    
+    @IBAction func toggledAppreciation(_ sender: UIButton) {
+         delegate?.tappedLikeButton(for: self)
+    }
+    
+    weak var delegate: PaintingTableViewCellDelegate?
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
-
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 

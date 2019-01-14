@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 struct Painting {
-    let image = UIImage(named: "")
+    var image = UIImage(named: "")
     var isLiked: Bool = false
     
 }
