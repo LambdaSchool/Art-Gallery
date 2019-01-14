@@ -1,5 +1,5 @@
 import Foundation
 
-class PaintingTableViewCellDelegate {
-    
+protocol PaintingTableViewCellDelegate: class {
+    func tappedLikeButton(on cell: PaintingTableViewCell)
 }
