@@ -22,15 +22,49 @@
                                 <rect key="frame" x="20" y="140" width="374" height="722"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="Y2m-8Q-hMN" customClass="PaintingTableViewCell">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ImageCell" id="Y2m-8Q-hMN" customClass="PaintingTableViewCell">
                                         <rect key="frame" x="0.0" y="28" width="374" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Y2m-8Q-hMN" id="XRD-Tn-pEu">
                                             <rect key="frame" x="0.0" y="0.0" width="374" height="43.666666666666664"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="ZBB-Uz-n4F">
+                                                    <rect key="frame" x="0.0" y="0.0" width="374" height="43.666666666666664"/>
+                                                    <subviews>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Dp0-Aa-Hxt">
+                                                            <rect key="frame" x="0.0" y="0.0" width="374" height="0.0"/>
+                                                        </imageView>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6pd-fs-hiX">
+                                                            <rect key="frame" x="0.0" y="20" width="374" height="23.666666666666671"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                            <state key="normal" title="Like"/>
+                                                            <connections>
+                                                                <action selector="likeButton:" destination="Y2m-8Q-hMN" eventType="touchUpInside" id="K0U-Qn-Sxe"/>
+                                                                <action selector="likeButtonTapped" destination="Y2m-8Q-hMN" eventType="touchUpInside" id="EOr-6Z-v0M"/>
+                                                                <action selector="toggledAppreciation:" destination="Y2m-8Q-hMN" eventType="touchUpInside" id="UgY-jA-1pd"/>
+                                                            </connections>
+                                                        </button>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="ZBB-Uz-n4F" firstAttribute="top" secondItem="XRD-Tn-pEu" secondAttribute="top" id="9kz-HU-tkf"/>
+                                                <constraint firstAttribute="trailing" secondItem="ZBB-Uz-n4F" secondAttribute="trailing" id="Q4g-np-JyP"/>
+                                                <constraint firstItem="ZBB-Uz-n4F" firstAttribute="leading" secondItem="XRD-Tn-pEu" secondAttribute="leading" id="flS-2d-aAm"/>
+                                                <constraint firstAttribute="bottom" secondItem="ZBB-Uz-n4F" secondAttribute="bottom" id="udg-5i-rqK"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="likeButton" destination="6pd-fs-hiX" id="RXT-6W-1ac"/>
+                                            <outlet property="portraitView" destination="Dp0-Aa-Hxt" id="1bN-TA-oF2"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="ahs-qg-Klc"/>
+                                    <outlet property="delegate" destination="pLb-oZ-GPa" id="Udu-gi-1hf"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -48,6 +82,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <customObject id="pLb-oZ-GPa" customClass="PaintingsModel" customModule="Art_Gallery" customModuleProvider="target"/>
             </objects>
             <point key="canvasLocation" x="825" y="726"/>
         </scene>
