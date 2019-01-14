@@ -9,6 +9,7 @@
 import UIKit
 
 class PaintingController {
+    
     private(set) var paintings: [Painting] = []
     
     func loadPaintingFromAssets() {

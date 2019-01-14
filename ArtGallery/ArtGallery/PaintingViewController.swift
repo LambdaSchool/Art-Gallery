@@ -44,6 +44,10 @@ class PaintingViewController: UIViewController, UITableViewDataSource, UITableVi
         
         return paintingCell
     }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 200
+    }
 }
 
 
