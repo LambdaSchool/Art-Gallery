@@ -20,6 +20,15 @@ class PaintingViewController: UIViewController, UITableViewDataSource, UITableVi
         tableView.reloadData()
     }
     
+    // MARK: - UITableViewDataSource
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        <#code#>
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        <#code#>
+    }
 
     /*
     // MARK: - Navigation
@@ -30,6 +39,8 @@ class PaintingViewController: UIViewController, UITableViewDataSource, UITableVi
         // Pass the selected object to the new view controller.
     }
     */
+    
+    // MARK: - Properties
     
     @IBOutlet weak var tableView: UITableView!
 }
