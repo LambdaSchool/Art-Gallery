@@ -8,17 +8,19 @@
 
 import UIKit
 
+
 class PaintingTableViewCell: UITableViewCell {
+    
+    @IBOutlet weak var paintingImageView: UIImageView!
+    @IBOutlet weak var likeButton: UIButton!
+    
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+    @IBAction func likeButton(_ sender: Any) {
+        
+        
+        
+        
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-
+    
+    
 }

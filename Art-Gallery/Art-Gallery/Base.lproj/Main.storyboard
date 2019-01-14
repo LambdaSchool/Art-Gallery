@@ -13,7 +13,7 @@
         <!--Art Gallery-->
         <scene sceneID="Z2f-Zf-aky">
             <objects>
-                <viewController id="fK6-VG-51M" sceneMemberID="viewController">
+                <viewController id="fK6-VG-51M" customClass="PaintingViewController" customModule="Art_Gallery" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Oyz-Fn-TRD">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -22,7 +22,7 @@
                                 <rect key="frame" x="0.0" y="116" width="375" height="551"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="414" id="MKe-V3-i93">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="414" id="MKe-V3-i93" customClass="PaintingTableViewCell" customModule="Art_Gallery" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="414"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="MKe-V3-i93" id="1gA-st-OJ3">
@@ -38,6 +38,9 @@
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mm3-R1-LmD">
                                                             <rect key="frame" x="0.0" y="343.5" width="359" height="30"/>
                                                             <state key="normal" title="Button"/>
+                                                            <connections>
+                                                                <action selector="likeButton:" destination="MKe-V3-i93" eventType="touchUpInside" id="5b4-5d-T5c"/>
+                                                            </connections>
                                                         </button>
                                                     </subviews>
                                                 </stackView>
@@ -49,8 +52,16 @@
                                                 <constraint firstAttribute="bottom" secondItem="5cw-jG-uhh" secondAttribute="bottom" constant="20" id="wP8-1u-NR0"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="likeButton" destination="mm3-R1-LmD" id="Koh-ps-N6c"/>
+                                            <outlet property="paintingImageView" destination="fLV-9p-UW1" id="3XF-z4-En5"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="WZ1-B0-h31" id="fh7-YY-ezN"/>
+                                    <outlet property="delegate" destination="WZ1-B0-h31" id="THg-yT-AC4"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -63,8 +74,12 @@
                         <viewLayoutGuide key="safeArea" id="ko5-NR-DhK"/>
                     </view>
                     <navigationItem key="navigationItem" title="Art Gallery" id="F7T-S8-VEs"/>
+                    <connections>
+                        <outlet property="tableView" destination="h0Y-yA-ovy" id="0IF-Z9-CEL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="msD-at-NTp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="WZ1-B0-h31" customClass="PaintingController"/>
             </objects>
             <point key="canvasLocation" x="1359.2" y="125.4872563718141"/>
         </scene>

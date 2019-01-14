@@ -16,6 +16,7 @@
 		27A41B3921ED293D00006A26 /* PaintingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A41B3821ED293D00006A26 /* PaintingController.swift */; };
 		27A41B4021ED2A1400006A26 /* PaintingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A41B3F21ED2A1400006A26 /* PaintingViewController.swift */; };
 		27A41B4321ED2A6A00006A26 /* PaintingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A41B4221ED2A6A00006A26 /* PaintingTableViewCell.swift */; };
+		27A41B4521ED35CB00006A26 /* PaintingTableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A41B4421ED35CB00006A26 /* PaintingTableViewDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		27A41B3821ED293D00006A26 /* PaintingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaintingController.swift; sourceTree = "<group>"; };
 		27A41B3F21ED2A1400006A26 /* PaintingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PaintingViewController.swift; path = ../PaintingViewController.swift; sourceTree = "<group>"; };
 		27A41B4221ED2A6A00006A26 /* PaintingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaintingTableViewCell.swift; sourceTree = "<group>"; };
+		27A41B4421ED35CB00006A26 /* PaintingTableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaintingTableViewDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 			children = (
 				27A41B2021ED1BA000006A26 /* AppDelegate.swift */,
 				27A41B2421ED1BA000006A26 /* Main.storyboard */,
+				27A41B4421ED35CB00006A26 /* PaintingTableViewDelegate.swift */,
 				27A41B3E21ED29B800006A26 /* View Controller */,
 				27A41B3B21ED295000006A26 /* Model Controllers */,
 				27A41B3A21ED294600006A26 /* Models */,
@@ -174,6 +177,7 @@
 			files = (
 				27A41B2121ED1BA000006A26 /* AppDelegate.swift in Sources */,
 				27A41B3921ED293D00006A26 /* PaintingController.swift in Sources */,
+				27A41B4521ED35CB00006A26 /* PaintingTableViewDelegate.swift in Sources */,
 				27A41B4321ED2A6A00006A26 /* PaintingTableViewCell.swift in Sources */,
 				27A41B3321ED25FF00006A26 /* Painting.swift in Sources */,
 				27A41B4021ED2A1400006A26 /* PaintingViewController.swift in Sources */,
