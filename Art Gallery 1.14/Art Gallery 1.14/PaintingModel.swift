@@ -18,15 +18,23 @@ class PaintingModel: NSObject, UITableViewDataSource, PaintingTableViewCellDeleg
     }
     
     func tappedLikeButton(on cell: PaintingTableViewCell) {
-        <#code#>
+        guard let indexPath = tableView?.indexPath(for: cell)
+            else { fatalError("cell not found") }
+        
+        paintings[indexPath.row].isLiked.toggle()
+        cell.likeButton.alpha = paintings[indexPath.row].isLiked ? 1.0: 0.33
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        <#code#>
+        paintings.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        <#code#>
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "PaintingCell") as?
+            PaintingTableViewCell else {
+                fatalError("Could not instantiate guranteed cell type.")
+        }
+
     }
     
 }
