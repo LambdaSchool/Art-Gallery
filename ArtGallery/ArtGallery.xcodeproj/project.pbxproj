@@ -13,9 +13,8 @@
 		4BF978E521ED1EF300E6231C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BF978E321ED1EF300E6231C /* LaunchScreen.storyboard */; };
 		4BF978ED21ED1F9100E6231C /* PaintingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF978EC21ED1F9100E6231C /* PaintingTableViewCell.swift */; };
 		4BF978EF21ED209C00E6231C /* Painting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF978EE21ED209C00E6231C /* Painting.swift */; };
-		4BF978F121ED20A900E6231C /* PaintingTableViewCellDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF978F021ED20A900E6231C /* PaintingTableViewCellDelegate.swift */; };
-		4BF978F321ED20BE00E6231C /* PaintingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF978F221ED20BE00E6231C /* PaintingModel.swift */; };
-		4BF978F521ED232300E6231C /* PaintingAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4BF978F421ED232300E6231C /* PaintingAssets.xcassets */; };
+		4BF978F521ED232300E6231C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4BF978F421ED232300E6231C /* Assets.xcassets */; };
+		4BF978F721ED38D400E6231C /* PaintingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF978F621ED38D400E6231C /* PaintingController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,9 +26,8 @@
 		4BF978E621ED1EF300E6231C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4BF978EC21ED1F9100E6231C /* PaintingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaintingTableViewCell.swift; sourceTree = "<group>"; };
 		4BF978EE21ED209C00E6231C /* Painting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Painting.swift; sourceTree = "<group>"; };
-		4BF978F021ED20A900E6231C /* PaintingTableViewCellDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaintingTableViewCellDelegate.swift; sourceTree = "<group>"; };
-		4BF978F221ED20BE00E6231C /* PaintingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaintingModel.swift; sourceTree = "<group>"; };
-		4BF978F421ED232300E6231C /* PaintingAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = PaintingAssets.xcassets; path = ../../PaintingAssets.xcassets; sourceTree = "<group>"; };
+		4BF978F421ED232300E6231C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../../Assets.xcassets; sourceTree = "<group>"; };
+		4BF978F621ED38D400E6231C /* PaintingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaintingController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,13 +61,12 @@
 			isa = PBXGroup;
 			children = (
 				4BF978DA21ED1EF100E6231C /* AppDelegate.swift */,
+				4BF978EE21ED209C00E6231C /* Painting.swift */,
+				4BF978F621ED38D400E6231C /* PaintingController.swift */,
 				4BF978DC21ED1EF100E6231C /* PaintingViewController.swift */,
 				4BF978EC21ED1F9100E6231C /* PaintingTableViewCell.swift */,
 				4BF978DE21ED1EF100E6231C /* Main.storyboard */,
-				4BF978EE21ED209C00E6231C /* Painting.swift */,
-				4BF978F021ED20A900E6231C /* PaintingTableViewCellDelegate.swift */,
-				4BF978F221ED20BE00E6231C /* PaintingModel.swift */,
-				4BF978F421ED232300E6231C /* PaintingAssets.xcassets */,
+				4BF978F421ED232300E6231C /* Assets.xcassets */,
 				4BF978E321ED1EF300E6231C /* LaunchScreen.storyboard */,
 				4BF978E621ED1EF300E6231C /* Info.plist */,
 			);
@@ -134,7 +131,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4BF978F521ED232300E6231C /* PaintingAssets.xcassets in Resources */,
+				4BF978F521ED232300E6231C /* Assets.xcassets in Resources */,
 				4BF978E521ED1EF300E6231C /* LaunchScreen.storyboard in Resources */,
 				4BF978E021ED1EF100E6231C /* Main.storyboard in Resources */,
 			);
@@ -148,11 +145,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				4BF978DD21ED1EF100E6231C /* PaintingViewController.swift in Sources */,
-				4BF978F321ED20BE00E6231C /* PaintingModel.swift in Sources */,
 				4BF978DB21ED1EF100E6231C /* AppDelegate.swift in Sources */,
 				4BF978ED21ED1F9100E6231C /* PaintingTableViewCell.swift in Sources */,
+				4BF978F721ED38D400E6231C /* PaintingController.swift in Sources */,
 				4BF978EF21ED209C00E6231C /* Painting.swift in Sources */,
-				4BF978F121ED20A900E6231C /* PaintingTableViewCellDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
