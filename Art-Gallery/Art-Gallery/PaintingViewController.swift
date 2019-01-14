@@ -10,6 +10,11 @@ import UIKit
 
 class PaintingViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, PaintingTableViewCellDelegate {
     
+    
+    func tappedLikeButton(on cell: PaintingTableViewCell) {
+        <#code#>
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -17,7 +22,7 @@ class PaintingViewController: UIViewController, UITableViewDataSource, UITableVi
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        <#code#>
+        return paintingController.numberOfPaintings
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -37,5 +42,7 @@ class PaintingViewController: UIViewController, UITableViewDataSource, UITableVi
         // Pass the selected object to the new view controller.
     }
     */
+    
+    let paintingController = PaintingController()
 
 }

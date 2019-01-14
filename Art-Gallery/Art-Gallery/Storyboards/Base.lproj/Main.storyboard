@@ -22,7 +22,7 @@
                                 <rect key="frame" x="0.0" y="116" width="375" height="551"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="414" id="MKe-V3-i93" customClass="PaintingTableViewCell" customModule="Art_Gallery" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="PaintingCell" rowHeight="414" id="MKe-V3-i93" customClass="PaintingTableViewCell" customModule="Art_Gallery" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="414"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="MKe-V3-i93" id="1gA-st-OJ3">
@@ -39,7 +39,7 @@
                                                             <rect key="frame" x="0.0" y="343.5" width="359" height="30"/>
                                                             <state key="normal" title="Button"/>
                                                             <connections>
-                                                                <action selector="likeButton:" destination="MKe-V3-i93" eventType="touchUpInside" id="5b4-5d-T5c"/>
+                                                                <action selector="tappedLikeButton:" destination="MKe-V3-i93" eventType="touchUpInside" id="QEK-48-oes"/>
                                                             </connections>
                                                         </button>
                                                     </subviews>
@@ -53,14 +53,14 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="likeButton" destination="mm3-R1-LmD" id="Koh-ps-N6c"/>
+                                            <outlet property="likeButton" destination="mm3-R1-LmD" id="Zav-j1-HOT"/>
                                             <outlet property="paintingImageView" destination="fLV-9p-UW1" id="3XF-z4-En5"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
-                                    <outlet property="dataSource" destination="WZ1-B0-h31" id="fh7-YY-ezN"/>
-                                    <outlet property="delegate" destination="WZ1-B0-h31" id="THg-yT-AC4"/>
+                                    <outlet property="dataSource" destination="fK6-VG-51M" id="zcK-tF-apf"/>
+                                    <outlet property="delegate" destination="fK6-VG-51M" id="Wg2-f0-hbO"/>
                                 </connections>
                             </tableView>
                         </subviews>
@@ -79,7 +79,6 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="msD-at-NTp" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <customObject id="WZ1-B0-h31" customClass="PaintingController"/>
             </objects>
             <point key="canvasLocation" x="1359.2" y="125.4872563718141"/>
         </scene>

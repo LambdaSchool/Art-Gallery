@@ -27,7 +27,7 @@
 		27A41B2A21ED1BA100006A26 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		27A41B2C21ED1BA100006A26 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		27A41B3221ED25FF00006A26 /* Painting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Painting.swift; sourceTree = "<group>"; };
-		27A41B3621ED290800006A26 /* PaintingAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = PaintingAssets.xcassets; path = ../../PaintingAssets.xcassets; sourceTree = "<group>"; };
+		27A41B3621ED290800006A26 /* PaintingAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = PaintingAssets.xcassets; sourceTree = "<group>"; };
 		27A41B3821ED293D00006A26 /* PaintingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaintingController.swift; sourceTree = "<group>"; };
 		27A41B3F21ED2A1400006A26 /* PaintingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PaintingViewController.swift; path = ../PaintingViewController.swift; sourceTree = "<group>"; };
 		27A41B4221ED2A6A00006A26 /* PaintingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaintingTableViewCell.swift; sourceTree = "<group>"; };
@@ -64,16 +64,13 @@
 		27A41B1F21ED1BA000006A26 /* Art-Gallery */ = {
 			isa = PBXGroup;
 			children = (
-				27A41B2021ED1BA000006A26 /* AppDelegate.swift */,
-				27A41B2421ED1BA000006A26 /* Main.storyboard */,
-				27A41B4421ED35CB00006A26 /* PaintingTableViewDelegate.swift */,
-				27A41B3E21ED29B800006A26 /* View Controller */,
-				27A41B3B21ED295000006A26 /* Model Controllers */,
+				27A41B4821ED414C00006A26 /* Helpers */,
 				27A41B3A21ED294600006A26 /* Models */,
-				27A41B2721ED1BA100006A26 /* Assets.xcassets */,
-				27A41B3621ED290800006A26 /* PaintingAssets.xcassets */,
-				27A41B2921ED1BA100006A26 /* LaunchScreen.storyboard */,
-				27A41B2C21ED1BA100006A26 /* Info.plist */,
+				27A41B3B21ED295000006A26 /* Model Controllers */,
+				27A41B4921ED416200006A26 /* View */,
+				27A41B3E21ED29B800006A26 /* View Controller */,
+				27A41B4621ED410500006A26 /* Storyboards */,
+				27A41B4721ED411900006A26 /* Resources */,
 			);
 			path = "Art-Gallery";
 			sourceTree = "<group>";
@@ -98,9 +95,44 @@
 			isa = PBXGroup;
 			children = (
 				27A41B3F21ED2A1400006A26 /* PaintingViewController.swift */,
-				27A41B4221ED2A6A00006A26 /* PaintingTableViewCell.swift */,
 			);
 			path = "View Controller";
+			sourceTree = "<group>";
+		};
+		27A41B4621ED410500006A26 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				27A41B2421ED1BA000006A26 /* Main.storyboard */,
+				27A41B2921ED1BA100006A26 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		27A41B4721ED411900006A26 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				27A41B2021ED1BA000006A26 /* AppDelegate.swift */,
+				27A41B2721ED1BA100006A26 /* Assets.xcassets */,
+				27A41B3621ED290800006A26 /* PaintingAssets.xcassets */,
+				27A41B2C21ED1BA100006A26 /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		27A41B4821ED414C00006A26 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				27A41B4421ED35CB00006A26 /* PaintingTableViewDelegate.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		27A41B4921ED416200006A26 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				27A41B4221ED2A6A00006A26 /* PaintingTableViewCell.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -328,7 +360,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = F29U3VL727;
-				INFOPLIST_FILE = "Art-Gallery/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Art-Gallery/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -346,7 +378,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = F29U3VL727;
-				INFOPLIST_FILE = "Art-Gallery/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Art-Gallery/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

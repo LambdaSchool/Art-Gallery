@@ -12,15 +12,14 @@ import UIKit
 class PaintingTableViewCell: UITableViewCell {
     
     @IBOutlet weak var paintingImageView: UIImageView!
+   
     @IBOutlet weak var likeButton: UIButton!
     
-
-    @IBAction func likeButton(_ sender: Any) {
-        
-        
+    @IBAction func tappedLikeButton(_ sender: UIButton) {
         
         
     }
     
+    weak var delegate: PaintingTableViewCellDelegate?
     
 }

@@ -9,7 +9,6 @@
 import Foundation
 
 protocol PaintingTableViewCellDelegate: class {
-    func likeButton(on cell: PaintingTableViewCell)
-    
+    func tappedLikeButton(on cell: PaintingTableViewCell)
 }
 
