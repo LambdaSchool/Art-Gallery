@@ -22,15 +22,43 @@
                                 <rect key="frame" x="20" y="116" width="335" height="551"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="paintingCell" rowHeight="150" id="eRM-5E-Uf3" customClass="PaintingTableViewCell" customModule="Art_Gallery" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="335" height="150"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="paintingCell" rowHeight="296" id="eRM-5E-Uf3" customClass="PaintingTableViewCell" customModule="Art_Gallery" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="335" height="296"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="eRM-5E-Uf3" id="mpO-d0-8XH">
-                                            <rect key="frame" x="0.0" y="0.0" width="335" height="149.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="335" height="295.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="c6w-MG-bkc">
+                                                    <rect key="frame" x="20" y="0.0" width="295" height="295.5"/>
+                                                    <subviews>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="W3c-Kc-ULb">
+                                                            <rect key="frame" x="19.5" y="0.0" width="256" height="256"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="256" id="4aq-oy-peH"/>
+                                                                <constraint firstAttribute="width" secondItem="W3c-Kc-ULb" secondAttribute="height" multiplier="1:1" id="jhk-QX-tbF"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7eT-TS-WtT">
+                                                            <rect key="frame" x="126" y="260" width="43" height="35.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                            <state key="normal" title="Button"/>
+                                                        </button>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="c6w-MG-bkc" secondAttribute="bottom" id="0Np-6l-wNn"/>
+                                                <constraint firstItem="c6w-MG-bkc" firstAttribute="leading" secondItem="mpO-d0-8XH" secondAttribute="leading" constant="20" id="fso-3n-Tfh"/>
+                                                <constraint firstAttribute="trailing" secondItem="c6w-MG-bkc" secondAttribute="trailing" constant="20" id="hxq-KF-62O"/>
+                                                <constraint firstItem="c6w-MG-bkc" firstAttribute="top" secondItem="mpO-d0-8XH" secondAttribute="top" id="tq6-Ww-2xL"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="delegate" destination="L2b-pG-B4U" id="njd-Er-Leg"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -48,6 +76,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <customObject id="L2b-pG-B4U" customClass="PaintingModel" customModule="Art_Gallery" customModuleProvider="target"/>
             </objects>
             <point key="canvasLocation" x="916" y="790.25487256371821"/>
         </scene>

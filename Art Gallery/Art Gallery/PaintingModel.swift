@@ -26,6 +26,8 @@ class PaintingModel: NSObject, UITableViewDataSource, PaintingTableViewCellDeleg
         <#code#>
     }
     
+    let reuseIdentifier = "paintingCell"
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         <#code#>
     }
