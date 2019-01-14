@@ -22,13 +22,41 @@
                                 <rect key="frame" x="20" y="116" width="335" height="551"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ArtCell" id="iit-xH-mys" customClass="PaintingTableViewCell" customModule="Art_Gallery_1_14" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="335" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ArtCell" rowHeight="256" id="iit-xH-mys" customClass="PaintingTableViewCell" customModule="Art_Gallery_1_14" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="335" height="256"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="iit-xH-mys" id="YYw-pv-Xd1">
-                                            <rect key="frame" x="0.0" y="0.0" width="335" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="335" height="255.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleAspectFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="fsP-q7-x0J">
+                                                    <rect key="frame" x="35" y="11" width="265" height="234"/>
+                                                    <subviews>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dfx-cz-lnB">
+                                                            <rect key="frame" x="0.0" y="0.0" width="265" height="185"/>
+                                                        </imageView>
+                                                        <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RXc-Ts-a8q">
+                                                            <rect key="frame" x="0.0" y="205" width="265" height="29"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                            <state key="normal" title="Button"/>
+                                                            <connections>
+                                                                <action selector="toggleIsLiked:" destination="iit-xH-mys" eventType="touchUpInside" id="cxt-Tj-d4k"/>
+                                                            </connections>
+                                                        </button>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottomMargin" secondItem="fsP-q7-x0J" secondAttribute="bottom" id="0FY-zi-GnL"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="fsP-q7-x0J" secondAttribute="trailing" constant="20" id="F17-31-pPV"/>
+                                                <constraint firstItem="fsP-q7-x0J" firstAttribute="leading" secondItem="YYw-pv-Xd1" secondAttribute="leadingMargin" constant="20" id="jsD-kT-LQU"/>
+                                                <constraint firstItem="fsP-q7-x0J" firstAttribute="top" secondItem="YYw-pv-Xd1" secondAttribute="topMargin" id="uaV-QP-oNR"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="likeButton" destination="RXc-Ts-a8q" id="Lye-Cq-cWq"/>
+                                            <outlet property="paintingView" destination="dfx-cz-lnB" id="yVv-GD-qms"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>

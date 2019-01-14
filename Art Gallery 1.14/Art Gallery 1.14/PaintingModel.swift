@@ -26,7 +26,7 @@ class PaintingModel: NSObject, UITableViewDataSource, PaintingTableViewCellDeleg
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        paintings.count
+        return paintings.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -34,7 +34,15 @@ class PaintingModel: NSObject, UITableViewDataSource, PaintingTableViewCellDeleg
             PaintingTableViewCell else {
                 fatalError("Could not instantiate guranteed cell type.")
         }
-
+        
+        cell.delegate = self
+        
+        cell.paintingView.image = paintings[indexPath.row].image
+        let title = "👍"
+        cell.likeButton?.setTitle(title, for: .normal)
+        cell.likeButton.alpha = paintings[indexPath.row].isLiked ? 1.0 : 0.33
+        
+        return cell
     }
     
 }
