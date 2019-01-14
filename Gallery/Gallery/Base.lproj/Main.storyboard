@@ -22,13 +22,41 @@
                                 <rect key="frame" x="20" y="116" width="335" height="551"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="galleryCell" id="KBP-Du-asS" customClass="PaintingTableViewCell" customModule="Gallery" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="335" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="galleryCell" rowHeight="283" id="KBP-Du-asS" customClass="PaintingTableViewCell" customModule="Gallery" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="335" height="283"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="KBP-Du-asS" id="Bit-4O-MdD">
-                                            <rect key="frame" x="0.0" y="0.0" width="335" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="335" height="282.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Iyu-TY-ZGl">
+                                                    <rect key="frame" x="20" y="5" width="295" height="212.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="212.5" id="fQ4-gL-3JC"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GHF-By-rLw">
+                                                    <rect key="frame" x="131" y="247.5" width="73" height="30"/>
+                                                    <state key="normal" title="Like"/>
+                                                    <connections>
+                                                        <action selector="likeButton:" destination="KBP-Du-asS" eventType="touchUpInside" id="1Sf-m5-6hp"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Iyu-TY-ZGl" firstAttribute="leading" secondItem="Bit-4O-MdD" secondAttribute="leading" constant="20" id="2eD-LE-S0Y"/>
+                                                <constraint firstAttribute="trailing" secondItem="GHF-By-rLw" secondAttribute="trailing" constant="131" id="3W9-Zj-5nl"/>
+                                                <constraint firstItem="GHF-By-rLw" firstAttribute="leading" secondItem="Bit-4O-MdD" secondAttribute="leading" constant="131" id="8M8-od-ZNh"/>
+                                                <constraint firstAttribute="trailing" secondItem="Iyu-TY-ZGl" secondAttribute="trailing" constant="20" id="Erm-9C-mBx"/>
+                                                <constraint firstItem="GHF-By-rLw" firstAttribute="top" secondItem="Iyu-TY-ZGl" secondAttribute="bottom" constant="30" id="RIe-oH-Hf4"/>
+                                                <constraint firstAttribute="bottom" secondItem="GHF-By-rLw" secondAttribute="bottom" constant="5" id="ZjW-YY-8Wd"/>
+                                                <constraint firstItem="Iyu-TY-ZGl" firstAttribute="top" secondItem="Bit-4O-MdD" secondAttribute="top" constant="5" id="ixR-KE-KhK"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="artImage" destination="Iyu-TY-ZGl" id="LRp-D2-24v"/>
+                                            <outlet property="likeButton" destination="GHF-By-rLw" id="UFZ-6Q-tbA"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -49,7 +77,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="841" y="134"/>
+            <point key="canvasLocation" x="840.79999999999995" y="133.5832083958021"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="tqy-IK-diC">

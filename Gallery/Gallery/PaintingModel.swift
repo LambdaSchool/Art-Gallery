@@ -7,7 +7,17 @@
 //
 
 import Foundation
+import UIKit
 
-class PaintingModel {
+class PaintingModel: NSObject {
+    
+    weak var tableView: PaintingViewController?
+    var paintings: [Painting] = []
+
+    func toggleIsLiked(for painting: Painting){
+       var painting = painting
+        painting.isLiked = !painting.isLiked
+print(painting.isLiked)
+    }
     
 }
