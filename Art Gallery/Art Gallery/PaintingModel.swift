@@ -11,7 +11,6 @@ import UIKit
 class PaintingModel: NSObject, UITableViewDataSource, PaintingTableViewCellDelegate {
     
     override init() {
-        
         for i in 1...12 {
             
             let imageName = "Image\(i)"

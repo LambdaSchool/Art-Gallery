@@ -40,9 +40,12 @@
                                                             </constraints>
                                                         </imageView>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7eT-TS-WtT">
-                                                            <rect key="frame" x="126" y="260" width="43" height="35.5"/>
+                                                            <rect key="frame" x="132.5" y="260" width="30" height="35.5"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                            <state key="normal" title="Button"/>
+                                                            <state key="normal" title="lit"/>
+                                                            <connections>
+                                                                <action selector="toggledAppreciation:" destination="eRM-5E-Uf3" eventType="touchUpInside" id="Y1H-iY-byL"/>
+                                                            </connections>
                                                         </button>
                                                     </subviews>
                                                 </stackView>
@@ -54,6 +57,10 @@
                                                 <constraint firstItem="c6w-MG-bkc" firstAttribute="top" secondItem="mpO-d0-8XH" secondAttribute="top" id="tq6-Ww-2xL"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="likeButton" destination="7eT-TS-WtT" id="r5z-st-SvC"/>
+                                            <outlet property="portraitView" destination="W3c-Kc-ULb" id="WUm-CU-IXb"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
