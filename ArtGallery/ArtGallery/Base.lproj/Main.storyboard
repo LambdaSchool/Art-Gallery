@@ -22,7 +22,7 @@
                                 <rect key="frame" x="20" y="116" width="335" height="551"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="PaintingCell" rowHeight="300" id="atK-Ho-md5">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="PaintingCell" rowHeight="300" id="atK-Ho-md5" customClass="PaintingTableViewCell" customModule="ArtGallery" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="335" height="300"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="atK-Ho-md5" id="wbH-xO-rcw">
@@ -39,6 +39,9 @@
                                                             <rect key="frame" x="0.0" y="270.5" width="295" height="29"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                             <state key="normal" title="Button"/>
+                                                            <connections>
+                                                                <action selector="toggledAppreciation:" destination="atK-Ho-md5" eventType="touchUpInside" id="k9W-3H-YDa"/>
+                                                            </connections>
                                                         </button>
                                                     </subviews>
                                                 </stackView>
@@ -50,6 +53,10 @@
                                                 <constraint firstItem="hZN-ND-gpx" firstAttribute="leading" secondItem="wbH-xO-rcw" secondAttribute="leading" constant="20" id="wns-BU-H8y"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="likeButton" destination="FvU-CC-G4F" id="6nA-J9-u5E"/>
+                                            <outlet property="portraitView" destination="9pM-fM-Djt" id="hOu-de-5LD"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>

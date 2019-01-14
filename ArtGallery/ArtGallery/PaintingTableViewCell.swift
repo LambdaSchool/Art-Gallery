@@ -9,16 +9,13 @@
 import UIKit
 
 class PaintingTableViewCell: UITableViewCell {
-
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+    @IBOutlet weak var portraitView: UIImageView!
+    @IBOutlet weak var likeButton: UIButton!
+    
+    weak var delegate: PaintingTableViewCellDelegate?
+    
+    @IBAction func toggledAppreciation(_ sender: Any) {
+        delegate?.likeButtonWasTapped(on: self)
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-
+    
 }
