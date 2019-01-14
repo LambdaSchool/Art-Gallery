@@ -7,9 +7,8 @@ class PaintingTableViewCell: UITableViewCell {
     @IBOutlet weak var likeButton: UIButton!
     @IBOutlet weak var paintingView: UIImageView!
     
-    @IBAction func toggleIsLiked(_ sender: Any) {
+    @IBAction func toggleAppreciation(_ sender: Any) {
         delegate?.tappedLikeButton(on: self)
         
     }
-    
 }

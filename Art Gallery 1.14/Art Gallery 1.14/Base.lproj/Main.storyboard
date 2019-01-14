@@ -79,9 +79,9 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <customObject id="adC-VR-dvC" userLabel="PaintingsModel"/>
+                <customObject id="adC-VR-dvC" userLabel="Painting Model" customClass="PaintingModel" customModule="Art_Gallery_1_14" customModuleProvider="target"/>
             </objects>
-            <point key="canvasLocation" x="980" y="26.53673163418291"/>
+            <point key="canvasLocation" x="1033" y="27"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="yf6-I2-FkZ">
