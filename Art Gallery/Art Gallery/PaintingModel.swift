@@ -15,9 +15,9 @@ class PaintingModel: NSObject, UITableViewDataSource, PaintingTableViewCellDeleg
         for i in 1...12 {
             
             let imageName = "Image\(i)"
-            let image = UIImage(named: imageName)
+            guard let image = UIImage(named: imageName) else {return}
             
-            let painting = Painting(image: image!)
+            let painting = Painting(image: image)
             paintings.append(painting)
         }
     }
