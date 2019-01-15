@@ -13,14 +13,7 @@ import UIKit
 
 
 struct Painting {
-    var isLiked: Bool
     let image: UIImage
-    
-    init(isLiked: Bool = false, image: UIImage) {
-        
-        self.isLiked = isLiked
-        self.image = image
-        
-    }
+    var isLiked: Bool = false
     
 }

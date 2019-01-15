@@ -7,6 +7,11 @@
 //
 
 import Foundation
+import UIKit
 
 
 // A custom protocol to communcate between cell and model
+
+protocol PaintingTableViewCellDelegate: class {
+    func tappedLikeButton(on cell: PaintingTableViewCell)
+}

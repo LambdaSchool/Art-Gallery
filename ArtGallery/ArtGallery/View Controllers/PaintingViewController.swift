@@ -8,28 +8,57 @@
 
 import UIKit
 
-class PaintingViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+    
+
+class PaintingViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, PaintingTableViewCellDelegate {
+    
+    var paintings: [Painting] = []
     
     //MARK: - Setting up delegates
     
+    func tappedLikeButton(on cell: PaintingTableViewCell) {
+        guard let indexPath = tableView.indexPath(for: cell) else { return }
+        if paintings[indexPath.row].isLiked == false {
+            paintings[indexPath.row].isLiked = true
+            cell.button.setTitle("Unliked", for: .normal)
+        } else {
+            paintings[indexPath.row].isLiked = false
+            cell.button.setTitle("Liked", for: .normal)
+        }
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        <#code#>
+        return paintings.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        <#code#>
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! PaintingTableViewCell
+        
+        cell.imageView!.image = paintings[indexPath.row].image
+        cell.textLabel?.text = ""
+        
+        cell.delegate = self
+        
+        return cell
+        
     }
     
+    //MARK: - Loading
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        var counter: Int = 1
+        
+        while counter <= 12 {
+            paintings.append(Painting(image: UIImage(named: "Image\(counter)")!, isLiked: false))
+            counter += 1
+        }
+        
+        tableView.reloadData()
+        
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        tableView.reloadData()
-    }
     
 
     /*

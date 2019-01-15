@@ -6,7 +6,14 @@
 //  Copyright © 2019 Rabbit Hole Fashion. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 // Store application status
 
+//class PaintingModel: NSObject, UITableViewDataSource, UITableViewDelegate {
+//
+//    weak var tableView = UITableView
+//
+//
+//
+//}

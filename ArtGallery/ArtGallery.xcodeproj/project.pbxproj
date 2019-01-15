@@ -63,9 +63,7 @@
 			isa = PBXGroup;
 			children = (
 				CA0B752021ED2F3900189DE8 /* AppDelegate.swift */,
-				CA0B753A21ED389D00189DE8 /* PaintingTableViewCellDelegate.swift */,
-				CA0B753C21ED391300189DE8 /* PaintingModel.swift */,
-				CA0B753821ED380400189DE8 /* Painting.swift */,
+				CA0B753E21ED3D4000189DE8 /* Model */,
 				CA0B752421ED2F3900189DE8 /* Main.storyboard */,
 				CA0B753721ED36FA00189DE8 /* View Controllers */,
 				CA0B752721ED2F3A00189DE8 /* Assets.xcassets */,
@@ -82,6 +80,16 @@
 				CA0B753421ED30A900189DE8 /* PaintingTableViewCell.swift */,
 			);
 			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		CA0B753E21ED3D4000189DE8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CA0B753A21ED389D00189DE8 /* PaintingTableViewCellDelegate.swift */,
+				CA0B753C21ED391300189DE8 /* PaintingModel.swift */,
+				CA0B753821ED380400189DE8 /* Painting.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
