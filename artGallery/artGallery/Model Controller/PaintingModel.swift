@@ -32,9 +32,7 @@ class PaintingModel: NSObject {
         }
     }
     
-    func toggleIsLiked(for painting: Painting) {
-        painting.isLiked = !painting.isLiked
-    }
+    
 }
 
 //MARK: - UITableViewDataSource Methods
@@ -53,8 +51,13 @@ extension PaintingModel : UITableViewDataSource , PaintingTableViewCellDelegate{
         return cell
     }
     
+    func toggleIsLiked(for painting: Painting) {
+        painting.isLiked = !painting.isLiked
+    }
+    
     func tappedLikeButton(on cell: PaintingTableViewCell) {
         print("delegate was triggered")
+        //This is where you change the property on the data model
         
         guard let indexPath = myTableView?.indexPath(for: cell) else { return }
         

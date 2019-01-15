@@ -18,7 +18,7 @@ class PaintingTableViewCell: UITableViewCell {
     //MARK: - IBOutlets
     @IBOutlet weak var portratiView: UIImageView!
     @IBOutlet weak var likeButton: UIButton!
-    var painting: Painting? {
+    var painting: Painting? { //this is the painting that was selected in the cell for at row on the table view
         didSet {
             updateViews()
         }
@@ -34,11 +34,13 @@ class PaintingTableViewCell: UITableViewCell {
     }
     
     func updateViews(){
+        //grab the painting that was pulled from the cell for at row on the table view
         guard let painting = painting else { return }
+        //condition statement for the painting isLiked property for the button title
         let likeButtonTitle = painting.isLiked ? "Unlike" : "Like"
         likeButton.setTitle(likeButtonTitle, for: .normal)
         
-        portratiView.image = painting.image
+        portratiView.image = painting.image //set the image view
     }
     
 
