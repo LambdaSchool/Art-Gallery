@@ -15,7 +15,11 @@ class PaintingViewController: UIViewController, UITableViewDataSource, UITableVi
     let paintingController = PaintingController()
     
     func tappedLikeButton(on cell: PaintingTableViewCell) {
-        // this needs to be 
+        // this needs to be writteen
+        guard let indexPath = tableView.indexPath(for: cell) else { return }
+        
+        paintingController.toggleIsLiked(at: indexPath)
+        tableView.reloadRows(at: [indexPath], with: .automatic)
         
     }
     

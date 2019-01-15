@@ -11,11 +11,15 @@ import UIKit
 
 class PaintingTableViewCell: UITableViewCell {
     
+//    static let reuseIdentifier = "PaintingCell"
+    
     @IBOutlet weak var paintingImageView: UIImageView!
    
     @IBOutlet weak var likeButton: UIButton!
     
     @IBAction func tappedLikeButton(_ sender: UIButton) {
+        delegate?.tappedLikeButton(on: self)
+        
         
         
     }

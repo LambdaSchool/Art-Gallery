@@ -16,7 +16,6 @@ protocol PaintingTableViewCellDelegate: class {
 
 class PaintingController {
     
- 
     private(set) var paintings: [Painting] = []
     
     init() {
