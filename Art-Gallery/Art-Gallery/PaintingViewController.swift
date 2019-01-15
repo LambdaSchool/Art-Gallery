@@ -15,7 +15,7 @@ class PaintingViewController: UIViewController, UITableViewDataSource, UITableVi
     let paintingController = PaintingController()
     
     func tappedLikeButton(on cell: PaintingTableViewCell) {
-        // this needs to be writteen
+
         guard let indexPath = tableView.indexPath(for: cell) else { return }
         
         paintingController.toggleIsLiked(at: indexPath)
@@ -50,17 +50,6 @@ class PaintingViewController: UIViewController, UITableViewDataSource, UITableVi
     
     
     @IBOutlet weak var tableView: UITableView!
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
     
 
 }
