@@ -15,19 +15,31 @@ protocol PaintingTableViewCellDelegate: class {
 
 class PaintingTableViewCell: UITableViewCell {
     
+    //MARK: - IBOutlets
+    @IBOutlet weak var portratiView: UIImageView!
+    @IBOutlet weak var likeButton: UIButton!
+    var painting: Painting? {
+        didSet {
+            updateViews()
+        }
+    }
+    
     //MARK: - Properties
     weak var delegate: PaintingTableViewCellDelegate?
     
-
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+    //MARK: - IBActions
+    @IBAction func toggledAppreciation(_ sender: Any) {
+        delegate?.tappedLikeButton(on: self)
+        print("button pressed")
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    
+    func updateViews(){
+        guard let painting = painting else { return }
+        let likeButtonTitle = painting.isLiked ? "Unlike" : "Like"
+        likeButton.setTitle(likeButtonTitle, for: .normal)
+        
+        portratiView.image = painting.image
     }
+    
 
 }
