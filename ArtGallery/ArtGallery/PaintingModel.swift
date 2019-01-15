@@ -9,43 +9,27 @@
 import Foundation
 import UIKit
 
-class PaintingModel: NSObject, UITableViewDataSource, PaintingTableViewCellDelegate {
+class PaintingModel {
     
-    func tappedLikeButton(on cell: PaintingTableViewCell) {
-        if isLiked == false {
-            
-        }
+    func toggleIsLiked(for painting: Painting) {
+        painting.isLiked = !painting.isLiked
     }
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
-        
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-    }
-    
-    func numberOfSections(in tableView: UITableView) -> Int {
-        weak var tableView: PaintingViewController?
-    }
-    
+  
     func loadImages() {
         for n in 1...12 {
             let imageName = "image\(n)"
             if let imagePic = UIImage(named: imageName) {
-                // Initialize a painting
-                var painting = Painting(image: imagePic, isLiked: false)
-                // Add it to the paintings array
+                let painting = Painting(image: imagePic)
                 paintings.append(painting)
             }
         }
     }
     
     
+    
     var paintings: [Painting] = []
     
-    override init() {
+    init() {
         loadImages()
     }
     

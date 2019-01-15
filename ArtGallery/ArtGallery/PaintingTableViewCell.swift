@@ -12,20 +12,30 @@ class PaintingTableViewCell: UITableViewCell {
     
     
     @IBAction func toggledAppreciation(_ sender: UIButton) {
-         delegate?.tappedLikeButton(for: self)
+        delegate?.tappedLikeButton(on: self)
     }
+    
+    @IBOutlet weak var portraitView: UIImageView!
+    
+    @IBOutlet weak var likeButton: UIButton!
     
     weak var delegate: PaintingTableViewCellDelegate?
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+    private func updateViews() {
+        guard let painting = painting else { return }
+        
+        portraitView.image = painting.image
+    
+        let likeButtonTitle = painting.isLiked ? "Unlike" : "Like"
+        likeButton.setTitle(likeButtonTitle, for: .normal)
     }
     
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    var painting: Painting? {
+        didSet { //property observer, observes when note gets set and then does something
+            updateViews()
+        }
+        
+        
     }
-
+  
 }
