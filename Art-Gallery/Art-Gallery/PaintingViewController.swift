@@ -35,9 +35,12 @@ class PaintingViewController: UIViewController, UITableViewDataSource, UITableVi
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier, for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier, for: indexPath) as! PaintingTableViewCell
+        let painting = paintingController.painting(for: indexPath)
         
-        return 
+        cell.paintingImageView.image = painting.image
+        
+        return cell
 
         
     }
