@@ -10,9 +10,13 @@ import UIKit
 
 class PaintingViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, PaintingTableViewCellDelegate {
     
+    let reuseIdentifier = "PaintingCell"
+    
+    let paintingController = PaintingController()
     
     func tappedLikeButton(on cell: PaintingTableViewCell) {
-        <#code#>
+        // this needs to be 
+        
     }
     
     override func viewDidLoad() {
@@ -22,11 +26,16 @@ class PaintingViewController: UIViewController, UITableViewDataSource, UITableVi
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return paintingController.numberOfPaintings
+       return paintingController.paintings.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        <#code#>
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier, for: indexPath)
+        
+        return 
+
+        
     }
     
     
@@ -43,6 +52,5 @@ class PaintingViewController: UIViewController, UITableViewDataSource, UITableVi
     }
     */
     
-    let paintingController = PaintingController()
 
 }

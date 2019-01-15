@@ -45,6 +45,7 @@
                                                     </subviews>
                                                 </stackView>
                                             </subviews>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
                                                 <constraint firstItem="5cw-jG-uhh" firstAttribute="top" secondItem="1gA-st-OJ3" secondAttribute="top" constant="20" id="c2f-jz-75a"/>
                                                 <constraint firstItem="5cw-jG-uhh" firstAttribute="leading" secondItem="1gA-st-OJ3" secondAttribute="leading" constant="8" id="k9g-eg-GUF"/>

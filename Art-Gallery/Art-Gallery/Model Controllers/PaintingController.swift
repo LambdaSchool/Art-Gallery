@@ -9,12 +9,17 @@
 import Foundation
 import UIKit
 
-class PaintingController {
 
+protocol PaintingTableViewCellDelegate: class {
+    func tappedLikeButton(on cell: PaintingTableViewCell)
+}
+
+class PaintingController {
+    
+ 
     private(set) var paintings: [Painting] = []
     
-    
-    private init() {
+    init() {
         for index in 1...12 {
             let name: String = "Image\(index)"
             guard let image = UIImage(named: name)  else { continue }
@@ -23,16 +28,11 @@ class PaintingController {
         }
     }
     
-    // need functions here for:
-    // count (number of paintings)
-    // paintat
-    
-    
     func numberOfPaintings() -> Int {
         return paintings.count
     }
     
-
+ 
 
 
 }

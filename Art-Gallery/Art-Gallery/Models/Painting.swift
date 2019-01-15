@@ -9,7 +9,13 @@
 import Foundation
 import UIKit
 
-struct Painting {
+class Painting {
     var image: UIImage
-    var isLiked: Bool = false
+    var isLiked: Bool
+    
+    
+    init(image: UIImage, isLiked: Bool = false) {
+        self.image = image
+        self.isLiked = isLiked
+    }
 }
