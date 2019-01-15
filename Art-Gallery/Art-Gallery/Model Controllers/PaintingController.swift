@@ -35,8 +35,10 @@ class PaintingController {
     func painting(for indexPath: IndexPath) -> Painting {
         return paintings[indexPath.row]
     }
- 
-
+    
+    func toggleIsLiked(at indexPath: IndexPath) {
+        paintings[indexPath.row].isLiked.toggle()
+    }
 
 }
 
