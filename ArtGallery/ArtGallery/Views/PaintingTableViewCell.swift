@@ -35,6 +35,9 @@ class PaintingTableViewCell: UITableViewCell {
         }
         
         portraitView.image = painting.image
+        portraitView.layer.cornerRadius = 8
+        portraitView.layer.borderWidth = 5
+        portraitView.layer.borderColor = UIColor.yellow.cgColor
     }
     
     @IBAction func toggledAppreciation(_ sender: Any) {

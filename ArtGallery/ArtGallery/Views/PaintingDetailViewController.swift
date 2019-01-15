@@ -17,7 +17,7 @@ class PaintingDetailViewController: UIViewController {
     }
     
     @IBAction func done(_ sender: Any) {
-        
+        dismiss(animated: true, completion: nil)
     }
     
     
