@@ -15,9 +15,8 @@ class PaintingModel: NSObject {
     var paintings: [Painting] = []
 
     func toggleIsLiked(for painting: Painting){
-       var painting = painting
-        painting.isLiked = !painting.isLiked
-print(painting.isLiked)
+        guard let index = paintings.index(of: painting) else { return }
+        paintings[index].isLiked = !paintings[index].isLiked
     }
     
 }

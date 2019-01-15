@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class Painting {
+struct Painting: Equatable {
     var image: UIImage?
     var isLiked: Bool
     
