@@ -11,12 +11,16 @@ import UIKit
 class PaintingModel: NSObject, UITableViewDataSource, PaintingTableViewCellDelegate {
     
     override init() {
+        super.init()
+        self.imageLoader()
+    }
+    
+    func imageLoader() {
         for i in 1...12 {
-            
             let imageName = "Image\(i)"
             guard let image = UIImage(named: imageName) else {return}
-            
             let painting = Painting(image: image)
+            
             paintings.append(painting)
         }
     }
@@ -35,7 +39,7 @@ class PaintingModel: NSObject, UITableViewDataSource, PaintingTableViewCellDeleg
         
         cell.likeButton.setTitle(title, for: .normal)
         cell.portraitView.image = painting.image
-        cell.likeButton.alpha = painting.isLiked ? 1.00 : 0.33
+        cell.likeButton.alpha = painting.isLiked ? 1.0 : 0.33
         cell.delegate = self
         
         return cell
@@ -46,14 +50,14 @@ class PaintingModel: NSObject, UITableViewDataSource, PaintingTableViewCellDeleg
         var painting = paintings[indexPath.row]
         painting.isLiked.toggle()
         
-        print("Button tapped")
+        print("TappedLikeButton func triggered")
         
-        cell.likeButton.alpha = painting.isLiked ? 1.00 : 0.33
+        cell.likeButton.alpha = painting.isLiked ? 1.0 : 0.33
     }
     
     //MARK: - Properties
     
-    var paintings: [Painting] = []
+    private(set) var paintings: [Painting] = []
     
     weak var tableView: UITableView?
 }

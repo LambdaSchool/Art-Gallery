@@ -12,6 +12,8 @@ class PaintingTableViewCell: UITableViewCell {
 
     @IBAction func toggledAppreciation(_ sender: Any) {
         delegate?.tappedLikeButton(on: self)
+        
+        print("button tapped")
     }
     
     //MARK: - Properties

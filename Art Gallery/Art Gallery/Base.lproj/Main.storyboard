@@ -40,7 +40,7 @@
                                                         </imageView>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7eT-TS-WtT">
                                                             <rect key="frame" x="132.5" y="260" width="30" height="35.5"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                             <state key="normal" title="lit"/>
                                                             <connections>
                                                                 <action selector="toggledAppreciation:" destination="eRM-5E-Uf3" eventType="touchUpInside" id="Y1H-iY-byL"/>
