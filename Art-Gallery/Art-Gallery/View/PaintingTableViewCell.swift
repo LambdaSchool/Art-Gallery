@@ -20,8 +20,6 @@ class PaintingTableViewCell: UITableViewCell {
     @IBAction func tappedLikeButton(_ sender: UIButton) {
         delegate?.tappedLikeButton(on: self)
         
-        
-        
     }
     
     weak var delegate: PaintingTableViewCellDelegate?

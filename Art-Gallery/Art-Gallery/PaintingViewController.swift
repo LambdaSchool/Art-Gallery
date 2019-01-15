@@ -40,6 +40,9 @@ class PaintingViewController: UIViewController, UITableViewDataSource, UITableVi
         
         cell.paintingImageView.image = painting.image
         
+        let buttonText = painting.isLiked ? "Unlike" : "Like"
+        cell.likeButton.setTitle(buttonText, for: .normal)
+        
         return cell
 
         
