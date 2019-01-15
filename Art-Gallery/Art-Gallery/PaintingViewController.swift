@@ -19,7 +19,7 @@ class PaintingViewController: UIViewController, UITableViewDataSource, UITableVi
         guard let indexPath = tableView.indexPath(for: cell) else { return }
         
         paintingController.toggleIsLiked(at: indexPath)
-        tableView.reloadRows(at: [indexPath], with: .automatic)
+        tableView.reloadData()
         
     }
     

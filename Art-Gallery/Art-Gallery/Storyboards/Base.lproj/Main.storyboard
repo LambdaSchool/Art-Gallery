@@ -33,10 +33,13 @@
                                                     <rect key="frame" x="8" y="20" width="359" height="373.5"/>
                                                     <subviews>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fLV-9p-UW1">
-                                                            <rect key="frame" x="0.0" y="0.0" width="359" height="335.5"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="359" height="335"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" secondItem="fLV-9p-UW1" secondAttribute="height" multiplier="359:335" id="RyE-9u-aTc"/>
+                                                            </constraints>
                                                         </imageView>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mm3-R1-LmD">
-                                                            <rect key="frame" x="0.0" y="343.5" width="359" height="30"/>
+                                                            <rect key="frame" x="0.0" y="343" width="359" height="30.5"/>
                                                             <state key="normal" title="Button"/>
                                                             <connections>
                                                                 <action selector="tappedLikeButton:" destination="MKe-V3-i93" eventType="touchUpInside" id="QEK-48-oes"/>
