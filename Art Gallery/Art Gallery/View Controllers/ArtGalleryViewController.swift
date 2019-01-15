@@ -35,10 +35,13 @@ class ArtGalleryViewController: UIViewController, UITableViewDelegate, UITableVi
         tableView.reloadRows(at: [indexPath], with: .automatic)
     }
     
-
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        tableView.reloadData()
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "PaintingDetail" {
+            guard let paintingDetailVC = segue.destination as? PaintingDetailViewController,
+                let cell = sender as? PaintingTableViewCell else { return }
+            
+            paintingDetailVC.painting = cell.painting
+        }
     }
     
     let paintingsController = PaintingsController()

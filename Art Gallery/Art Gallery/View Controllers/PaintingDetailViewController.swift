@@ -13,18 +13,17 @@ class PaintingDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        if let painting = painting {
+            paintingLabel.text = painting.information
+        }
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func dismissVC(_ sender: UIButton) {
+        self.dismiss(animated: true, completion: nil)
     }
-    */
+    
+    @IBOutlet weak var paintingLabel: UILabel!
+    
+    var painting: Painting?
 
 }

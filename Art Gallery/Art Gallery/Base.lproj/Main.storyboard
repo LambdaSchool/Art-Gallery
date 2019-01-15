@@ -22,15 +22,15 @@
                                 <rect key="frame" x="20" y="64" width="335" height="603"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CellIdentifier" rowHeight="305" id="E7k-uZ-tBt" customClass="PaintingTableViewCell" customModule="Art_Gallery" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="335" height="305"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CellIdentifier" rowHeight="316" id="E7k-uZ-tBt" customClass="PaintingTableViewCell" customModule="Art_Gallery" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="335" height="316"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="E7k-uZ-tBt" id="I3E-NW-dsw">
-                                            <rect key="frame" x="0.0" y="0.0" width="335" height="304.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="335" height="315.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="NiP-Si-lCo">
-                                                    <rect key="frame" x="20" y="0.0" width="295" height="304.5"/>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="NiP-Si-lCo">
+                                                    <rect key="frame" x="20" y="0.0" width="295" height="315.5"/>
                                                     <subviews>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="252" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ntl-qs-Gi3">
                                                             <rect key="frame" x="0.0" y="0.0" width="295" height="256"/>
@@ -39,7 +39,7 @@
                                                             </constraints>
                                                         </imageView>
                                                         <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JwJ-rX-CXc">
-                                                            <rect key="frame" x="0.0" y="276" width="295" height="28.5"/>
+                                                            <rect key="frame" x="0.0" y="266" width="295" height="49.5"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                             <state key="normal" title="Like"/>
                                                             <connections>
@@ -59,6 +59,7 @@
                                         <connections>
                                             <outlet property="likeButton" destination="JwJ-rX-CXc" id="mjO-MO-GSx"/>
                                             <outlet property="portraitView" destination="Ntl-qs-Gi3" id="bUS-JH-QnS"/>
+                                            <segue destination="bCq-QS-vtC" kind="presentation" identifier="PaintingDetail" id="d39-Da-kZf"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -86,16 +87,41 @@
             </objects>
             <point key="canvasLocation" x="861.60000000000002" y="-672.41379310344837"/>
         </scene>
-        <!--View Controller-->
+        <!--Painting Detail View Controller-->
         <scene sceneID="cmF-Dk-jO7">
             <objects>
-                <viewController id="bCq-QS-vtC" sceneMemberID="viewController">
+                <viewController id="bCq-QS-vtC" customClass="PaintingDetailViewController" customModule="Art_Gallery" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6kq-gm-76u">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TkC-AJ-ZdT">
+                                <rect key="frame" x="136.5" y="309.5" width="102" height="48"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zMO-kl-Sar">
+                                <rect key="frame" x="169" y="374" width="37" height="30"/>
+                                <state key="normal" title="Done"/>
+                                <connections>
+                                    <action selector="dismissVC:" destination="bCq-QS-vtC" eventType="touchUpInside" id="TVb-39-GeE"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="zMO-kl-Sar" firstAttribute="top" secondItem="TkC-AJ-ZdT" secondAttribute="bottom" constant="16.5" id="4xn-BP-Yzi"/>
+                            <constraint firstItem="zMO-kl-Sar" firstAttribute="leading" secondItem="JqB-QJ-nHo" secondAttribute="leading" constant="169" id="6Jj-fb-XPl"/>
+                            <constraint firstItem="JqB-QJ-nHo" firstAttribute="trailing" secondItem="zMO-kl-Sar" secondAttribute="trailing" constant="169" id="F6H-f2-o2f"/>
+                            <constraint firstItem="TkC-AJ-ZdT" firstAttribute="centerX" secondItem="6kq-gm-76u" secondAttribute="centerX" id="c5v-jR-NaO"/>
+                            <constraint firstItem="TkC-AJ-ZdT" firstAttribute="centerY" secondItem="6kq-gm-76u" secondAttribute="centerY" id="hCh-KK-6Oq"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="JqB-QJ-nHo"/>
                     </view>
+                    <connections>
+                        <outlet property="paintingLabel" destination="TkC-AJ-ZdT" id="A6M-Yy-l8J"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="w3y-ut-LRC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
