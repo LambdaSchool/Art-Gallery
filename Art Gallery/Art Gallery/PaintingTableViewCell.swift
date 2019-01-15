@@ -31,6 +31,13 @@ class PaintingTableViewCell: UITableViewCell {
     private func updateViews() {
         guard let painting = painting else { return }
         portraitView.image = painting.image
+        if painting.isLike {
+            
+            likeButton.setTitle("Unlike", for: .normal)
+
+        } else {
+            likeButton.setTitle("Like", for: .normal)
+        }
     }
 
 }

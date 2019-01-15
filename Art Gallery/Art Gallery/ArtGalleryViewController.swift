@@ -26,21 +26,18 @@ class ArtGalleryViewController: UIViewController, UITableViewDelegate, UITableVi
     }
     
     func tappedLikeButton(on cell: PaintingTableViewCell) {
+        guard let indexPath = tableView.indexPath(for: cell) else { return }
         
-        guard let painting = cell.painting else { return }
-
-        guard let button = cell.likeButton else { return }
-
-        if painting.isLike {
-            button.titleLabel?.text = "Like"
-        } else {
-            button.titleLabel?.text = "Unlike"
-        }
+        let painting = paintingsController.images[indexPath.row]
+        
+        paintingsController.toggleLike(painting: painting)
+        
+        tableView.reloadRows(at: [indexPath], with: .automatic)
     }
     
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         tableView.reloadData()
     }
     

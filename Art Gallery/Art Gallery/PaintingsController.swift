@@ -23,6 +23,14 @@ class PaintingsController {
         }
     }
     
+    func toggleLike(painting: Painting) {
+        if painting.isLike {
+            painting.isLike = false
+        } else {
+            painting.isLike = true
+        }
+    }
+    
     init() {
         loadImages()
     }
