@@ -16,6 +16,8 @@
 		4BF978F521ED232300E6231C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4BF978F421ED232300E6231C /* Assets.xcassets */; };
 		4BF978F721ED38D400E6231C /* PaintingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF978F621ED38D400E6231C /* PaintingController.swift */; };
 		4BF978F921ED46EF00E6231C /* PaintingDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF978F821ED46EF00E6231C /* PaintingDetailViewController.swift */; };
+		4BF978FD21ED53EF00E6231C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BF978FB21ED53EF00E6231C /* LaunchScreen.storyboard */; };
+		4BF978FE21ED53EF00E6231C /* LambdaLogoAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4BF978FC21ED53EF00E6231C /* LambdaLogoAssets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		4BF978F421ED232300E6231C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../../Assets.xcassets; sourceTree = "<group>"; };
 		4BF978F621ED38D400E6231C /* PaintingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaintingController.swift; sourceTree = "<group>"; };
 		4BF978F821ED46EF00E6231C /* PaintingDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaintingDetailViewController.swift; sourceTree = "<group>"; };
+		4BF978FB21ED53EF00E6231C /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		4BF978FC21ED53EF00E6231C /* LambdaLogoAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = LambdaLogoAssets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,10 +74,20 @@
 				4BF978DE21ED1EF100E6231C /* Main.storyboard */,
 				4BF978F821ED46EF00E6231C /* PaintingDetailViewController.swift */,
 				4BF978F421ED232300E6231C /* Assets.xcassets */,
+				4BF978FA21ED53EF00E6231C /* DragAndDropLaunchScreen */,
 				4BF978E321ED1EF300E6231C /* LaunchScreen.storyboard */,
 				4BF978E621ED1EF300E6231C /* Info.plist */,
 			);
 			path = ArtGallery;
+			sourceTree = "<group>";
+		};
+		4BF978FA21ED53EF00E6231C /* DragAndDropLaunchScreen */ = {
+			isa = PBXGroup;
+			children = (
+				4BF978FB21ED53EF00E6231C /* LaunchScreen.storyboard */,
+				4BF978FC21ED53EF00E6231C /* LambdaLogoAssets.xcassets */,
+			);
+			path = DragAndDropLaunchScreen;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -134,7 +148,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4BF978FE21ED53EF00E6231C /* LambdaLogoAssets.xcassets in Resources */,
 				4BF978F521ED232300E6231C /* Assets.xcassets in Resources */,
+				4BF978FD21ED53EF00E6231C /* LaunchScreen.storyboard in Resources */,
 				4BF978E521ED1EF300E6231C /* LaunchScreen.storyboard in Resources */,
 				4BF978E021ED1EF100E6231C /* Main.storyboard in Resources */,
 			);

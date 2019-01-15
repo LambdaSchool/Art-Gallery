@@ -9,8 +9,6 @@
 import UIKit
 
 class PaintingViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, PaintingTableViewCellDelegate {
-    
-    
     @IBOutlet weak var tableView: UITableView!
     
     let paintingController = PaintingController()
@@ -18,6 +16,9 @@ class PaintingViewController: UIViewController, UITableViewDataSource, UITableVi
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self
+        
+        tableView.rowHeight = UITableView.automaticDimension
+        tableView.estimatedRowHeight = 200
     }
     
     func likeButtonWasTapped(on cell: PaintingTableViewCell) {
@@ -41,12 +42,12 @@ class PaintingViewController: UIViewController, UITableViewDataSource, UITableVi
         let painting = paintingController.paintings[indexPath.row]
         paintingCell.painting = painting
         paintingCell.delegate = self
-        
+       
         return paintingCell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 200
+        return tableView.estimatedRowHeight
     }
 }
 

@@ -31,6 +31,7 @@ class PaintingTableViewCell: UITableViewCell {
             likeButton.setTitle("Like", for: .normal)
         } else {
             likeButton.setTitle("Unlike", for: .normal)
+            
         }
         
         portraitView.image = painting.image
@@ -38,6 +39,7 @@ class PaintingTableViewCell: UITableViewCell {
     
     @IBAction func toggledAppreciation(_ sender: Any) {
         delegate?.likeButtonWasTapped(on: self)
+        
     }
     
     
