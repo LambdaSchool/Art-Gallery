@@ -17,7 +17,7 @@ class PaintingsController {
         for n in 1...12 {
             let imageName = "Image\(n)"
             let imageToLoad = UIImage(named: imageName)
-            let imageAsPainting = Painting(image: imageToLoad!)
+            let imageAsPainting = Painting(image: imageToLoad!, information: imageName)
             
             images.append(imageAsPainting)
         }
