@@ -32,6 +32,9 @@ class PaintingController {
         return paintings.count
     }
     
+    func painting(for indexPath: IndexPath) -> Painting {
+        return paintings[indexPath.row]
+    }
  
 
 
