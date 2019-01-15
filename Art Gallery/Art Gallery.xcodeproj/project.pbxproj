@@ -15,6 +15,7 @@
 		77A28C2521ED3B600037947C /* ArtGalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A28C2421ED3B600037947C /* ArtGalleryViewController.swift */; };
 		77A28C2921ED3C260037947C /* PaintingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A28C2821ED3C260037947C /* PaintingsController.swift */; };
 		77A28C2B21ED3CB50037947C /* PaintingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A28C2A21ED3CB50037947C /* PaintingTableViewCell.swift */; };
+		77A28C2D21ED6E080037947C /* PaintingDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A28C2C21ED6E080037947C /* PaintingDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		77A28C2421ED3B600037947C /* ArtGalleryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtGalleryViewController.swift; sourceTree = "<group>"; };
 		77A28C2821ED3C260037947C /* PaintingsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaintingsController.swift; sourceTree = "<group>"; };
 		77A28C2A21ED3CB50037947C /* PaintingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaintingTableViewCell.swift; sourceTree = "<group>"; };
+		77A28C2C21ED6E080037947C /* PaintingDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaintingDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,15 +64,40 @@
 			children = (
 				77A28C0621ED23EF0037947C /* AppDelegate.swift */,
 				77A28C0A21ED23EF0037947C /* Main.storyboard */,
-				77A28C2821ED3C260037947C /* PaintingsController.swift */,
+				77A28C2E21ED6E720037947C /* View Controllers */,
+				77A28C3021ED6E8B0037947C /* Model Controller */,
 				77A28C2A21ED3CB50037947C /* PaintingTableViewCell.swift */,
-				77A28C2421ED3B600037947C /* ArtGalleryViewController.swift */,
-				77A28C1C21ED25A10037947C /* Painting.swift */,
+				77A28C2F21ED6E820037947C /* Model */,
 				77A28C0D21ED23F00037947C /* Assets.xcassets */,
 				77A28C0F21ED23F00037947C /* LaunchScreen.storyboard */,
 				77A28C1221ED23F00037947C /* Info.plist */,
 			);
 			path = "Art Gallery";
+			sourceTree = "<group>";
+		};
+		77A28C2E21ED6E720037947C /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				77A28C2C21ED6E080037947C /* PaintingDetailViewController.swift */,
+				77A28C2421ED3B600037947C /* ArtGalleryViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		77A28C2F21ED6E820037947C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				77A28C1C21ED25A10037947C /* Painting.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		77A28C3021ED6E8B0037947C /* Model Controller */ = {
+			isa = PBXGroup;
+			children = (
+				77A28C2821ED3C260037947C /* PaintingsController.swift */,
+			);
+			path = "Model Controller";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -147,6 +174,7 @@
 				77A28C2921ED3C260037947C /* PaintingsController.swift in Sources */,
 				77A28C0721ED23EF0037947C /* AppDelegate.swift in Sources */,
 				77A28C2B21ED3CB50037947C /* PaintingTableViewCell.swift in Sources */,
+				77A28C2D21ED6E080037947C /* PaintingDetailViewController.swift in Sources */,
 				77A28C2521ED3B600037947C /* ArtGalleryViewController.swift in Sources */,
 				77A28C1D21ED25A10037947C /* Painting.swift in Sources */,
 			);

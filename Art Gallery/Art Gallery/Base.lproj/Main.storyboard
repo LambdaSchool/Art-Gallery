@@ -86,6 +86,21 @@
             </objects>
             <point key="canvasLocation" x="861.60000000000002" y="-672.41379310344837"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="cmF-Dk-jO7">
+            <objects>
+                <viewController id="bCq-QS-vtC" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6kq-gm-76u">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="JqB-QJ-nHo"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="w3y-ut-LRC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1569" y="-672"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="m5a-52-FjE">
             <objects>
