@@ -27,7 +27,7 @@ class PaintingTableViewCell: UITableViewCell {
     
 
     
-    func updateViews(){
+    private func updateViews(){
       guard let painting = painting else {return}
         artImage.image = painting.image
         let likeButtonTitle = painting.isLiked ? "Unlike" : "Like"

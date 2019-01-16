@@ -20,12 +20,7 @@ class PaintingViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         
-        var i : Int = 1
-        while(i <= 12){
-           
-            paintingModel.paintings.append(Painting(image: UIImage(named: "Image\(i)"), isLiked: false))
-            i+=1
-        }
+     //   paintingModel.loadPaintingsFromAssets()
     
     }
 
@@ -42,11 +37,12 @@ extension PaintingViewController: UITableViewDelegate, UITableViewDataSource, Pa
     func tappedLikeButton(on cell: PaintingTableViewCell) {
         guard let indexPath = tableView.indexPath(for: cell) else { return }
         
-        let painting = paintingModel.paintings[indexPath.row]
         
-        paintingModel.toggleIsLiked(for: painting)
+        paintingModel.toggleIsLiked(on: indexPath.row)
         
         tableView.reloadRows(at: [indexPath], with: .none)
+        // or
+      //  tableView.reloadData()
             
     }
     
