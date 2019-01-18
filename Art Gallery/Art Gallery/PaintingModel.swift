@@ -8,11 +8,10 @@
 
 import UIKit
 
-class PaintingModel: NSObject, UITableViewDataSource, PaintingTableViewCellDelegate {
+class PaintingModel {
     
-    override init() {
-        super.init()
-        self.imageLoader()
+    init() {
+        imageLoader()
     }
     
     func imageLoader() {
@@ -25,34 +24,9 @@ class PaintingModel: NSObject, UITableViewDataSource, PaintingTableViewCellDeleg
         }
     }
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return paintings.count
-    }
-    
-    let reuseIdentifier = "paintingCell"
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier) as! PaintingTableViewCell
-        
-        let title = "🔥"
-        let painting = paintings[indexPath.row]
-        
-        cell.likeButton.setTitle(title, for: .normal)
-        cell.portraitView.image = painting.image
-        cell.likeButton.alpha = painting.isLiked ? 1.0 : 0.33
-        cell.delegate = self
-        
-        return cell
-    }
-    
-    func tappedLikeButton(on cell: PaintingTableViewCell) {
-        guard let indexPath = tableView?.indexPath(for: cell) else { return }
-        var painting = paintings[indexPath.row]
-        painting.isLiked.toggle()
-        
-        print("TappedLikeButton func triggered")
-        
-        cell.likeButton.alpha = painting.isLiked ? 1.0 : 0.33
+    func updateIsLiked(painting: Painting) {
+        guard let index = paintings.index(of: painting) else { return }
+        paintings[index].isLiked.toggle()
     }
     
     //MARK: - Properties

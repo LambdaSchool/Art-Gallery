@@ -8,7 +8,7 @@
 
 import UIKit
 
-struct Painting {
+struct Painting: Equatable {
     let image: UIImage
     var isLiked: Bool
     
