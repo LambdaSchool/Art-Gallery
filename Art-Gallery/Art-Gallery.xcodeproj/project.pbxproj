@@ -14,6 +14,7 @@
 		2777607521F674D600CAEBEF /* PaintingAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2777607421F674D600CAEBEF /* PaintingAssets.xcassets */; };
 		2777607921F6844800CAEBEF /* PaintingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2777607821F6844800CAEBEF /* PaintingViewController.swift */; };
 		2777607B21F6848900CAEBEF /* PaintingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2777607A21F6848900CAEBEF /* PaintingTableViewCell.swift */; };
+		2777607D21F6859B00CAEBEF /* PaintingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2777607C21F6859B00CAEBEF /* PaintingModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		2777607421F674D600CAEBEF /* PaintingAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = PaintingAssets.xcassets; path = ../../PaintingAssets.xcassets; sourceTree = "<group>"; };
 		2777607821F6844800CAEBEF /* PaintingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaintingViewController.swift; sourceTree = "<group>"; };
 		2777607A21F6848900CAEBEF /* PaintingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaintingTableViewCell.swift; sourceTree = "<group>"; };
+		2777607C21F6859B00CAEBEF /* PaintingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaintingModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 				2777607421F674D600CAEBEF /* PaintingAssets.xcassets */,
 				2777606221F6746C00CAEBEF /* AppDelegate.swift */,
 				2777606621F6746C00CAEBEF /* Main.storyboard */,
+				2777607C21F6859B00CAEBEF /* PaintingModel.swift */,
 				2777607A21F6848900CAEBEF /* PaintingTableViewCell.swift */,
 				2777607821F6844800CAEBEF /* PaintingViewController.swift */,
 				2777606921F6746D00CAEBEF /* Assets.xcassets */,
@@ -143,6 +146,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2777607921F6844800CAEBEF /* PaintingViewController.swift in Sources */,
+				2777607D21F6859B00CAEBEF /* PaintingModel.swift in Sources */,
 				2777606321F6746C00CAEBEF /* AppDelegate.swift in Sources */,
 				2777607B21F6848900CAEBEF /* PaintingTableViewCell.swift in Sources */,
 			);
