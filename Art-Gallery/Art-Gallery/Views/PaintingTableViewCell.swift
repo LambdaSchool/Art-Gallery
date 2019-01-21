@@ -9,7 +9,19 @@
 import UIKit
 
 class PaintingTableViewCell: UITableViewCell {
+    
+    
+    @IBOutlet weak var paintingImage: UIImageView!
+    
+    @IBOutlet weak var likeButton: UIButton!
+    
+    @IBAction func likeButtonTapped(_ sender: UIButton) {
 
+
+    }
+    
+ 
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

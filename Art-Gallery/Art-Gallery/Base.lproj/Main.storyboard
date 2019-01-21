@@ -30,20 +30,31 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="f9n-FW-WXD">
-                                                    <rect key="frame" x="47" y="11" width="240" height="166"/>
+                                                    <rect key="frame" x="47" y="11" width="240" height="278"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <subviews>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oAE-BO-e00">
-                                                            <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="oAE-BO-e00">
+                                                            <rect key="frame" x="0.0" y="0.0" width="240" height="240"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="240" id="Bm9-q1-pce"/>
+                                                                <constraint firstAttribute="height" constant="240" id="svU-CI-MA8"/>
+                                                            </constraints>
                                                         </imageView>
-                                                        <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JJv-Ot-pe3">
-                                                            <rect key="frame" x="97" y="136" width="46" height="30"/>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JJv-Ot-pe3">
+                                                            <rect key="frame" x="97" y="248" width="46" height="30"/>
                                                             <state key="normal" title="Button"/>
+                                                            <connections>
+                                                                <action selector="likeButtonTapped:" destination="zM9-4B-Pv7" eventType="touchUpInside" id="iFH-oR-iQP"/>
+                                                            </connections>
                                                         </button>
                                                     </subviews>
                                                 </stackView>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="likeButton" destination="JJv-Ot-pe3" id="qRW-bf-0DL"/>
+                                            <outlet property="paintingImage" destination="oAE-BO-e00" id="A0N-A6-OPh"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>

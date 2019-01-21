@@ -11,6 +11,8 @@ import UIKit
 class PaintingViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     let paintingModelController = PaintingModelController()
+    
+    let reuseIdentifier = "PaintingCell"
  
 
     override func viewDidLoad() {
@@ -28,6 +30,14 @@ class PaintingViewController: UIViewController, UITableViewDelegate, UITableView
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
+        let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier, for: indexPath) as! PaintingTableViewCell
+        
+        let painting = paintingModelController.painting(for: indexPath)
+        
+        cell.paintingImage.image = painting.image
+        
+        
+        return cell
     }
     
     
