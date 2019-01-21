@@ -12,6 +12,7 @@
 		2777606821F6746C00CAEBEF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2777606621F6746C00CAEBEF /* Main.storyboard */; };
 		2777606A21F6746D00CAEBEF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2777606921F6746D00CAEBEF /* Assets.xcassets */; };
 		2777606D21F6746D00CAEBEF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2777606B21F6746D00CAEBEF /* LaunchScreen.storyboard */; };
+		2777607521F674D600CAEBEF /* PaintingAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2777607421F674D600CAEBEF /* PaintingAssets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		2777606921F6746D00CAEBEF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2777606C21F6746D00CAEBEF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2777606E21F6746D00CAEBEF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2777607421F674D600CAEBEF /* PaintingAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = PaintingAssets.xcassets; path = ../../PaintingAssets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 				2777606421F6746C00CAEBEF /* ViewController.swift */,
 				2777606621F6746C00CAEBEF /* Main.storyboard */,
 				2777606921F6746D00CAEBEF /* Assets.xcassets */,
+				2777607421F674D600CAEBEF /* PaintingAssets.xcassets */,
 				2777606B21F6746D00CAEBEF /* LaunchScreen.storyboard */,
 				2777606E21F6746D00CAEBEF /* Info.plist */,
 			);
@@ -122,6 +125,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2777607521F674D600CAEBEF /* PaintingAssets.xcassets in Resources */,
 				2777606D21F6746D00CAEBEF /* LaunchScreen.storyboard in Resources */,
 				2777606A21F6746D00CAEBEF /* Assets.xcassets in Resources */,
 				2777606821F6746C00CAEBEF /* Main.storyboard in Resources */,
