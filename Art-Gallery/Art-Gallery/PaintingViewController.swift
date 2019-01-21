@@ -9,6 +9,8 @@
 import UIKit
 
 class PaintingViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
+    let paintingModelController = PaintingModelController()
  
 
     override func viewDidLoad() {
@@ -20,11 +22,12 @@ class PaintingViewController: UIViewController, UITableViewDelegate, UITableView
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        <#code#>
+        return paintingModelController.numberOfPaintings()
+        
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        <#code#>
+        
     }
     
     

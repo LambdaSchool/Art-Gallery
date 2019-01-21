@@ -33,6 +33,10 @@ class PaintingModelController {
     
     // need methods for number of paintings, and painting at
     
+    func numberOfPaintings() -> Int {
+        return paintings.count
+    }
+    
     
     
     
