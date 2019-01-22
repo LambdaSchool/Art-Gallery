@@ -10,4 +10,5 @@ import Foundation
 
 class PaintingController {
     
+    private(set) var paintings: [Painting] = []
 }

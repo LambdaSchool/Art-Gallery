@@ -10,10 +10,13 @@ import UIKit
 
 class PaintingViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
+    // Lifecycle Methods
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        tableView.delegate = self
+        tableView.dataSource = self
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -23,17 +26,20 @@ class PaintingViewController: UIViewController, UITableViewDataSource, UITableVi
     // MARK: - UITableViewDataSource
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
+        return paintingController.paintings.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "paintingCell", for: indexPath)
-        guard let unwrappedCell = cell as? PaintingTableViewCell else { return cell }
         
+        guard let paintingCell = cell as? PaintingTableViewCell else {
+            return cell
+        }
         
         let painting = paintingController.paintings[indexPath.row]
+        paintingCell.paintingView.image = painting.image
         
-        return unwrappedCell
+        return paintingCell
     }
 
     /*
@@ -46,9 +52,9 @@ class PaintingViewController: UIViewController, UITableViewDataSource, UITableVi
     }
     */
     
-    // MARK: - Properties
-    
-    let paintingController = PaintingControll
+    // MARK: - IBOutlets & Properties
     
     @IBOutlet weak var tableView: UITableView!
+    
+    let paintingController = PaintingController()
 }

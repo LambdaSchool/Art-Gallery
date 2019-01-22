@@ -17,10 +17,12 @@ class PaintingTableViewCell: UITableViewCell {
     // IBActions & Logic
     
     @IBAction func like(_ sender: UIButton) {
-        
+        delegate?.tappedLike(on: self)
     }
     
     // IBOutlets & Properties
+    
+    weak var delegate: PaintingTableViewCellDelegate?
     
     @IBOutlet weak var paintingView: UIImageView!
 }

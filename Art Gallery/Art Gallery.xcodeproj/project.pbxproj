@@ -41,6 +41,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		17BE79DE21F6E46D0076447D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				17C338E821ED2B7C00D63D46 /* Painting.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		17BE79DF21F6E47B0076447D /* Model Controller */ = {
+			isa = PBXGroup;
+			children = (
+				17C338EE21ED329C00D63D46 /* PaintingController.swift */,
+			);
+			path = "Model Controller";
+			sourceTree = "<group>";
+		};
 		17C338C421ED27AD00D63D46 = {
 			isa = PBXGroup;
 			children = (
@@ -61,8 +77,8 @@
 			isa = PBXGroup;
 			children = (
 				17C338D021ED27AD00D63D46 /* AppDelegate.swift */,
-				17C338E821ED2B7C00D63D46 /* Painting.swift */,
-				17C338EE21ED329C00D63D46 /* PaintingController.swift */,
+				17BE79DE21F6E46D0076447D /* Model */,
+				17BE79DF21F6E47B0076447D /* Model Controller */,
 				17C338E421ED28AD00D63D46 /* View Controllers */,
 				17C338E721ED28EB00D63D46 /* Custom Cells */,
 				17C338D421ED27AE00D63D46 /* Main.storyboard */,
