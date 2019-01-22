@@ -14,7 +14,6 @@
 		17C338E321ED280400D63D46 /* PaintingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C338E221ED280400D63D46 /* PaintingViewController.swift */; };
 		17C338E621ED28D900D63D46 /* PaintingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C338E521ED28D900D63D46 /* PaintingTableViewCell.swift */; };
 		17C338E921ED2B7C00D63D46 /* Painting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C338E821ED2B7C00D63D46 /* Painting.swift */; };
-		17C338ED21ED2C3000D63D46 /* PaintingTableViewCellDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C338EC21ED2C3000D63D46 /* PaintingTableViewCellDelegate.swift */; };
 		17C338EF21ED329C00D63D46 /* PaintingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C338EE21ED329C00D63D46 /* PaintingController.swift */; };
 /* End PBXBuildFile section */
 
@@ -28,7 +27,6 @@
 		17C338E221ED280400D63D46 /* PaintingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaintingViewController.swift; sourceTree = "<group>"; };
 		17C338E521ED28D900D63D46 /* PaintingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaintingTableViewCell.swift; sourceTree = "<group>"; };
 		17C338E821ED2B7C00D63D46 /* Painting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Painting.swift; sourceTree = "<group>"; };
-		17C338EC21ED2C3000D63D46 /* PaintingTableViewCellDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaintingTableViewCellDelegate.swift; sourceTree = "<group>"; };
 		17C338EE21ED329C00D63D46 /* PaintingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaintingController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -87,7 +85,6 @@
 			isa = PBXGroup;
 			children = (
 				17C338E521ED28D900D63D46 /* PaintingTableViewCell.swift */,
-				17C338EC21ED2C3000D63D46 /* PaintingTableViewCellDelegate.swift */,
 			);
 			path = "Custom Cells";
 			sourceTree = "<group>";
@@ -167,7 +164,6 @@
 				17C338EF21ED329C00D63D46 /* PaintingController.swift in Sources */,
 				17C338D121ED27AD00D63D46 /* AppDelegate.swift in Sources */,
 				17C338E621ED28D900D63D46 /* PaintingTableViewCell.swift in Sources */,
-				17C338ED21ED2C3000D63D46 /* PaintingTableViewCellDelegate.swift in Sources */,
 				17C338E921ED2B7C00D63D46 /* Painting.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

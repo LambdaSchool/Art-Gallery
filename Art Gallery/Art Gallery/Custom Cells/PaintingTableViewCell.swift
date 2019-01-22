@@ -8,6 +8,19 @@
 
 import UIKit
 
+protocol PaintingTableViewCellDelegate: class {
+    func tappedLike(on cell: PaintingTableViewCell)
+}
+
 class PaintingTableViewCell: UITableViewCell {
     
+    // IBActions & Logic
+    
+    @IBAction func like(_ sender: UIButton) {
+        
+    }
+    
+    // IBOutlets & Properties
+    
+    @IBOutlet weak var paintingView: UIImageView!
 }

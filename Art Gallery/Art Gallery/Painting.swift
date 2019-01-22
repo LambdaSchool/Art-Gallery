@@ -16,4 +16,4 @@ class Painting {
         self.image = image
         self.isLiked = isLiked
     }
-}
+}          

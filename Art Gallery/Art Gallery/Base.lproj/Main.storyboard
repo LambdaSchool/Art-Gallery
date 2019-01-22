@@ -22,7 +22,7 @@
                                 <rect key="frame" x="20" y="116" width="335" height="551"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="paintingCell" rowHeight="330" id="Z0k-v9-OL2" customClass="PaintingTableViewCell" customModule="Art_Gallery" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="paintingCell" rowHeight="330" id="Z0k-v9-OL2" userLabel="Painting Cell" customClass="PaintingTableViewCell" customModule="Art_Gallery" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="335" height="330"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Z0k-v9-OL2" id="yrA-P1-qgF">
@@ -39,6 +39,9 @@
                                                             <rect key="frame" x="117.5" y="276" width="30" height="32"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                             <state key="normal" title="Like"/>
+                                                            <connections>
+                                                                <action selector="like:" destination="Z0k-v9-OL2" eventType="touchUpInside" id="0as-Rg-Tvf"/>
+                                                            </connections>
                                                         </button>
                                                     </subviews>
                                                 </stackView>
@@ -50,6 +53,9 @@
                                                 <constraint firstAttribute="bottomMargin" secondItem="e3b-5Y-Qwa" secondAttribute="bottom" id="fS4-dX-taX"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="paintingView" destination="9R9-ru-s4K" id="FuY-er-CPM"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -82,7 +88,6 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="eZI-G6-TUT" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="Vz2-MI-9b2">
-                        <rect key="frame" x="0.0" y="20" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
