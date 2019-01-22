@@ -59,6 +59,10 @@
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="zne-Ce-jmC" id="F29-VC-yhp"/>
+                                    <outlet property="delegate" destination="zne-Ce-jmC" id="QUe-0o-nNw"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
