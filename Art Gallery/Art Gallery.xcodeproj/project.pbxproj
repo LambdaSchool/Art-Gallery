@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		17BE79E121F6EFFC0076447D /* PaintingAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 17BE79E021F6EFFC0076447D /* PaintingAssets.xcassets */; };
 		17C338D121ED27AD00D63D46 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C338D021ED27AD00D63D46 /* AppDelegate.swift */; };
 		17C338D621ED27AE00D63D46 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17C338D421ED27AE00D63D46 /* Main.storyboard */; };
-		17C338D821ED27B100D63D46 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 17C338D721ED27B100D63D46 /* Assets.xcassets */; };
 		17C338DB21ED27B100D63D46 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17C338D921ED27B100D63D46 /* LaunchScreen.storyboard */; };
 		17C338E321ED280400D63D46 /* PaintingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C338E221ED280400D63D46 /* PaintingViewController.swift */; };
 		17C338E621ED28D900D63D46 /* PaintingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C338E521ED28D900D63D46 /* PaintingTableViewCell.swift */; };
@@ -18,10 +18,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		17BE79E021F6EFFC0076447D /* PaintingAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = PaintingAssets.xcassets; path = ../../PaintingAssets.xcassets; sourceTree = "<group>"; };
 		17C338CD21ED27AD00D63D46 /* Art Gallery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Art Gallery.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		17C338D021ED27AD00D63D46 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		17C338D521ED27AE00D63D46 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		17C338D721ED27B100D63D46 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		17C338DA21ED27B100D63D46 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		17C338DC21ED27B100D63D46 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		17C338E221ED280400D63D46 /* PaintingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaintingViewController.swift; sourceTree = "<group>"; };
@@ -82,7 +82,7 @@
 				17C338E421ED28AD00D63D46 /* View Controllers */,
 				17C338E721ED28EB00D63D46 /* Custom Cells */,
 				17C338D421ED27AE00D63D46 /* Main.storyboard */,
-				17C338D721ED27B100D63D46 /* Assets.xcassets */,
+				17BE79E021F6EFFC0076447D /* PaintingAssets.xcassets */,
 				17C338D921ED27B100D63D46 /* LaunchScreen.storyboard */,
 				17C338DC21ED27B100D63D46 /* Info.plist */,
 			);
@@ -163,8 +163,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				17BE79E121F6EFFC0076447D /* PaintingAssets.xcassets in Resources */,
 				17C338DB21ED27B100D63D46 /* LaunchScreen.storyboard in Resources */,
-				17C338D821ED27B100D63D46 /* Assets.xcassets in Resources */,
 				17C338D621ED27AE00D63D46 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

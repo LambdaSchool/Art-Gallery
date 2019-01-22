@@ -6,9 +6,22 @@
 //  Copyright © 2019 Stuart. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 class PaintingController {
+    
+    init() {
+        loadAssets()
+    }
+    
+    func loadAssets() {
+        for index in 1...12 {
+            guard let image = UIImage(named: "Image\(index)") else { return }
+            paintings.append(Painting(image: image))
+        }
+    }
+    
+    // MARK: - Properties
     
     private(set) var paintings: [Painting] = []
 }

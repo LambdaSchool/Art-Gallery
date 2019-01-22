@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PaintingViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class PaintingViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, PaintingTableViewCellDelegate {
 
     // Lifecycle Methods
     
@@ -20,6 +20,7 @@ class PaintingViewController: UIViewController, UITableViewDataSource, UITableVi
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         tableView.reloadData()
     }
     

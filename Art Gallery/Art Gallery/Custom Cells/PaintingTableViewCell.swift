@@ -9,7 +9,7 @@
 import UIKit
 
 protocol PaintingTableViewCellDelegate: class {
-    func tappedLike(on cell: PaintingTableViewCell)
+    func tappedLikeButton(on cell: PaintingTableViewCell)
 }
 
 class PaintingTableViewCell: UITableViewCell {
@@ -17,7 +17,7 @@ class PaintingTableViewCell: UITableViewCell {
     // IBActions & Logic
     
     @IBAction func like(_ sender: UIButton) {
-        delegate?.tappedLike(on: self)
+        delegate?.tappedLikeButton(on: self)
     }
     
     // IBOutlets & Properties
