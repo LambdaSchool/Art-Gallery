@@ -16,10 +16,12 @@ class PaintingTableViewCell: UITableViewCell {
     @IBOutlet weak var likeButton: UIButton!
     
     @IBAction func likeButtonTapped(_ sender: UIButton) {
+        delegate?.tappedLikeButton(on: self)
 
 
     }
     
+    weak var delegate: PaintingTableViewCellDelegate?
  
     
     override func awakeFromNib() {

@@ -8,7 +8,17 @@
 
 import UIKit
 
-class PaintingViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class PaintingViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, PaintingTableViewCellDelegate {
+    
+    
+    func tappedLikeButton(on cell: PaintingTableViewCell) {
+        
+        guard let indexPath = tableView.indexPath(for: cell) else { return }
+        
+        paintingModelController.toggleIsLiked(at: indexPath)
+        tableView.reloadData()
+    }
+    
     
     let paintingModelController = PaintingModelController()
     
@@ -22,9 +32,9 @@ class PaintingViewController: UIViewController, UITableViewDelegate, UITableView
     }
     
     
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return paintingModelController.numberOfPaintings()
+
+        return paintingModelController.paintings.count
         
     }
     
@@ -36,11 +46,14 @@ class PaintingViewController: UIViewController, UITableViewDelegate, UITableView
         
         cell.paintingImage.image = painting.image
         
-        
+        let isLikedText = painting.isLiked ? "Unlike" : "Like"
+        cell.likeButton.setTitle(isLikedText, for: .normal)
+        cell.delegate = self
         return cell
     }
     
     
+    @IBOutlet weak var tableView: UITableView!
     
 
     /*

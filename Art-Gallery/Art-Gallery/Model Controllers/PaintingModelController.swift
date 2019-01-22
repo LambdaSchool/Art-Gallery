@@ -9,11 +9,12 @@
 import Foundation
 import UIKit
 
-// will implement delelgate protocol here but where does it belong?
+// will implement delegate protocol here but where does it belong?
 
 protocol PaintingTableViewCellDelegate: class {
-    
+    func tappedLikeButton(on cell: PaintingTableViewCell)
 }
+
 
 
 class PaintingModelController {
@@ -28,17 +29,22 @@ class PaintingModelController {
             guard let image = UIImage(named: name) else { return }
             let painting = Painting(image: image, isLiked: false)
             paintings.append(painting)
+//            print("im here at loading image function")
         }
     }
     
     // need methods for number of paintings, and painting at
-    
     func numberOfPaintings() -> Int {
         return paintings.count
     }
     
+    
     func painting(for indexPath: IndexPath) -> Painting {
         return paintings[indexPath.row]
+    }
+    
+    func toggleIsLiked(at indexPath: IndexPath) {
+        paintings[indexPath.row].isLiked.toggle()
     }
     
     

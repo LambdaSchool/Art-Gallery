@@ -22,26 +22,22 @@
                                 <rect key="frame" x="0.0" y="116" width="375" height="551"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PaintingCell" rowHeight="233" id="zM9-4B-Pv7" customClass="PaintingTableViewCell" customModule="Art_Gallery" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="233"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PaintingCell" rowHeight="384" id="zM9-4B-Pv7" customClass="PaintingTableViewCell" customModule="Art_Gallery" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="384"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="zM9-4B-Pv7" id="yXr-b2-Vlq">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="232.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="383.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="f9n-FW-WXD">
-                                                    <rect key="frame" x="47" y="11" width="240" height="278"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="f9n-FW-WXD">
+                                                    <rect key="frame" x="8" y="20" width="359" height="343.5"/>
                                                     <subviews>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="oAE-BO-e00">
-                                                            <rect key="frame" x="0.0" y="0.0" width="240" height="240"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="width" constant="240" id="Bm9-q1-pce"/>
-                                                                <constraint firstAttribute="height" constant="240" id="svU-CI-MA8"/>
-                                                            </constraints>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="252" translatesAutoresizingMaskIntoConstraints="NO" id="oAE-BO-e00">
+                                                            <rect key="frame" x="59.5" y="0.0" width="240" height="154.5"/>
+                                                            <color key="backgroundColor" red="1" green="0.68025821080000004" blue="0.1149975468" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </imageView>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JJv-Ot-pe3">
-                                                            <rect key="frame" x="97" y="248" width="46" height="30"/>
+                                                            <rect key="frame" x="156.5" y="162.5" width="46" height="181"/>
                                                             <state key="normal" title="Button"/>
                                                             <connections>
                                                                 <action selector="likeButtonTapped:" destination="zM9-4B-Pv7" eventType="touchUpInside" id="iFH-oR-iQP"/>
@@ -50,6 +46,12 @@
                                                     </subviews>
                                                 </stackView>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="f9n-FW-WXD" secondAttribute="trailing" constant="8" id="YLg-ej-AG4"/>
+                                                <constraint firstItem="f9n-FW-WXD" firstAttribute="leading" secondItem="yXr-b2-Vlq" secondAttribute="leading" constant="8" id="ZNZ-1n-FyK"/>
+                                                <constraint firstItem="f9n-FW-WXD" firstAttribute="top" secondItem="yXr-b2-Vlq" secondAttribute="top" constant="20" id="fDp-mr-HR6"/>
+                                                <constraint firstAttribute="bottom" secondItem="f9n-FW-WXD" secondAttribute="bottom" constant="20" id="fv1-kJ-vZ3"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="likeButton" destination="JJv-Ot-pe3" id="qRW-bf-0DL"/>
@@ -69,10 +71,13 @@
                         <viewLayoutGuide key="safeArea" id="PRq-2i-JwN"/>
                     </view>
                     <navigationItem key="navigationItem" title="Art Gallery" id="mbf-CM-pMd"/>
+                    <connections>
+                        <outlet property="tableView" destination="oN3-Fa-B0Q" id="vqa-52-Bw3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Lw-Uv-9cD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1140" y="47"/>
+            <point key="canvasLocation" x="1140" y="46.326836581709152"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="8mX-Xp-woa">
