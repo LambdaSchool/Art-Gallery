@@ -40,6 +40,8 @@ class PaintingViewController: UIViewController, UITableViewDataSource, UITableVi
         let painting = paintingController.paintings[indexPath.row]
         paintingCell.paintingView.image = painting.image
         
+        paintingCell.delegate = self
+        
         return paintingCell
     }
     
@@ -47,11 +49,17 @@ class PaintingViewController: UIViewController, UITableViewDataSource, UITableVi
     
     func tappedLikeButton(on cell: PaintingTableViewCell) {
         guard let indexPath = tableView.indexPath(for: cell) else { return }
-        
+
         let painting = paintingController.paintings[indexPath.row]
         paintingController.toggleIsLiked(for: painting)
+
+        if painting.isLiked == true {
+            cell.likeButton.setTitle("Unlike", for: .normal)
+        } else {
+            cell.likeButton.setTitle("Like", for: .normal)
+        }
         
-        tableView.reloadRows(at: [indexPath], with: .automatic)
+        tableView.reloadData()
     }
 
     /*

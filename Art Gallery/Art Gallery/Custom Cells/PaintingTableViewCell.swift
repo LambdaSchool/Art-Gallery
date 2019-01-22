@@ -20,9 +20,14 @@ class PaintingTableViewCell: UITableViewCell {
         delegate?.tappedLikeButton(on: self)
     }
     
+    
+    
     // IBOutlets & Properties
+    
+    var paintingController = PaintingController()
     
     weak var delegate: PaintingTableViewCellDelegate?
     
     @IBOutlet weak var paintingView: UIImageView!
+    @IBOutlet weak var likeButton: UIButton!
 }
