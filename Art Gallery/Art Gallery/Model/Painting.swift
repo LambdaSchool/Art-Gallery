@@ -8,7 +8,7 @@
 
 import UIKit
 
-struct Painting {
+class Painting {
     let image: UIImage
     var isLiked: Bool
     

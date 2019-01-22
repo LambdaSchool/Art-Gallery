@@ -21,6 +21,10 @@ class PaintingController {
         }
     }
     
+    func toggleIsLiked(for painting: Painting) {
+        painting.isLiked = !painting.isLiked
+    }
+    
     // MARK: - Properties
     
     private(set) var paintings: [Painting] = []

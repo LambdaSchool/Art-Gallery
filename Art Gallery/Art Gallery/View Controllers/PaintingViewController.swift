@@ -9,7 +9,7 @@
 import UIKit
 
 class PaintingViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, PaintingTableViewCellDelegate {
-
+    
     // Lifecycle Methods
     
     override func viewDidLoad() {
@@ -41,6 +41,17 @@ class PaintingViewController: UIViewController, UITableViewDataSource, UITableVi
         paintingCell.paintingView.image = painting.image
         
         return paintingCell
+    }
+    
+    // MARK: - PaintingTableViewCellDelegate
+    
+    func tappedLikeButton(on cell: PaintingTableViewCell) {
+        guard let indexPath = tableView.indexPath(for: cell) else { return }
+        
+        let painting = paintingController.paintings[indexPath.row]
+        paintingController.toggleIsLiked(for: painting)
+        
+        tableView.reloadRows(at: [indexPath], with: .automatic)
     }
 
     /*
