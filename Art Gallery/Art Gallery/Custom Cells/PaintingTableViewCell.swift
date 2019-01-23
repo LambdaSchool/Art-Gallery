@@ -20,11 +20,25 @@ class PaintingTableViewCell: UITableViewCell {
         delegate?.tappedLikeButton(on: self)
     }
     
-    
+    func updateViews() {
+        guard let painting = painting else { return }
+        
+        paintingView.image = painting.image
+
+        if painting.isLiked == true {
+            likeButton.setTitle("Unlike", for: .normal)
+        } else {
+            likeButton.setTitle("Like", for: .normal)
+        }
+    }
     
     // IBOutlets & Properties
     
-    var paintingController = PaintingController()
+    var painting: Painting? {
+        didSet {
+            updateViews()
+        }
+    }
     
     weak var delegate: PaintingTableViewCellDelegate?
     
