@@ -8,11 +8,16 @@
 
 import UIKit
 
-class PaintModel: NSObject, UITableViewDataSource, PaintingTableViewCellDelegate {
+class PaintingModel: NSObject, UITableViewDataSource, PaintingTableViewCellDelegate {
     
     var paintings: [Painting] = []
     
     weak var tableView: UITableView?
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        self.tableView = tableView
+        return 1
+    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         //FIXME: correct value in later
@@ -33,9 +38,16 @@ class PaintModel: NSObject, UITableViewDataSource, PaintingTableViewCellDelegate
         super.init()
         
         for paintingIndex in 1...12 {
+            
             print("Image\(paintingIndex)")
+            let thisImage = UIImage(named: "Image\(paintingIndex)")!
+            let thisPainting = Painting(image: thisImage)
+            paintings.append(thisPainting)
         }
         
     }
+    
+    
+    
 }
 

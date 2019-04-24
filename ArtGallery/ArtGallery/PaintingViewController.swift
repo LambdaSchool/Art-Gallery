@@ -18,8 +18,7 @@ class PaintingViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        var paintModel = PaintModel()
-        // Do any additional setup after loading the view.
+    
     }
     
 
