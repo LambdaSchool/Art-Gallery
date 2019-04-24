@@ -43,15 +43,18 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="W3e-uD-9xZ"/>
+                    <connections>
+                        <outlet property="tableView" destination="3X6-69-4bs" id="5l9-QQ-SRO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="957.97101449275374" y="20.758928571428569"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Lambda Gallery-->
         <scene sceneID="HVm-lO-gWV">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="r0i-SC-QHc" sceneMemberID="viewController">
+                <navigationController title="Lambda Gallery" automaticallyAdjustsScrollViewInsets="NO" id="r0i-SC-QHc" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="jsc-Tc-aOW">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
