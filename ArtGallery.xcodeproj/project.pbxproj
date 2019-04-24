@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		EFDBF7FA22710569001EE529 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFDBF7F922710569001EE529 /* AppDelegate.swift */; };
-		EFDBF7FC22710569001EE529 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFDBF7FB22710569001EE529 /* ViewController.swift */; };
 		EFDBF7FF22710569001EE529 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFDBF7FD22710569001EE529 /* Main.storyboard */; };
 		EFDBF80122710569001EE529 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EFDBF80022710569001EE529 /* Assets.xcassets */; };
 		EFDBF80422710569001EE529 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFDBF80222710569001EE529 /* LaunchScreen.storyboard */; };
@@ -16,13 +15,12 @@
 		EFDBF81022710978001EE529 /* PaintingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFDBF80F22710978001EE529 /* PaintingTableViewCell.swift */; };
 		EFDBF81222710BC1001EE529 /* Painting.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFDBF81122710BC1001EE529 /* Painting.swift */; };
 		EFDBF81422710BFD001EE529 /* PaintingTableViewCellDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFDBF81322710BFD001EE529 /* PaintingTableViewCellDelegate.swift */; };
-		EFDBF81622710C1A001EE529 /* PainingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFDBF81522710C1A001EE529 /* PainingModel.swift */; };
+		EFDBF81622710C1A001EE529 /* PaintingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFDBF81522710C1A001EE529 /* PaintingModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		EFDBF7F622710569001EE529 /* ArtGallery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ArtGallery.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFDBF7F922710569001EE529 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		EFDBF7FB22710569001EE529 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		EFDBF7FE22710569001EE529 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EFDBF80022710569001EE529 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EFDBF80322710569001EE529 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -31,7 +29,7 @@
 		EFDBF80F22710978001EE529 /* PaintingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaintingTableViewCell.swift; sourceTree = "<group>"; };
 		EFDBF81122710BC1001EE529 /* Painting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Painting.swift; sourceTree = "<group>"; };
 		EFDBF81322710BFD001EE529 /* PaintingTableViewCellDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaintingTableViewCellDelegate.swift; sourceTree = "<group>"; };
-		EFDBF81522710C1A001EE529 /* PainingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PainingModel.swift; sourceTree = "<group>"; };
+		EFDBF81522710C1A001EE529 /* PaintingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaintingModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,12 +74,11 @@
 			isa = PBXGroup;
 			children = (
 				EFDBF7F922710569001EE529 /* AppDelegate.swift */,
-				EFDBF7FB22710569001EE529 /* ViewController.swift */,
 				EFDBF80D2271094E001EE529 /* PaintingViewController.swift */,
 				EFDBF80F22710978001EE529 /* PaintingTableViewCell.swift */,
 				EFDBF81122710BC1001EE529 /* Painting.swift */,
 				EFDBF81322710BFD001EE529 /* PaintingTableViewCellDelegate.swift */,
-				EFDBF81522710C1A001EE529 /* PainingModel.swift */,
+				EFDBF81522710C1A001EE529 /* PaintingModel.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -166,13 +163,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EFDBF7FC22710569001EE529 /* ViewController.swift in Sources */,
 				EFDBF7FA22710569001EE529 /* AppDelegate.swift in Sources */,
 				EFDBF81222710BC1001EE529 /* Painting.swift in Sources */,
 				EFDBF80E2271094E001EE529 /* PaintingViewController.swift in Sources */,
 				EFDBF81422710BFD001EE529 /* PaintingTableViewCellDelegate.swift in Sources */,
 				EFDBF81022710978001EE529 /* PaintingTableViewCell.swift in Sources */,
-				EFDBF81622710C1A001EE529 /* PainingModel.swift in Sources */,
+				EFDBF81622710C1A001EE529 /* PaintingModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
