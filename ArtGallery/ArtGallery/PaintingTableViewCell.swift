@@ -15,18 +15,8 @@ class PaintingTableViewCell: UITableViewCell {
     
     weak var delegate: PaintingTableViewCellDelegate?
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-    
     @IBAction func toggledAppreciation(_ sender: UIButton) {
+        #warning("Set up like toggle")
     }
     
 }

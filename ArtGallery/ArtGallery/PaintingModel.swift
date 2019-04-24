@@ -20,7 +20,7 @@ class PaintingModel: NSObject, UITableViewDataSource, PaintingTableViewCellDeleg
             
             // Create new painting and append to array
             guard let paintingName = UIImage(named: "Image\(number)") else { return }
-            let painting = Painting(image: paintingName)
+            let painting = Painting(image: paintingName, isLiked: false)
             paintings.append(painting)
         }
         
@@ -28,6 +28,7 @@ class PaintingModel: NSObject, UITableViewDataSource, PaintingTableViewCellDeleg
     
     func tappedLikedButton(on cell: PaintingTableViewCell) {
         // Do some stuff when that button is tapped.
+        print("Like button pressed.")
     }
     
     // MARK: - TableView DataSource Methods
@@ -38,6 +39,17 @@ class PaintingModel: NSObject, UITableViewDataSource, PaintingTableViewCellDeleg
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "PaintingCell", for: indexPath)
+        
+        guard let paintingCell = cell as? PaintingTableViewCell else { return cell}
+        
+        let painting = paintings[indexPath.row]
+        paintingCell.portraitView.image = painting.image
+        if painting.isLiked {
+            paintingCell.likeButton.titleLabel?.text = "Unlike"
+        } else {
+            paintingCell.likeButton.titleLabel?.text = "Like"
+        }
+        
         
         return cell
         

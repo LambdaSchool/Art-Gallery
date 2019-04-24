@@ -10,10 +10,15 @@ import UIKit
 
 class PaintingViewController: UIViewController {
 
+    let paintingModel = PaintingModel()
+    
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        tableView.dataSource = paintingModel
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
