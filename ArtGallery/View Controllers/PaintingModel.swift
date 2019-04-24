@@ -18,7 +18,7 @@ struct Painting {
         self.isLiked = isLiked
     }
 }
-//comment for test commit.
+//comment for test commit
 
 protocol PaintingTableViewCellDelegate: class {
     func tappedLikeButton(on cell: PaintingTableViewCell)
