@@ -10,6 +10,11 @@ import UIKit
 
 class PaintingTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var portraitView: UIImageView!
+    @IBOutlet weak var likeButton: UIButton!
+    
+    weak var delegate: PaintingTableViewCellDelegate?
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -20,5 +25,8 @@ class PaintingTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-
+    
+    @IBAction func toggledAppreciation(_ sender: UIButton) {
+    }
+    
 }
