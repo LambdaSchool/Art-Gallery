@@ -9,7 +9,8 @@
 import UIKit
 
 class PaintingTableViewCell: UITableViewCell {
-
+	@IBOutlet var paintingImageView: UIImageView!
+	
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -21,4 +22,6 @@ class PaintingTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
 
+	@IBAction func likeButtonPressed(_ sender: Any) {
+	}
 }
