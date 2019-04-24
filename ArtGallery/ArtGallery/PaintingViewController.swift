@@ -29,6 +29,9 @@ class PaintingViewController: UIViewController, PaintingTableViewCellDelegate {
     
     func tappedLikedButton(on cell: PaintingTableViewCell) {
         guard let indexPath = tableView.indexPath(for: cell) else { return }
+        
+        paintingModel.paintings[indexPath.row].isLiked = !paintingModel.paintings[indexPath.row].isLiked
+        tableView.reloadData()
     }
 
 }
