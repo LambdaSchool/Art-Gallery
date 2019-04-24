@@ -13,10 +13,30 @@ class PaintingTableViewCell: UITableViewCell {
     @IBOutlet weak var portraitView: UIImageView!
     @IBOutlet weak var likeButton: UIButton!
     
+    var painting: Painting? {
+        didSet {
+            updateView()
+        }
+    }
+    
     weak var delegate: PaintingTableViewCellDelegate?
     
     @IBAction func toggledAppreciation(_ sender: UIButton) {
-        #warning("Set up like toggle")
+        delegate?.tappedLikedButton(on: self)
+    }
+    
+    private func updateView() {
+        
+        guard let painting = painting else { return }
+        
+        portraitView.image = painting.image
+        
+        if painting.isLiked {
+            likeButton.setTitle("Unlike", for: .normal)
+        } else {
+            likeButton.setTitle("Like", for: .normal)
+        }
+        
     }
     
 }
