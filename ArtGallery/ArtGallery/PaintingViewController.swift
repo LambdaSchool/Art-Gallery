@@ -12,9 +12,13 @@ class PaintingViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        var paintModel = PaintModel()
         // Do any additional setup after loading the view.
     }
     

@@ -44,7 +44,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="ZbG-9l-shi"/>
                     <connections>
-                        <outlet property="tableView" destination="bz0-mV-ss7" id="ozE-so-Mhx"/>
+                        <outlet property="tableView" destination="bz0-mV-ss7" id="UJQ-8u-5o3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
