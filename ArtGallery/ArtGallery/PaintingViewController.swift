@@ -31,7 +31,8 @@ class PaintingViewController: UIViewController, PaintingTableViewCellDelegate {
         guard let indexPath = tableView.indexPath(for: cell) else { return }
         
         paintingModel.paintings[indexPath.row].isLiked = !paintingModel.paintings[indexPath.row].isLiked
-        tableView.reloadData()
+        
+        tableView.reloadRows(at: [indexPath], with: .automatic)
     }
 
 }

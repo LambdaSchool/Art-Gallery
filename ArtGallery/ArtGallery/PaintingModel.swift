@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class PaintingModel: NSObject, PaintingTableViewCellDelegate {
+class PaintingModel: NSObject {
     
     weak var tableView: UITableView?
     var paintings: [Painting] = []
@@ -24,11 +24,6 @@ class PaintingModel: NSObject, PaintingTableViewCellDelegate {
             paintings.append(painting)
         }
         
-    }
-    
-    func tappedLikedButton(on cell: PaintingTableViewCell) {
-        // Do some stuff when that button is tapped.
-        print("Like button pressed.")
     }
     
 }
