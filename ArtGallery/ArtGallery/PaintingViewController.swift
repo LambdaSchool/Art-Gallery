@@ -39,8 +39,8 @@ extension PaintingViewController: UITableViewDelegate {
 	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 		
 		if let vc = storyboard?.instantiateViewController(withIdentifier: "DetailPaintingVC") {
-//			present(vc, animated: true)
-			navigationController?.pushViewController(vc, animated: true)
+			present(vc, animated: true)
+//			navigationController?.pushViewController(vc, animated: true)
 		}
 		
 

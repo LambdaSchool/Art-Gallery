@@ -96,7 +96,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ZRs-Ci-hrh">
-                                <rect key="frame" x="20" y="44" width="374" height="818"/>
+                                <rect key="frame" x="20" y="44" width="374" height="768"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <mutableString key="text">Bacon ipsum dolor amet fatback corned beef short ribs alcatra. Alcatra pork loin meatball frankfurter. Pig ribeye bresaola porchetta burgdoggen cupim bacon brisket. Porchetta t-bone pancetta meatball pastrami. Drumstick porchetta pork belly pastrami, sausage jerky pork andouille tri-tip capicola short loin doner pig. Tenderloin pig short ribs pork chicken buffalo ground round ribeye meatball drumstick.
 
@@ -104,11 +104,20 @@ Capicola kielbasa shank leberkas jerky pig porchetta rump ham, picanha chicken s
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PLJ-H9-CWz">
+                                <rect key="frame" x="178.5" y="812" width="57" height="30"/>
+                                <state key="normal" title="I'M DUN"/>
+                                <connections>
+                                    <action selector="doneButtonPressed:" destination="Mhc-24-nem" eventType="touchUpInside" id="9EF-Eo-jTY"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="ZRs-Ci-hrh" firstAttribute="top" secondItem="l0s-j5-2Xd" secondAttribute="top" id="2aW-zQ-HN6"/>
-                            <constraint firstItem="l0s-j5-2Xd" firstAttribute="bottom" secondItem="ZRs-Ci-hrh" secondAttribute="bottom" id="ce4-JK-Jvz"/>
+                            <constraint firstItem="l0s-j5-2Xd" firstAttribute="bottom" secondItem="PLJ-H9-CWz" secondAttribute="bottom" constant="20" id="Gs7-A8-VMi"/>
+                            <constraint firstItem="PLJ-H9-CWz" firstAttribute="top" secondItem="ZRs-Ci-hrh" secondAttribute="bottom" id="WBm-H0-m7g"/>
+                            <constraint firstItem="PLJ-H9-CWz" firstAttribute="centerX" secondItem="c3S-Ic-rHB" secondAttribute="centerX" id="dJE-58-Sww"/>
                             <constraint firstItem="ZRs-Ci-hrh" firstAttribute="leading" secondItem="l0s-j5-2Xd" secondAttribute="leading" constant="20" id="g0E-on-O8S"/>
                             <constraint firstItem="l0s-j5-2Xd" firstAttribute="trailing" secondItem="ZRs-Ci-hrh" secondAttribute="trailing" constant="20" id="lv8-Mn-jn4"/>
                         </constraints>

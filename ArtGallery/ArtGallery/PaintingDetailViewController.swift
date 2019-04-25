@@ -27,7 +27,10 @@ class PaintingDetailViewController: UIViewController {
     }
     
 
-    /*
+	@IBAction func doneButtonPressed(_ sender: UIButton) {
+		dismiss(animated: true)
+	}
+	/*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
