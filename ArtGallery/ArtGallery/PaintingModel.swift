@@ -20,18 +20,38 @@ class PaintingModel: NSObject, UITableViewDataSource, PaintingTableViewCellDeleg
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        //FIXME: correct value in later
-        return 0
+        
+        return paintings.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        //FIXME: correct value in later
+    
         
-        return UITableViewCell()
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        
+        guard let paintingCell = cell as? PaintingTableViewCell else { return cell }
+        
+        let painting = paintings[indexPath.row]
+        paintingCell.delegate = self
+        paintingCell.paintingImageView.image = painting.image
+        paintingCell.likeButton.titleLabel?.text = painting.isLiked ? "Unlike" : "Like"
+        
+        
+        return cell
         
     }
     
     func tappedLikeButton(on cell: PaintingTableViewCell) {
+        
+        let index = tableView!.indexPath(for: cell)!.row
+        
+        if paintings[index].isLiked {
+            paintings[index].isLiked = false
+        } else {
+            paintings[index].isLiked = true
+        }
+        
+        tableView?.reloadData()
     }
     
     override init() {

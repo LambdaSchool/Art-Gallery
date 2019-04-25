@@ -54,6 +54,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="likeButton" destination="dpM-3I-seF" id="mCU-6L-Asr"/>
                                             <outlet property="paintingImageView" destination="cD8-1a-wzW" id="CVy-lG-qcT"/>
                                         </connections>
                                     </tableViewCell>

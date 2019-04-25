@@ -10,7 +10,9 @@ import UIKit
 
 class PaintingTableViewCell: UITableViewCell {
 	@IBOutlet var paintingImageView: UIImageView!
-	
+    @IBOutlet weak var likeButton: UIButton!
+    weak var delegate: PaintingTableViewCellDelegate?
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -23,5 +25,6 @@ class PaintingTableViewCell: UITableViewCell {
     }
 
 	@IBAction func likeButtonPressed(_ sender: Any) {
+        delegate?.tappedLikeButton(on: self)
 	}
 }
