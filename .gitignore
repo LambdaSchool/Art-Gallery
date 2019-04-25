@@ -21,7 +21,15 @@ xcuserdata/
 *.moved-aside
 *.xccheckout
 *.xcscmblueprint
+<<<<<<< HEAD
 *.DS_Store
+=======
+	.DS_Store
+	ArtGallery/.DS_Store
+	ArtGallery/ArtGallery/.DS_Store
+	ArtGallery/ArtGallery/Assets.xcassets/.DS_Store
+	PaintingAssets.xcassets/.DS_Store
+>>>>>>> 1979e13c9c61255bc997638f65c90f83353f509a
 
 ## Obj-C/Swift specific
 *.hmap
