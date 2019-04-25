@@ -64,7 +64,7 @@
                                 </prototypes>
                                 <connections>
                                     <outlet property="dataSource" destination="Ao6-4I-c7w" id="slg-LQ-4yf"/>
-                                    <outlet property="delegate" destination="Ao6-4I-c7w" id="H6D-SO-gal"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="vbr-DF-nZ0"/>
                                 </connections>
                             </tableView>
                         </subviews>
@@ -86,6 +86,38 @@
                 <customObject id="Ao6-4I-c7w" customClass="PaintingModel" customModule="ArtGallery" customModuleProvider="target"/>
             </objects>
             <point key="canvasLocation" x="1042.0289855072465" y="128.57142857142856"/>
+        </scene>
+        <!--Painting Detail View Controller-->
+        <scene sceneID="qix-Ad-VbP">
+            <objects>
+                <viewController storyboardIdentifier="DetailPaintingVC" id="Mhc-24-nem" customClass="PaintingDetailViewController" customModule="ArtGallery" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="c3S-Ic-rHB">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ZRs-Ci-hrh">
+                                <rect key="frame" x="20" y="44" width="374" height="818"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <mutableString key="text">Bacon ipsum dolor amet fatback corned beef short ribs alcatra. Alcatra pork loin meatball frankfurter. Pig ribeye bresaola porchetta burgdoggen cupim bacon brisket. Porchetta t-bone pancetta meatball pastrami. Drumstick porchetta pork belly pastrami, sausage jerky pork andouille tri-tip capicola short loin doner pig. Tenderloin pig short ribs pork chicken buffalo ground round ribeye meatball drumstick.
+
+Capicola kielbasa shank leberkas jerky pig porchetta rump ham, picanha chicken swine cow cupim. T-bone kielbasa fatback landjaeger biltong. Andouille kevin shank tri-tip doner sirloin, fatback salami pork loin. Biltong pork chop chuck, spare ribs drumstick short loin pork loin ham.</mutableString>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ZRs-Ci-hrh" firstAttribute="top" secondItem="l0s-j5-2Xd" secondAttribute="top" id="2aW-zQ-HN6"/>
+                            <constraint firstItem="l0s-j5-2Xd" firstAttribute="bottom" secondItem="ZRs-Ci-hrh" secondAttribute="bottom" id="ce4-JK-Jvz"/>
+                            <constraint firstItem="ZRs-Ci-hrh" firstAttribute="leading" secondItem="l0s-j5-2Xd" secondAttribute="leading" constant="20" id="g0E-on-O8S"/>
+                            <constraint firstItem="l0s-j5-2Xd" firstAttribute="trailing" secondItem="ZRs-Ci-hrh" secondAttribute="trailing" constant="20" id="lv8-Mn-jn4"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="l0s-j5-2Xd"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="h4v-Lj-kJc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1915.9420289855075" y="128.57142857142856"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="c5U-Tp-qPX">

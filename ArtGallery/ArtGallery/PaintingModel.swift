@@ -66,8 +66,5 @@ class PaintingModel: NSObject, UITableViewDataSource, PaintingTableViewCellDeleg
         }
         
     }
-    
-    
-    
 }
 
