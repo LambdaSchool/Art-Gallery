@@ -43,7 +43,7 @@ class PaintingModel: NSObject, UITableViewDataSource, PaintingTableViewCellDeleg
     
     func tappedLikeButton(on cell: PaintingTableViewCell) {
         
-        let index = tableView!.indexPath(for: cell)!.row
+		guard let index = tableView?.indexPath(for: cell)?.row else { return }
         
         if paintings[index].isLiked {
             paintings[index].isLiked = false
@@ -60,7 +60,7 @@ class PaintingModel: NSObject, UITableViewDataSource, PaintingTableViewCellDeleg
         for paintingIndex in 1...12 {
             
             print("Image\(paintingIndex)")
-            let thisImage = UIImage(named: "Image\(paintingIndex)")!
+			guard let thisImage = UIImage(named: "Image\(paintingIndex)") else { continue }
             let thisPainting = Painting(image: thisImage)
             paintings.append(thisPainting)
         }
