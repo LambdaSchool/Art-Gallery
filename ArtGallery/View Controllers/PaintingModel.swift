@@ -9,39 +9,20 @@
 import Foundation
 import UIKit
 
-struct Painting {
-    let image: UIImage
-    var isLiked: Bool
+class PaintingModel: NSObject, UITableViewDelegate, UITableViewDataSource {
+    weak var tableView: PaintingViewController?
     
-    init(image: UIImage, isLiked: Bool = false) {
-        self.image = image
-        self.isLiked = isLiked
-    }
-}
-//comment for test commit
-
-protocol PaintingTableViewCellDelegate: class {
-    func tappedLikeButton(on cell: PaintingTableViewCell)
-}
-
-class PaintingModel: NSObject {
-    
-    
-}
-
-extension PaintingModel: UITableViewDataSource {
+    var paintings: [Painting] = []
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        <#code#>
+        return 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        <#code#>
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+        
+        guard let imageCell = cell as? PaintingTableViewCell else { return cell }
+        
+        return cell
     }
-    
-    
-}
-
-extension PaintingModel: UITableViewDelegate {
-    
 }
