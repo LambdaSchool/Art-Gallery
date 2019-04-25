@@ -40,7 +40,7 @@
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="30" id="Aok-nN-rw1"/>
                                                     </constraints>
-                                                    <state key="normal" title="Button"/>
+                                                    <state key="normal" title="IM BEING DUMB"/>
                                                     <connections>
                                                         <action selector="likeButtonPressed:" destination="0Mb-R0-fyO" eventType="touchUpInside" id="Mbj-5E-pDs"/>
                                                     </connections>

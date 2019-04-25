@@ -30,12 +30,12 @@ class PaintingModel: NSObject, UITableViewDataSource, PaintingTableViewCellDeleg
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         
         guard let paintingCell = cell as? PaintingTableViewCell else { return cell }
-        
         let painting = paintings[indexPath.row]
         paintingCell.delegate = self
         paintingCell.paintingImageView.image = painting.image
         paintingCell.likeButton.titleLabel?.text = painting.isLiked ? "Unlike" : "Like"
-        
+		
+		paintingCell.paintingImageView.layer.cornerRadius = 10
         
         return cell
         
@@ -58,13 +58,15 @@ class PaintingModel: NSObject, UITableViewDataSource, PaintingTableViewCellDeleg
         super.init()
         
         for paintingIndex in 1...12 {
-            
-            print("Image\(paintingIndex)")
 			guard let thisImage = UIImage(named: "Image\(paintingIndex)") else { continue }
             let thisPainting = Painting(image: thisImage)
             paintings.append(thisPainting)
         }
-        
+		
+		DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+			self.tableView?.reloadData()
+		}
+
     }
 }
 
