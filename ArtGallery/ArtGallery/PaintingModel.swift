@@ -8,37 +8,29 @@
 
 import UIKit
 
-class PaintingModel: NSObject {//, UITableViewDataSource, PaintingTableViewCellDelegate {
-    
-//    func tappedLikeButton(on cell: PaintingTableViewCell) {
-//
-//    }
-//
-//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//
-//    }
-//
-//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//
-//    }
+class PaintingModel: NSObject, UITableViewDataSource, PaintingTableViewCellDelegate {
     
     weak var tableView: UITableView?
     var paintings: [Painting] = []
     
-    
-    
     override init() {
-        var imageArray: [UIImage] = []
         for image in 1...12 {
             let name = "image\(image)"
-            
-            let aPainting = UIImage(named: name)!
-            
-            imageArray.append(aPainting)
-            print(imageArray[1])
-            
+            let anImage = UIImage(named: name)!
+            let aPainting = Painting(image: anImage)
+            paintings[image] = aPainting
         }
-        
     }
-  
+    
+    func tappedLikeButton(on cell: PaintingTableViewCell) {
+        <#code#>
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        <#code#>
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        <#code#>
+    }
 }
