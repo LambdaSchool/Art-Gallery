@@ -73,12 +73,12 @@
 		EFDBF80B227105B1001EE529 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				EFDBF7F922710569001EE529 /* AppDelegate.swift */,
+				EFDBF81122710BC1001EE529 /* Painting.swift */,
+				EFDBF81522710C1A001EE529 /* PaintingModel.swift */,
 				EFDBF80D2271094E001EE529 /* PaintingViewController.swift */,
 				EFDBF80F22710978001EE529 /* PaintingTableViewCell.swift */,
-				EFDBF81122710BC1001EE529 /* Painting.swift */,
 				EFDBF81322710BFD001EE529 /* PaintingTableViewCellDelegate.swift */,
-				EFDBF81522710C1A001EE529 /* PaintingModel.swift */,
+				EFDBF7F922710569001EE529 /* AppDelegate.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
