@@ -22,35 +22,50 @@
                                 <rect key="frame" x="20" y="88" width="374" height="774"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="204" id="Eth-Ap-hLH" customClass="PaintingTableViewCell" customModule="Art_Gallery" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="374" height="204"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="315" id="Eth-Ap-hLH" customClass="PaintingTableViewCell" customModule="Art_Gallery" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="374" height="315"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Eth-Ap-hLH" id="1Ry-sB-XsJ">
-                                            <rect key="frame" x="0.0" y="0.0" width="374" height="203.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="314.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="eSS-Zc-tXu">
-                                                    <rect key="frame" x="8" y="8" width="358" height="187.5"/>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="eSS-Zc-tXu">
+                                                    <rect key="frame" x="20" y="0.0" width="334" height="314.5"/>
                                                     <subviews>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yiv-Jc-MBa">
-                                                            <rect key="frame" x="12" y="0.0" width="334" height="128"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="334" height="256"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="256" id="uMo-6q-MJq"/>
+                                                            </constraints>
                                                         </imageView>
                                                         <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="252" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vWa-Di-xaf">
-                                                            <rect key="frame" x="164" y="136" width="30" height="51.5"/>
+                                                            <rect key="frame" x="0.0" y="276" width="334" height="38.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                             <state key="normal" title="Like"/>
+                                                            <connections>
+                                                                <action selector="toggledAppreciation:" destination="Eth-Ap-hLH" eventType="touchUpInside" id="EKF-5y-Wbp"/>
+                                                            </connections>
                                                         </button>
                                                     </subviews>
                                                 </stackView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="eSS-Zc-tXu" firstAttribute="top" secondItem="1Ry-sB-XsJ" secondAttribute="top" constant="8" id="5Ob-ME-bTZ"/>
-                                                <constraint firstItem="eSS-Zc-tXu" firstAttribute="leading" secondItem="1Ry-sB-XsJ" secondAttribute="leading" constant="8" id="crH-wB-XtF"/>
-                                                <constraint firstAttribute="bottom" secondItem="eSS-Zc-tXu" secondAttribute="bottom" constant="8" id="fsj-nH-q9E"/>
-                                                <constraint firstAttribute="trailing" secondItem="eSS-Zc-tXu" secondAttribute="trailing" constant="8" id="y9x-aB-MdL"/>
+                                                <constraint firstAttribute="bottom" secondItem="eSS-Zc-tXu" secondAttribute="bottom" id="74y-KG-Lxt"/>
+                                                <constraint firstItem="eSS-Zc-tXu" firstAttribute="top" secondItem="1Ry-sB-XsJ" secondAttribute="top" id="U3t-gE-dQR"/>
+                                                <constraint firstAttribute="trailing" secondItem="eSS-Zc-tXu" secondAttribute="trailing" constant="20" id="YEc-cO-QyN"/>
+                                                <constraint firstItem="eSS-Zc-tXu" firstAttribute="leading" secondItem="1Ry-sB-XsJ" secondAttribute="leading" constant="20" id="eDd-9e-dIk"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="likeButton" destination="vWa-Di-xaf" id="Trj-iH-ku1"/>
+                                            <outlet property="portraitView" destination="yiv-Jc-MBa" id="zRX-Ze-imh"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="Ors-CJ-FO0" id="8OL-Lg-dXY"/>
+                                    <outlet property="delegate" destination="Ors-CJ-FO0" id="wp1-Up-pge"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -68,6 +83,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <customObject id="Ors-CJ-FO0" customClass="PaintingModel" customModule="Art_Gallery" customModuleProvider="target"/>
             </objects>
             <point key="canvasLocation" x="1047.8260869565217" y="137.94642857142856"/>
         </scene>
