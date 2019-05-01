@@ -25,6 +25,10 @@ class PaintingTableViewCell: UITableViewCell {
         guard let painting = self.painting else { return }
         
         self.portraitView.image = painting.image
+        self.portraitView.layer.cornerRadius = 20
+        self.portraitView.layer.borderWidth = 2
+        self.portraitView.layer.borderColor = UIColor(red: 0, green: 174, blue: 221, alpha: 1.0).cgColor
+        self.portraitView.clipsToBounds = true
 
         if painting.isLiked == true {
             self.likeButton.setTitle("Unlike", for: .normal)
@@ -34,6 +38,8 @@ class PaintingTableViewCell: UITableViewCell {
     }
     
     @IBAction func likeButtonTapped(_ sender: Any) {
+        self.painting!.isLiked = !self.painting!.isLiked
+        self.updateViews()
         delegate?.tappedLikeButton(on: self)
     }
 }

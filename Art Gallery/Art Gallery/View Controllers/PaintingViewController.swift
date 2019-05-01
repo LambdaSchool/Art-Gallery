@@ -61,6 +61,19 @@ extension PaintingViewController: UITableViewDataSource {
         
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        let currentImage = self.paintingModel.paintings[indexPath.row].image
+        let imageCrop = currentImage.getCropRatio()
+        return tableView.frame.width / imageCrop
+    }
+}
+
+extension UIImage {
+    func getCropRatio() -> CGFloat {
+        let widthRatio = CGFloat(self.size.width / self.size.height)
+        return widthRatio
+    }
 }
 
 extension PaintingViewController: PaintingTableViewCellDelegate {
@@ -68,7 +81,5 @@ extension PaintingViewController: PaintingTableViewCellDelegate {
         guard let indexPath = paintingTableView.indexPath(for: cell) else { return }
         
         self.paintingModel.toggledAppreciation(at: indexPath)
-
-        self.paintingTableView.reloadData()
     }
 }
