@@ -46,12 +46,12 @@ class PaintingViewController: UIViewController, UITableViewDataSource, UITableVi
         guard let index = tableView.indexPath(for: cell) else {return}
         let selectedRow = paintingController.paintings[index.row]
         if selectedRow.isLiked == false {
-            cell.likeButton.titleLabel?.text = "Unlike"
+            cell.likeButton.setTitle("Like", for: .normal)
         } else {
-            cell.likeButton.titleLabel?.text = "Like"
+            cell.likeButton.setTitle("Unlike", for: .normal)
         }
         paintingController.toggleIsLiked(for: selectedRow)
-        tableView.reloadRows(at: [index], with: UITableView.RowAnimation.fade)
+        tableView.reloadRows(at: [index], with: .none)
     }
 }
 
