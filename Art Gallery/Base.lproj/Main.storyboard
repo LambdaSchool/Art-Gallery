@@ -37,7 +37,7 @@
                                                     <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                                     <state key="normal" title="Like"/>
                                                     <connections>
-                                                        <action selector="isLikedButtonTapped:" destination="ZcH-hB-hoq" eventType="touchUpInside" id="mm4-RS-Cdf"/>
+                                                        <action selector="isLikedButtonTapped:" destination="ZcH-hB-hoq" eventType="touchUpInside" id="qaS-OH-wkc"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
