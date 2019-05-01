@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F66068BC227A48040094995C /* PaintingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66068BB227A48040094995C /* PaintingTableViewCell.swift */; };
 		F6AF8C3A2279406200901092 /* PaintingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6AF8C392279406200901092 /* PaintingViewController.swift */; };
 		F6AF8C3C227948EE00901092 /* Painting.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6AF8C3B227948EE00901092 /* Painting.swift */; };
 		F6AF8C3E227A145700901092 /* PaintingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6AF8C3D227A145700901092 /* PaintingController.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F66068BB227A48040094995C /* PaintingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaintingTableViewCell.swift; sourceTree = "<group>"; };
 		F6AF8C392279406200901092 /* PaintingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaintingViewController.swift; sourceTree = "<group>"; };
 		F6AF8C3B227948EE00901092 /* Painting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Painting.swift; sourceTree = "<group>"; };
 		F6AF8C3D227A145700901092 /* PaintingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaintingController.swift; sourceTree = "<group>"; };
@@ -60,6 +62,7 @@
 			children = (
 				F6BC035622793A0500B75648 /* AppDelegate.swift */,
 				F6BC035A22793A0500B75648 /* Main.storyboard */,
+				F66068BB227A48040094995C /* PaintingTableViewCell.swift */,
 				F6AF8C3B227948EE00901092 /* Painting.swift */,
 				F6AF8C3D227A145700901092 /* PaintingController.swift */,
 				F6AF8C392279406200901092 /* PaintingViewController.swift */,
@@ -143,6 +146,7 @@
 			files = (
 				F6BC035722793A0500B75648 /* AppDelegate.swift in Sources */,
 				F6AF8C3E227A145700901092 /* PaintingController.swift in Sources */,
+				F66068BC227A48040094995C /* PaintingTableViewCell.swift in Sources */,
 				F6AF8C3A2279406200901092 /* PaintingViewController.swift in Sources */,
 				F6AF8C3C227948EE00901092 /* Painting.swift in Sources */,
 			);
