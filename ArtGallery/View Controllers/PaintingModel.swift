@@ -9,9 +9,10 @@
 import Foundation
 import UIKit
 
-class PaintingModel {
+class PaintingModel: NSObject {
     
-    init() {
+    override init() {
+        super.init()
         loadPainting()
     }
     
