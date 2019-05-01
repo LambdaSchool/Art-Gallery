@@ -81,5 +81,6 @@ extension PaintingViewController: PaintingTableViewCellDelegate {
         guard let indexPath = paintingTableView.indexPath(for: cell) else { return }
         
         self.paintingModel.toggledAppreciation(at: indexPath)
+        self.paintingTableView.reloadRows(at: [indexPath], with: .none)
     }
 }

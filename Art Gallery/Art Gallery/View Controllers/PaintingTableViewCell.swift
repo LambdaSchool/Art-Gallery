@@ -38,8 +38,6 @@ class PaintingTableViewCell: UITableViewCell {
     }
     
     @IBAction func likeButtonTapped(_ sender: Any) {
-        self.painting!.isLiked = !self.painting!.isLiked
-        self.updateViews()
         delegate?.tappedLikeButton(on: self)
     }
 }
