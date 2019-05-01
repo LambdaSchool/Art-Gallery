@@ -8,12 +8,18 @@
 import Foundation
 import UIKit
 
+
+
 class PaintingTableViewCell: UITableViewCell {
 
     
     @IBOutlet weak var portraitView: UIImageView!
-   
+    
+    
     @IBOutlet weak var likeButton: UIButton!
+    
+
+    
     
     var painting : Painting?  {
         didSet {
@@ -21,13 +27,12 @@ class PaintingTableViewCell: UITableViewCell {
         }
     }
     
-    
-    
     weak var delegate : PaintingTableViewCellDelegate?
     
     
-    @IBAction func toggledAppreciation(_ sender: Any) {
-        self.delegate?.tappedLikeButton(on: self)
+
+    @IBAction func likeButtonTapped(_ sender: Any) {
+        delegate?.tappedLikeButton(on: self)
     }
     
     

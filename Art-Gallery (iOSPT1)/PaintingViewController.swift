@@ -8,6 +8,8 @@
 
 import UIKit
 
+
+
 class PaintingViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, PaintingTableViewCellDelegate {
     
     @IBOutlet weak var tableView: UITableView!
@@ -39,10 +41,17 @@ class PaintingViewController: UIViewController, UITableViewDataSource, UITableVi
         return cell
     }
     
-    func tappedLikeButton(on cell: PaintingTableViewCell) {
-      
-        }
-
     
+    func tappedLikeButton(on cell: PaintingTableViewCell) {
+        guard let index = tableView.indexPath(for: cell) else {return}
+        let selectedRow = paintingController.paintings[index.row]
+            paintingController.toggleIsLiked(for: selectedRow)
+        if selectedRow.isLiked == false {
+            cell.likeButton.titleLabel?.text = "Unlike"
+        } else {
+            cell.likeButton.titleLabel?.text = "Like"
+        }
+        tableView.reloadRows(at: [index], with: UITableView.RowAnimation.fade)
+    }
 }
 
