@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F6AF8C3A2279406200901092 /* PaintingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6AF8C392279406200901092 /* PaintingViewController.swift */; };
+		F6AF8C3C227948EE00901092 /* Painting.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6AF8C3B227948EE00901092 /* Painting.swift */; };
 		F6BC035722793A0500B75648 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6BC035622793A0500B75648 /* AppDelegate.swift */; };
 		F6BC035922793A0500B75648 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6BC035822793A0500B75648 /* ViewController.swift */; };
 		F6BC035C22793A0500B75648 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6BC035A22793A0500B75648 /* Main.storyboard */; };
@@ -15,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F6AF8C392279406200901092 /* PaintingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaintingViewController.swift; sourceTree = "<group>"; };
+		F6AF8C3B227948EE00901092 /* Painting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Painting.swift; sourceTree = "<group>"; };
 		F6BC035322793A0500B75648 /* Art Gallery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Art Gallery.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6BC035622793A0500B75648 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F6BC035822793A0500B75648 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -57,6 +61,8 @@
 				F6BC035622793A0500B75648 /* AppDelegate.swift */,
 				F6BC035822793A0500B75648 /* ViewController.swift */,
 				F6BC035A22793A0500B75648 /* Main.storyboard */,
+				F6AF8C3B227948EE00901092 /* Painting.swift */,
+				F6AF8C392279406200901092 /* PaintingViewController.swift */,
 				F6BC035D22793A0600B75648 /* Assets.xcassets */,
 				F6BC035F22793A0600B75648 /* LaunchScreen.storyboard */,
 				F6BC036222793A0600B75648 /* Info.plist */,
@@ -137,6 +143,8 @@
 			files = (
 				F6BC035922793A0500B75648 /* ViewController.swift in Sources */,
 				F6BC035722793A0500B75648 /* AppDelegate.swift in Sources */,
+				F6AF8C3A2279406200901092 /* PaintingViewController.swift in Sources */,
+				F6AF8C3C227948EE00901092 /* Painting.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
