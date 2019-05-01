@@ -10,7 +10,6 @@ import UIKit
 
 class PaintingController {
     
-    
     func loadPaintingsFromAssets() {
         for n in 1...12 {
             
@@ -18,12 +17,15 @@ class PaintingController {
             
             guard let image = UIImage(named: imageName) else { continue }
             
-            let painting = Painting(image: image, isLiked: true)
+            let painting = Painting(image: image, isLiked: false)
             
             paintings.append(painting)
         }
     }
     
+    func toggleIsLiked(for painting: Painting) {
+        
+    }
     
     
     //MARK: -properties
