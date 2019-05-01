@@ -9,11 +9,26 @@
 import Foundation
 import UIKit
 
-class PaintingModel: NSObject {
+class PaintingModel {
     
-    func createImage(withImage image: UIImage) {
-        let image = Painting(image: image)
-        paintings.append(image)
+    init() {
+        loadPainting()
+    }
+    
+//    func createImage(withImage image: UIImage) {
+//        let image = Painting(image: image)
+//        paintings.append(image)
+//    }
+    
+    func loadPainting() {
+        for n in 1...12 {
+            let imageName = "Image\(n)"
+            
+            guard let image = UIImage(named: imageName) else { continue }
+            let painting = Painting(image: image)
+            
+            paintings.append(painting)
+        }
     }
     
     weak var tableView: PaintingViewController?
