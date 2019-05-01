@@ -10,7 +10,7 @@ import UIKit
 
 
 protocol PaintingViewCellDelegate: class {
-    func isLikedButtonTapped(on ell: PaintingTableViewCell)
+    func isLikedButtonTapped(on cell: PaintingTableViewCell)
 }
 class PaintingTableViewCell: UITableViewCell {
     //what is this?
@@ -23,9 +23,10 @@ class PaintingTableViewCell: UITableViewCell {
         }
         
     }
+    weak var delegate: PaintingTableViewCell?
     
     @IBAction func isLikedButtonTapped(_ sender: Any) {
-        delegate
+        delegate?.isLikedButtonTapped(self)
        
     }
     
