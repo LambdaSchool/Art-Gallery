@@ -24,4 +24,10 @@ class PaintingController {
             paintings.append(painting)
         }
     }
+    
+    // Does this painting attribute come from the let constant in loadPaintingFromAssets??
+    // Does an IBAction need to be used for this function??
+    func toggleIsLiked(painting: Painting) {
+        painting.isLiked = !painting.isLiked
+    }
 }

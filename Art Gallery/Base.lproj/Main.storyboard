@@ -6,6 +6,43 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <scenes/>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ehc-tZ-zUX">
+            <objects>
+                <viewController id="CGg-h1-Ctv" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="O3T-s1-Xsz">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="LMD-IK-uQv"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="LVE-co-PFo"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QI4-wx-GOG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-155" y="84"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="YrZ-12-5hJ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="9U5-qg-r5c" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="e1M-jp-YaA">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="CGg-h1-Ctv" kind="relationship" relationship="rootViewController" id="lu0-lv-Kp6"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="v3o-XI-SVh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1112" y="84"/>
+        </scene>
+    </scenes>
 </document>
