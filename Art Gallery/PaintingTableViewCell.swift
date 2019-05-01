@@ -9,7 +9,25 @@
 import UIKit
 
 class PaintingTableViewCell: UITableViewCell {
-
+    //what is this?
+    var painting: Painting? {
+        //explain functions inside of properties
+        didSet{
+            
+            updateViews()
+            
+         }
+        
+    }
+    func updateViews(){
+        
+        guard let painting = painting else {return}
+        paintingImage.image = painting.image
+        if (painting.isLiked) {
+            isLikedButton.setTitle("Unlike", for: .normal)
+        }
+    }
+    
     @IBOutlet weak var paintingImage: UIImageView!
     
     @IBOutlet weak var isLikedButton: UIButton!
