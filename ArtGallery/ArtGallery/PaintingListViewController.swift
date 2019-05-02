@@ -27,7 +27,7 @@ class PaintingListViewController: UIViewController, UITableViewDataSource, UITab
         
         paintingController.toggleIsLiked(for: painting)
         
-        tableView.reloadRows(at: [indexPath], with: UITableViewRowAnimation)
+        tableView.reloadRows(at: [indexPath], with: .none)
     }
     
     
@@ -53,6 +53,6 @@ class PaintingListViewController: UIViewController, UITableViewDataSource, UITab
     //MARK: -Properties
     let paintingController = PaintingController()
     
-    @IBOutlet var tableView: UIView!
-
+    @IBOutlet var tableView: UITableView!
+    
 }

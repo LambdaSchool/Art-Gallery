@@ -19,6 +19,8 @@ class PaintingTableViewCell: UITableViewCell {
         delegate?.likeButtonWasTapped(on: self)
     }
     
+    //MARK: - Private Methods
+    
     private func updateViews() {
         guard let painting = painting else { return }
         let likeButtonTitle = painting.isLiked ? "Unlike" : "Like"
@@ -28,6 +30,7 @@ class PaintingTableViewCell: UITableViewCell {
 
     }
     
+    @IBOutlet var likeButton: UIButton!
     @IBOutlet var paintingImageView: UIImageView!
     
     

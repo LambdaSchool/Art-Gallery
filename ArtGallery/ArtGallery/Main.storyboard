@@ -40,7 +40,6 @@
                                                     <state key="normal" title="Button"/>
                                                     <connections>
                                                         <action selector="likeButtonPressed:" destination="g2z-Sz-oHu" eventType="touchUpInside" id="CuL-8F-tDe"/>
-                                                        <action selector="likeButtonTapped:" destination="g2z-Sz-oHu" eventType="touchUpInside" id="zxf-Xa-BWc"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -54,7 +53,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="likeButton" destination="oen-Pu-w9j" id="nN2-EE-GV1"/>
+                                            <outlet property="likeButton" destination="oen-Pu-w9j" id="FvO-JA-5cL"/>
                                             <outlet property="paintingImageView" destination="9lg-WL-25p" id="oZa-Iu-aL8"/>
                                         </connections>
                                     </tableViewCell>
@@ -72,7 +71,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Art Gallery" id="P9b-78-1kF"/>
                     <connections>
-                        <outlet property="tableView" destination="8bC-Xf-vdC" id="ASU-JP-kfP"/>
+                        <outlet property="tableView" destination="aXG-Uu-bNp" id="dOk-Ie-crf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
