@@ -9,7 +9,9 @@
 import UIKit
 
 class PaintingController {
-    
+    init() {
+        loadPaintingsFromAssets()
+    }
     func loadPaintingsFromAssets() {
         for n in 1...12 {
             
@@ -17,14 +19,14 @@ class PaintingController {
             
             guard let image = UIImage(named: imageName) else { continue }
             
-            let painting = Painting(image: image, isLiked: false)
+            let painting = Painting(image: image)
             
             paintings.append(painting)
         }
     }
     
     func toggleIsLiked(for painting: Painting) {
-        
+        painting.isLiked = !painting.isLiked
     }
     
     
