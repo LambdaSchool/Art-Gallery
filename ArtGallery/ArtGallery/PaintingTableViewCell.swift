@@ -8,22 +8,31 @@
 
 import UIKit
 
+protocol PaintingTableViewCellDelegate: class {
+    func likeButtonWasTapped(on cell: PaintingTableViewCell)
+}
+
 class PaintingTableViewCell: UITableViewCell {
 
+    @IBAction func likeButtonPressed(_ sender: Any) {
+        print("Button Tapped")
+        delegate?.likeButtonWasTapped(on: self)
+    }
     
-    
-    
-    
-    
-    
-    
+    private func updateViews() {
+        guard let painting = painting else { return }
+        let likeButtonTitle = painting.isLiked ? "Unlike" : "Like"
+        likeButton.setTitle(likeButtonTitle, for: .normal)
+        
+        paintingImageView.image = painting.image
+
+    }
     
     @IBOutlet var paintingImageView: UIImageView!
-    @IBAction func likeButtonPressed(_ sender: Any) {
-    }
     
     
     //MARk: -Properties
+    weak var delegate: PaintingTableViewCellDelegate?
     var painting: Painting? {
         didSet {
             updateViews()

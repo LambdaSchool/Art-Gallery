@@ -9,9 +9,11 @@
 import UIKit
 
 class PaintingController {
+    
     init() {
         loadPaintingsFromAssets()
     }
+    
     func loadPaintingsFromAssets() {
         for n in 1...12 {
             
