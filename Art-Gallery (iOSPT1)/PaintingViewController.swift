@@ -26,7 +26,6 @@ class PaintingViewController: UIViewController, UITableViewDataSource, UITableVi
         self.tableView.reloadData()
     }
 
-
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return paintingController.paintings.count
@@ -46,12 +45,25 @@ class PaintingViewController: UIViewController, UITableViewDataSource, UITableVi
         guard let index = tableView.indexPath(for: cell) else {return}
         let selectedRow = paintingController.paintings[index.row]
         if selectedRow.isLiked == false {
-            cell.likeButton.setTitle("Like", for: .normal)
-        } else {
+            print(selectedRow.isLiked)
             cell.likeButton.setTitle("Unlike", for: .normal)
+            print(selectedRow.isLiked)
+        } else {
+            print(selectedRow.isLiked)
+            cell.likeButton.setTitle("Like", for: .normal)
+            print(selectedRow.isLiked)
         }
         paintingController.toggleIsLiked(for: selectedRow)
-        tableView.reloadRows(at: [index], with: .none)
+       // tableView.reloadRows(at: [index], with: .none)    without this, it works
     }
 }
 
+
+/*
+ if selectedRow.isLiked == false {
+ cell.likeButton.setTitle("Unlike", for: .normal)
+ } else {
+ cell.likeButton.setTitle("Like", for: .normal)
+ }
+
+ */
