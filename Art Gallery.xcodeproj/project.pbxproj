@@ -7,25 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		469AAC42210258C200C0D421 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469AAC41210258C200C0D421 /* AppDelegate.swift */; };
-		469AAC44210258C200C0D421 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469AAC43210258C200C0D421 /* ViewController.swift */; };
-		469AAC47210258C200C0D421 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 469AAC45210258C200C0D421 /* Main.storyboard */; };
-		469AAC49210258C300C0D421 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 469AAC48210258C300C0D421 /* Assets.xcassets */; };
-		469AAC4C210258C300C0D421 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 469AAC4A210258C300C0D421 /* LaunchScreen.storyboard */; };
+		F66068BC227A48040094995C /* PaintingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66068BB227A48040094995C /* PaintingTableViewCell.swift */; };
+		F66068BE227A5AD80094995C /* PaintingListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66068BD227A5AD80094995C /* PaintingListViewController.swift */; };
+		F6AF8C3C227948EE00901092 /* Painting.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6AF8C3B227948EE00901092 /* Painting.swift */; };
+		F6AF8C3E227A145700901092 /* PaintingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6AF8C3D227A145700901092 /* PaintingController.swift */; };
+		F6BC035722793A0500B75648 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6BC035622793A0500B75648 /* AppDelegate.swift */; };
+		F6BC035C22793A0500B75648 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6BC035A22793A0500B75648 /* Main.storyboard */; };
+		F6BC035E22793A0600B75648 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F6BC035D22793A0600B75648 /* Assets.xcassets */; };
+		F6BC036122793A0600B75648 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6BC035F22793A0600B75648 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		469AAC3E210258C200C0D421 /* ArtGallery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ArtGallery.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		469AAC41210258C200C0D421 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		469AAC43210258C200C0D421 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		469AAC46210258C200C0D421 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		469AAC48210258C300C0D421 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		469AAC4B210258C300C0D421 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		469AAC4D210258C300C0D421 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F66068BB227A48040094995C /* PaintingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaintingTableViewCell.swift; sourceTree = "<group>"; };
+		F66068BD227A5AD80094995C /* PaintingListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaintingListViewController.swift; sourceTree = "<group>"; };
+		F6AF8C3B227948EE00901092 /* Painting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Painting.swift; sourceTree = "<group>"; };
+		F6AF8C3D227A145700901092 /* PaintingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaintingController.swift; sourceTree = "<group>"; };
+		F6BC035322793A0500B75648 /* Art Gallery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Art Gallery.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F6BC035622793A0500B75648 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F6BC035B22793A0500B75648 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F6BC035D22793A0600B75648 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F6BC036022793A0600B75648 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F6BC036222793A0600B75648 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		469AAC3B210258C200C0D421 /* Frameworks */ = {
+		F6BC035022793A0500B75648 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -35,71 +41,74 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		469AAC35210258C200C0D421 = {
+		F6BC034A22793A0500B75648 = {
 			isa = PBXGroup;
 			children = (
-				469AAC40210258C200C0D421 /* ArtGallery */,
-				469AAC3F210258C200C0D421 /* Products */,
+				F6BC035522793A0500B75648 /* Art Gallery */,
+				F6BC035422793A0500B75648 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		469AAC3F210258C200C0D421 /* Products */ = {
+		F6BC035422793A0500B75648 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				469AAC3E210258C200C0D421 /* ArtGallery.app */,
+				F6BC035322793A0500B75648 /* Art Gallery.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		469AAC40210258C200C0D421 /* ArtGallery */ = {
+		F6BC035522793A0500B75648 /* Art Gallery */ = {
 			isa = PBXGroup;
 			children = (
-				469AAC41210258C200C0D421 /* AppDelegate.swift */,
-				469AAC43210258C200C0D421 /* ViewController.swift */,
-				469AAC45210258C200C0D421 /* Main.storyboard */,
-				469AAC48210258C300C0D421 /* Assets.xcassets */,
-				469AAC4A210258C300C0D421 /* LaunchScreen.storyboard */,
-				469AAC4D210258C300C0D421 /* Info.plist */,
+				F6BC035622793A0500B75648 /* AppDelegate.swift */,
+				F6BC035A22793A0500B75648 /* Main.storyboard */,
+				F66068BB227A48040094995C /* PaintingTableViewCell.swift */,
+				F66068BD227A5AD80094995C /* PaintingListViewController.swift */,
+				F6AF8C3B227948EE00901092 /* Painting.swift */,
+				F6AF8C3D227A145700901092 /* PaintingController.swift */,
+				F6BC035D22793A0600B75648 /* Assets.xcassets */,
+				F6BC035F22793A0600B75648 /* LaunchScreen.storyboard */,
+				F6BC036222793A0600B75648 /* Info.plist */,
 			);
-			path = ArtGallery;
+			path = "Art Gallery";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		469AAC3D210258C200C0D421 /* ArtGallery */ = {
+		F6BC035222793A0500B75648 /* Art Gallery */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 469AAC50210258C300C0D421 /* Build configuration list for PBXNativeTarget "ArtGallery" */;
+			buildConfigurationList = F6BC036522793A0600B75648 /* Build configuration list for PBXNativeTarget "Art Gallery" */;
 			buildPhases = (
-				469AAC3A210258C200C0D421 /* Sources */,
-				469AAC3B210258C200C0D421 /* Frameworks */,
-				469AAC3C210258C200C0D421 /* Resources */,
+				F6BC034F22793A0500B75648 /* Sources */,
+				F6BC035022793A0500B75648 /* Frameworks */,
+				F6BC035122793A0500B75648 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = ArtGallery;
-			productName = ArtGallery;
-			productReference = 469AAC3E210258C200C0D421 /* ArtGallery.app */;
+			name = "Art Gallery";
+			productName = "Art Gallery";
+			productReference = F6BC035322793A0500B75648 /* Art Gallery.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		469AAC36210258C200C0D421 /* Project object */ = {
+		F6BC034B22793A0500B75648 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0940;
-				LastUpgradeCheck = 0940;
-				ORGANIZATIONNAME = "Lambda School";
+				LastSwiftUpdateCheck = 1020;
+				LastUpgradeCheck = 1020;
+				ORGANIZATIONNAME = "Nate Hedgeman";
 				TargetAttributes = {
-					469AAC3D210258C200C0D421 = {
-						CreatedOnToolsVersion = 9.4.1;
+					F6BC035222793A0500B75648 = {
+						CreatedOnToolsVersion = 10.2.1;
 					};
 				};
 			};
-			buildConfigurationList = 469AAC39210258C200C0D421 /* Build configuration list for PBXProject "ArtGallery" */;
+			buildConfigurationList = F6BC034E22793A0500B75648 /* Build configuration list for PBXProject "Art Gallery" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -107,54 +116,57 @@
 				en,
 				Base,
 			);
-			mainGroup = 469AAC35210258C200C0D421;
-			productRefGroup = 469AAC3F210258C200C0D421 /* Products */;
+			mainGroup = F6BC034A22793A0500B75648;
+			productRefGroup = F6BC035422793A0500B75648 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				469AAC3D210258C200C0D421 /* ArtGallery */,
+				F6BC035222793A0500B75648 /* Art Gallery */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		469AAC3C210258C200C0D421 /* Resources */ = {
+		F6BC035122793A0500B75648 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				469AAC4C210258C300C0D421 /* LaunchScreen.storyboard in Resources */,
-				469AAC49210258C300C0D421 /* Assets.xcassets in Resources */,
-				469AAC47210258C200C0D421 /* Main.storyboard in Resources */,
+				F6BC036122793A0600B75648 /* LaunchScreen.storyboard in Resources */,
+				F6BC035E22793A0600B75648 /* Assets.xcassets in Resources */,
+				F6BC035C22793A0500B75648 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		469AAC3A210258C200C0D421 /* Sources */ = {
+		F6BC034F22793A0500B75648 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				469AAC44210258C200C0D421 /* ViewController.swift in Sources */,
-				469AAC42210258C200C0D421 /* AppDelegate.swift in Sources */,
+				F6BC035722793A0500B75648 /* AppDelegate.swift in Sources */,
+				F6AF8C3E227A145700901092 /* PaintingController.swift in Sources */,
+				F66068BC227A48040094995C /* PaintingTableViewCell.swift in Sources */,
+				F66068BE227A5AD80094995C /* PaintingListViewController.swift in Sources */,
+				F6AF8C3C227948EE00901092 /* Painting.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		469AAC45210258C200C0D421 /* Main.storyboard */ = {
+		F6BC035A22793A0500B75648 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				469AAC46210258C200C0D421 /* Base */,
+				F6BC035B22793A0500B75648 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		469AAC4A210258C300C0D421 /* LaunchScreen.storyboard */ = {
+		F6BC035F22793A0600B75648 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				469AAC4B210258C300C0D421 /* Base */,
+				F6BC036022793A0600B75648 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -162,7 +174,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		469AAC4E210258C300C0D421 /* Debug */ = {
+		F6BC036322793A0600B75648 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -213,8 +225,9 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
-				MTL_ENABLE_DEBUG_INFO = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
@@ -222,7 +235,7 @@
 			};
 			name = Debug;
 		};
-		469AAC4F210258C300C0D421 /* Release */ = {
+		F6BC036422793A0600B75648 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -267,8 +280,9 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
@@ -276,36 +290,38 @@
 			};
 			name = Release;
 		};
-		469AAC51210258C300C0D421 /* Debug */ = {
+		F6BC036622793A0600B75648 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = ArtGallery/Info.plist;
+				DEVELOPMENT_TEAM = 8492LT54LT;
+				INFOPLIST_FILE = "Art Gallery/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.LambdaSchool.ArtGallery;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.natehedgeman.Art-Gallery";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		469AAC52210258C300C0D421 /* Release */ = {
+		F6BC036722793A0600B75648 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = ArtGallery/Info.plist;
+				DEVELOPMENT_TEAM = 8492LT54LT;
+				INFOPLIST_FILE = "Art Gallery/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.LambdaSchool.ArtGallery;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.natehedgeman.Art-Gallery";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -313,25 +329,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		469AAC39210258C200C0D421 /* Build configuration list for PBXProject "ArtGallery" */ = {
+		F6BC034E22793A0500B75648 /* Build configuration list for PBXProject "Art Gallery" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				469AAC4E210258C300C0D421 /* Debug */,
-				469AAC4F210258C300C0D421 /* Release */,
+				F6BC036322793A0600B75648 /* Debug */,
+				F6BC036422793A0600B75648 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		469AAC50210258C300C0D421 /* Build configuration list for PBXNativeTarget "ArtGallery" */ = {
+		F6BC036522793A0600B75648 /* Build configuration list for PBXNativeTarget "Art Gallery" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				469AAC51210258C300C0D421 /* Debug */,
-				469AAC52210258C300C0D421 /* Release */,
+				F6BC036622793A0600B75648 /* Debug */,
+				F6BC036722793A0600B75648 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 469AAC36210258C200C0D421 /* Project object */;
+	rootObject = F6BC034B22793A0500B75648 /* Project object */;
 }
