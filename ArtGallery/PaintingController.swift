@@ -20,7 +20,7 @@ class PaintingController {
     //Function to loop through paintings and name them as strings.
     
     func loadPaintingFromAssets() {
-        for picture in 1..<paintings.count {
+        for picture in 1...12 {
             var currentPicture: UIImage
             currentPicture = UIImage(named: "Image\(picture)")!
             let painting1 = Painting(image: currentPicture)

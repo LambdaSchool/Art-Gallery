@@ -13,8 +13,11 @@ class PaintingTableViewCell: UITableViewCell {
     @IBOutlet var likeButton: UIButton!
     
     
-    var painting: Painting?
-    
+    var painting: Painting? {
+        didSet {
+            self.updateView()
+        }
+    }
     
     @IBAction func likeButtonPressed(_ sender: Any) {
         painting?.isLiked.toggle()
