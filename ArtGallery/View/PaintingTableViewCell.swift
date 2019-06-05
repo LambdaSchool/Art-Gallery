@@ -8,15 +8,19 @@
 
 import UIKit
 
-
+protocol PaintingTableViewCellDelegate: class {
+    func likeButtonWasTapped(on cell: PaintingTableViewCell)
+}
 
 class PaintingTableViewCell: UITableViewCell {
     
     //MARK: - IBOutlets and IBActions
     @IBOutlet weak var paintingImageView: UIImageView!
     @IBOutlet weak var likeButton: UIButton!
+    weak var delegate: PaintingTableViewCellDelegate?
     
     @IBAction func likeButtonTapped(_ sender: UIButton) {
+        delegate?.likeButtonWasTapped(on: self)
     }
     
     var painting: Painting? {
@@ -28,6 +32,6 @@ class PaintingTableViewCell: UITableViewCell {
     func updateViews() {
         guard let painting = painting else { return }
         paintingImageView.image = painting.image
-        //SET UP LIKED TAPPED
+        likeButton.titleLabel?.text = "Like"
         }
 }

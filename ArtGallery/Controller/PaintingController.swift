@@ -21,7 +21,7 @@ class PaintingController {
     }
     
     func toggleIsLiked(for painting: Painting) {
-        
+        painting.isLiked.toggle()
     }
     
     init() {

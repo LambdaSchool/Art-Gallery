@@ -30,14 +30,14 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="261.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="C6b-AP-mJ4">
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="C6b-AP-mJ4">
                                                     <rect key="frame" x="0.0" y="0.0" width="414" height="261.5"/>
                                                     <subviews>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="afd-xY-koQ">
                                                             <rect key="frame" x="87" y="0.0" width="240" height="200"/>
                                                         </imageView>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jag-hE-J0T">
-                                                            <rect key="frame" x="184" y="205" width="46" height="56.5"/>
+                                                            <rect key="frame" x="184" y="206" width="46" height="55.5"/>
                                                             <state key="normal" title="Button"/>
                                                             <connections>
                                                                 <action selector="likeButtonTapped:" destination="b9b-Y4-F7m" eventType="touchUpInside" id="AS2-CB-KA7"/>
@@ -54,7 +54,6 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="likeButton" destination="Jag-hE-J0T" id="agW-iN-wAD"/>
                                             <outlet property="paintingImageView" destination="afd-xY-koQ" id="G1N-3O-xlj"/>
                                         </connections>
                                     </tableViewCell>

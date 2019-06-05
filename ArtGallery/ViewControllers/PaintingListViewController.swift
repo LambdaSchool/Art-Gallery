@@ -18,6 +18,7 @@ class PaintingListViewController: UIViewController {
 
         paintingTableView.delegate = self
         paintingTableView.dataSource = self
+        
     }
 }
 extension PaintingListViewController: UITableViewDelegate {
@@ -27,13 +28,27 @@ extension PaintingListViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return paintingController.paintings.count
     }
-    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "PaintCell", for: indexPath) as? PaintingTableViewCell else { return UITableViewCell()}
         let paint = paintingController.paintings[indexPath.row]
         cell.paintingImageView.image = paint.image
+       
         
         return cell
+    }
+}
+
+extension PaintingListViewController: PaintingTableViewCellDelegate {
+    func likeButtonWasTapped(on cell: PaintingTableViewCell) {
+        
+        guard let cellPainting = cell.painting else { return }
+      paintingController.toggleIsLiked(for: cellPainting)
+        
+        if cellPainting.isLiked == true {
+            cell.likeButton.setTitle("Unlike", for: .normal)
+        }else {
+            cell.likeButton.setTitle("Like", for: .normal)
+        }
     }
     
     
