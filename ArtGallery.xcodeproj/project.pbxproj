@@ -44,7 +44,6 @@
 		469AAC35210258C200C0D421 = {
 			isa = PBXGroup;
 			children = (
-				A28EE2D922A86A61005DDEFE /* PaintingListViewController.swift */,
 				469AAC40210258C200C0D421 /* ArtGallery */,
 				469AAC3F210258C200C0D421 /* Products */,
 			);
@@ -62,6 +61,7 @@
 			isa = PBXGroup;
 			children = (
 				469AAC41210258C200C0D421 /* AppDelegate.swift */,
+				A28EE2D922A86A61005DDEFE /* PaintingListViewController.swift */,
 				A28EE2D322A85216005DDEFE /* Painting.swift */,
 				469AAC45210258C200C0D421 /* Main.storyboard */,
 				A28EE2D722A8616D005DDEFE /* PaintingTableViewCell.swift */,
@@ -293,12 +293,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TX86F6EBCJ;
 				INFOPLIST_FILE = ArtGallery/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.LambdaSchool.ArtGallery;
+				PRODUCT_BUNDLE_IDENTIFIER = com.AlexShillingford.ArtGallery;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -310,12 +311,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TX86F6EBCJ;
 				INFOPLIST_FILE = ArtGallery/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.LambdaSchool.ArtGallery;
+				PRODUCT_BUNDLE_IDENTIFIER = com.AlexShillingford.ArtGallery;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

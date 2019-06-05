@@ -10,13 +10,16 @@ import UIKit
 
 class PaintingListViewController: UIViewController {
     
+    // MARK: IBOutlets and Properties
     @IBOutlet weak var galleryTableView: UITableView!
     
-
+    let paintingController = PaintingController()
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        galleryTableView.dataSource = self
     }
     
 
@@ -30,4 +33,16 @@ class PaintingListViewController: UIViewController {
     }
     */
 
+}
+
+extension PaintingListViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return paintingController.paintings.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        <#code#>
+    }
+    
+    
 }
