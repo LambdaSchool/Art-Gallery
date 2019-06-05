@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 
+// Creating painting class and initializing properties.
 class Painting {
     
     let image: UIImage

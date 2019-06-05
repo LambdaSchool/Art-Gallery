@@ -10,19 +10,15 @@ import UIKit
 
 class PaintingListViewController: UIViewController, UITableViewDataSource, PaintingTableViewCellDelegate {
     
-    
-    
     // MARK: - Outlets and Properties
     @IBOutlet var paintingTable: UITableView!
-    
     var paintingController = PaintingController()
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         self.paintingTable.dataSource = self
-        
+                
     }
     
     // MARK: - Table View
@@ -45,7 +41,7 @@ class PaintingListViewController: UIViewController, UITableViewDataSource, Paint
         return cell
     }
     
-    // Adopting delegate.
+    // Adopting delegate. Reloads cell row when button is pressed.
     
     func likeButtonWasTapped(on cell: PaintingTableViewCell) {
         guard let paintingLiked = cell.painting?.isLiked else { return }

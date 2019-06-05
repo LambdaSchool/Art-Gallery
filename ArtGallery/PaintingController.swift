@@ -17,7 +17,7 @@ class PaintingController {
     var paintings: [Painting] = []
     
     
-    //Function to loop through paintings and name them as strings.
+    //Function to loop through paintings and name them as strings. The painting images are then appended to the array.
     
     func loadPaintingFromAssets() {
         for picture in 1...12 {
@@ -29,6 +29,7 @@ class PaintingController {
         
     }
     
+    // Toggles like button when pressed.
     func toggleIsLiked(for painting: Painting) {
         painting.isLiked.toggle()
     }
