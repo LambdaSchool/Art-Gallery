@@ -14,6 +14,7 @@
 		469AAC4C210258C300C0D421 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 469AAC4A210258C300C0D421 /* LaunchScreen.storyboard */; };
 		A28EE2D422A85216005DDEFE /* Painting.swift in Sources */ = {isa = PBXBuildFile; fileRef = A28EE2D322A85216005DDEFE /* Painting.swift */; };
 		A28EE2D622A85376005DDEFE /* PaintingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A28EE2D522A85376005DDEFE /* PaintingController.swift */; };
+		A28EE2D822A8616D005DDEFE /* PaintingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A28EE2D722A8616D005DDEFE /* PaintingTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		469AAC4D210258C300C0D421 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A28EE2D322A85216005DDEFE /* Painting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Painting.swift; sourceTree = "<group>"; };
 		A28EE2D522A85376005DDEFE /* PaintingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaintingController.swift; sourceTree = "<group>"; };
+		A28EE2D722A8616D005DDEFE /* PaintingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaintingTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 				A28EE2D322A85216005DDEFE /* Painting.swift */,
 				469AAC43210258C200C0D421 /* ViewController.swift */,
 				469AAC45210258C200C0D421 /* Main.storyboard */,
+				A28EE2D722A8616D005DDEFE /* PaintingTableViewCell.swift */,
 				A28EE2D522A85376005DDEFE /* PaintingController.swift */,
 				469AAC48210258C300C0D421 /* Assets.xcassets */,
 				469AAC4A210258C300C0D421 /* LaunchScreen.storyboard */,
@@ -143,6 +146,7 @@
 			files = (
 				A28EE2D422A85216005DDEFE /* Painting.swift in Sources */,
 				A28EE2D622A85376005DDEFE /* PaintingController.swift in Sources */,
+				A28EE2D822A8616D005DDEFE /* PaintingTableViewCell.swift in Sources */,
 				469AAC44210258C200C0D421 /* ViewController.swift in Sources */,
 				469AAC42210258C200C0D421 /* AppDelegate.swift in Sources */,
 			);
