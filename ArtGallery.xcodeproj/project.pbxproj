@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		321ED91A22A844F40017F09D /* Painting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321ED91922A844F40017F09D /* Painting.swift */; };
+		321ED91D22A8460F0017F09D /* PaintingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321ED91C22A8460F0017F09D /* PaintingController.swift */; };
+		321ED92322A84E030017F09D /* PaintingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321ED92222A84E030017F09D /* PaintingTableViewCell.swift */; };
 		469AAC42210258C200C0D421 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469AAC41210258C200C0D421 /* AppDelegate.swift */; };
 		469AAC44210258C200C0D421 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469AAC43210258C200C0D421 /* ViewController.swift */; };
 		469AAC47210258C200C0D421 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 469AAC45210258C200C0D421 /* Main.storyboard */; };
@@ -15,6 +18,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		321ED91922A844F40017F09D /* Painting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Painting.swift; sourceTree = "<group>"; };
+		321ED91C22A8460F0017F09D /* PaintingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaintingController.swift; sourceTree = "<group>"; };
+		321ED92222A84E030017F09D /* PaintingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaintingTableViewCell.swift; sourceTree = "<group>"; };
 		469AAC3E210258C200C0D421 /* ArtGallery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ArtGallery.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		469AAC41210258C200C0D421 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		469AAC43210258C200C0D421 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -35,10 +41,55 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		321ED91B22A845CE0017F09D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				321ED91922A844F40017F09D /* Painting.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		321ED91F22A847380017F09D /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				469AAC41210258C200C0D421 /* AppDelegate.swift */,
+				469AAC45210258C200C0D421 /* Main.storyboard */,
+				469AAC48210258C300C0D421 /* Assets.xcassets */,
+				469AAC4A210258C300C0D421 /* LaunchScreen.storyboard */,
+				469AAC4D210258C300C0D421 /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		321ED92022A847D00017F09D /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				469AAC43210258C200C0D421 /* ViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		321ED92122A847EE0017F09D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				321ED91C22A8460F0017F09D /* PaintingController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		321ED92422A84E080017F09D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				321ED92222A84E030017F09D /* PaintingTableViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		469AAC35210258C200C0D421 = {
 			isa = PBXGroup;
 			children = (
 				469AAC40210258C200C0D421 /* ArtGallery */,
+				321ED91F22A847380017F09D /* Resources */,
 				469AAC3F210258C200C0D421 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -54,12 +105,10 @@
 		469AAC40210258C200C0D421 /* ArtGallery */ = {
 			isa = PBXGroup;
 			children = (
-				469AAC41210258C200C0D421 /* AppDelegate.swift */,
-				469AAC43210258C200C0D421 /* ViewController.swift */,
-				469AAC45210258C200C0D421 /* Main.storyboard */,
-				469AAC48210258C300C0D421 /* Assets.xcassets */,
-				469AAC4A210258C300C0D421 /* LaunchScreen.storyboard */,
-				469AAC4D210258C300C0D421 /* Info.plist */,
+				321ED91B22A845CE0017F09D /* Model */,
+				321ED92422A84E080017F09D /* View */,
+				321ED92122A847EE0017F09D /* Controller */,
+				321ED92022A847D00017F09D /* ViewControllers */,
 			);
 			path = ArtGallery;
 			sourceTree = "<group>";
@@ -135,6 +184,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				321ED91A22A844F40017F09D /* Painting.swift in Sources */,
+				321ED91D22A8460F0017F09D /* PaintingController.swift in Sources */,
+				321ED92322A84E030017F09D /* PaintingTableViewCell.swift in Sources */,
 				469AAC44210258C200C0D421 /* ViewController.swift in Sources */,
 				469AAC42210258C200C0D421 /* AppDelegate.swift in Sources */,
 			);
@@ -281,7 +333,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = ArtGallery/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/ArtGallery/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -298,7 +350,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = ArtGallery/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/ArtGallery/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
