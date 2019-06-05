@@ -56,3 +56,11 @@ extension PaintingListViewController: UITableViewDataSource {
     
     
 }
+
+extension PaintingListViewController: PaintingTableViewCellDelegate {
+    func likeButtonWasTapped(on cell: PaintingTableViewCell) {
+        let index = galleryTableView.indexPath(for: cell)
+        
+        
+    }
+}
