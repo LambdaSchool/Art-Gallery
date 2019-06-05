@@ -10,20 +10,42 @@ import UIKit
 
 class PaintingSelectViewController: UIViewController {
     @IBOutlet var selectedImage: UIImageView!
-    var selectedPainting: String?
+    
+    var selectedPainting: String? {
+        didSet {
+            self.updateViews()
+        }
+    }
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-    
+        self.updateViews()
         
 // Selecting the image to be loaded withing the view.
-        if let imageToLoad = selectedPainting {
-            selectedImage.image = UIImage(named: imageToLoad)
-        }
+//        if let imageToLoad = selectedPainting {
+//            selectedImage.image = UIImage(named: imageToLoad)
+//        }
+        
 
-        // Do any additional setup after loading the view.
+        
+    }
+    
+    private func updateViews() {
+        guard let selectedPainting = self.selectedPainting, isViewLoaded else { return }
+        
+        selectedImage.image = UIImage(named: selectedPainting)
+    }
+    
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.hidesBarsOnTap = true
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        navigationController?.hidesBarsOnTap = false
     }
     
 

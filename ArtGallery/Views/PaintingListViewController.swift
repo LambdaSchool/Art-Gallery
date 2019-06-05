@@ -66,12 +66,13 @@ class PaintingListViewController: UIViewController, UITableViewDataSource, Paint
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        let selectedIndexPath = .indexPathForSelectedRow!
-//        let picture = paintingTable[selectedIndexPath.row]
-//        let paintingSelectVC = segue.destination as! PaintingSelectViewController
-//        paintingSelectVC.picture = picture
-//    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showImage" {
+            guard let cell = sender as? PaintingTableViewCell,
+                let paintingVC = segue.destination as? PaintingSelectViewController else { return }
+            paintingVC.selectedImage = cell.paintingImage
+    }
     
 
+}
 }
