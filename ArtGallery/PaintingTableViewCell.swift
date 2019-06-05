@@ -24,10 +24,10 @@ class PaintingTableViewCell: UITableViewCell {
     func updateView() {
         guard let currentPainting = self.painting else { return }
             self.paintingImage.image = currentPainting.image
-            if self.painting?.isLiked == true {
-                likeButton.setTitle("Liked", for: .normal)
-            } else {
-                likeButton.setTitle("Like", for: .normal)
+        if self.painting?.isLiked == true {
+            likeButton.setTitle("Liked", for: .normal)
+        } else {
+            likeButton.setTitle("Like", for: .normal)
         }
         
     }

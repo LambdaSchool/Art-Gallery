@@ -7,11 +7,12 @@
 //
 
 import Foundation
+import UIKit
 
 class PaintingController {
     
     init() {
-        
+        loadPaintingFromAssets()
     }
     var paintings: [Painting] = []
     
@@ -19,10 +20,12 @@ class PaintingController {
     //Function to loop through paintings and name them as strings.
     
     func loadPaintingFromAssets() {
-//        for image in 1..<paintings.count {
-//            let images = "Image\(image)"
-//
-//        }
+        for picture in 1..<paintings.count {
+            var currentPicture: UIImage
+            currentPicture = UIImage(named: "Image\(picture)")!
+            let painting1 = Painting(image: currentPicture)
+            paintings.append(painting1)
+        }
         
     }
     
@@ -32,3 +35,4 @@ class PaintingController {
     
     
 }
+
