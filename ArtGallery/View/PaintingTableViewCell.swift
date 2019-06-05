@@ -20,6 +20,7 @@ class PaintingTableViewCell: UITableViewCell {
     weak var delegate: PaintingTableViewCellDelegate?
     
     @IBAction func likeButtonTapped(_ sender: UIButton) {
+        print("Recognising like Button Tap")
         delegate?.likeButtonWasTapped(on: self)
     }
     

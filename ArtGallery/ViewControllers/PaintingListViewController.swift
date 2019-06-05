@@ -11,7 +11,8 @@ import UIKit
 let paintingController = PaintingController()
 
 class PaintingListViewController: UIViewController {
-
+    var index: Int = 0
+    var paint: Painting?
     @IBOutlet weak var paintingTableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,26 +31,25 @@ extension PaintingListViewController: UITableViewDataSource {
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "PaintCell", for: indexPath) as? PaintingTableViewCell else { return UITableViewCell()}
-        let paint = paintingController.paintings[indexPath.row]
-        cell.paintingImageView.image = paint.image
-       
-        
+        paint = paintingController.paintings[indexPath.row]
+        cell.paintingImageView.image = paint?.image
+       cell.delegate = self
+        index = indexPath.row
         return cell
     }
 }
 
 extension PaintingListViewController: PaintingTableViewCellDelegate {
     func likeButtonWasTapped(on cell: PaintingTableViewCell) {
+
+        print("Extension running when tapped")
+        guard let chosenPainting = paint else { print("error Recognising chosen cell"); return}
+        paintingController.toggleIsLiked(for: (paint)!)
         
-        guard let cellPainting = cell.painting else { return }
-      paintingController.toggleIsLiked(for: cellPainting)
-        
-        if cellPainting.isLiked == true {
-            cell.likeButton.setTitle("Unlike", for: .normal)
+        if chosenPainting.isLiked == true {
+            cell.likeButton.setTitle("unlike", for: .normal)
         }else {
-            cell.likeButton.setTitle("Like", for: .normal)
+            cell.likeButton.setTitle("like", for: .normal)
         }
     }
-    
-    
 }
