@@ -29,7 +29,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="464.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="85" translatesAutoresizingMaskIntoConstraints="NO" id="fDd-lH-Ne8">
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="fDd-lH-Ne8">
                                                     <rect key="frame" x="30" y="5" width="354" height="454.5"/>
                                                     <subviews>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pIh-mF-w3B">
@@ -39,7 +39,7 @@
                                                             </constraints>
                                                         </imageView>
                                                         <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bym-SJ-2ZC">
-                                                            <rect key="frame" x="162" y="435" width="30" height="19.5"/>
+                                                            <rect key="frame" x="162" y="375" width="30" height="79.5"/>
                                                             <state key="normal" title="Like"/>
                                                             <connections>
                                                                 <action selector="likeButtonPressed:" destination="WyG-Pd-l3b" eventType="touchUpInside" id="jr1-MK-AtN"/>
@@ -58,6 +58,7 @@
                                         <connections>
                                             <outlet property="likeButton" destination="bym-SJ-2ZC" id="HGS-7C-Rcr"/>
                                             <outlet property="paintingImage" destination="pIh-mF-w3B" id="UeA-gz-BKp"/>
+                                            <segue destination="vUA-lx-5hG" kind="show" identifier="showImage" id="aJK-8T-EnI"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -80,6 +81,35 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1047.8260869565217" y="109.82142857142857"/>
+        </scene>
+        <!--Painting Select View Controller-->
+        <scene sceneID="P74-jU-tVS">
+            <objects>
+                <viewController id="vUA-lx-5hG" customClass="PaintingSelectViewController" customModule="ArtGallery" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wZ4-Tr-tdr">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XEF-sL-1gQ" userLabel="Selected Image">
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="XEF-sL-1gQ" secondAttribute="bottom" id="mMx-8n-FSB"/>
+                            <constraint firstItem="XEF-sL-1gQ" firstAttribute="leading" secondItem="5e1-Nc-8Zy" secondAttribute="leading" id="qMq-lq-40f"/>
+                            <constraint firstItem="XEF-sL-1gQ" firstAttribute="top" secondItem="5e1-Nc-8Zy" secondAttribute="top" id="sLm-9D-Caj"/>
+                            <constraint firstItem="XEF-sL-1gQ" firstAttribute="trailing" secondItem="5e1-Nc-8Zy" secondAttribute="trailing" id="yyg-I7-cgB"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="5e1-Nc-8Zy"/>
+                    </view>
+                    <connections>
+                        <outlet property="selectedImage" destination="XEF-sL-1gQ" id="gC4-Sv-C9T"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2IS-n0-uWs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1768.1159420289857" y="108.48214285714285"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="l6Q-yd-VnW">

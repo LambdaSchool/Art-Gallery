@@ -15,6 +15,7 @@
 		6F330A1622A84244005A7262 /* PaintingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F330A1522A84244005A7262 /* PaintingController.swift */; };
 		6F330A1822A847C4005A7262 /* PaintingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F330A1722A847C4005A7262 /* PaintingTableViewCell.swift */; };
 		6F330A1A22A85DEA005A7262 /* PaintingListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F330A1922A85DEA005A7262 /* PaintingListViewController.swift */; };
+		6F330A2022A87794005A7262 /* PaintingSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F330A1F22A87794005A7262 /* PaintingSelectViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		6F330A1522A84244005A7262 /* PaintingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaintingController.swift; sourceTree = "<group>"; };
 		6F330A1722A847C4005A7262 /* PaintingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaintingTableViewCell.swift; sourceTree = "<group>"; };
 		6F330A1922A85DEA005A7262 /* PaintingListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaintingListViewController.swift; sourceTree = "<group>"; };
+		6F330A1F22A87794005A7262 /* PaintingSelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaintingSelectViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,17 +62,50 @@
 		469AAC40210258C200C0D421 /* ArtGallery */ = {
 			isa = PBXGroup;
 			children = (
-				469AAC45210258C200C0D421 /* Main.storyboard */,
-				6F330A1922A85DEA005A7262 /* PaintingListViewController.swift */,
-				6F330A1322A84128005A7262 /* Painting.swift */,
-				6F330A1522A84244005A7262 /* PaintingController.swift */,
-				6F330A1722A847C4005A7262 /* PaintingTableViewCell.swift */,
-				469AAC41210258C200C0D421 /* AppDelegate.swift */,
-				469AAC4A210258C300C0D421 /* LaunchScreen.storyboard */,
+				6F330A1B22A87703005A7262 /* Views */,
+				6F330A1D22A87755005A7262 /* Model */,
+				6F330A1E22A87767005A7262 /* Controller */,
+				6F330A1C22A8772C005A7262 /* Resources */,
 				469AAC4D210258C300C0D421 /* Info.plist */,
 				469AAC48210258C300C0D421 /* Assets.xcassets */,
 			);
 			path = ArtGallery;
+			sourceTree = "<group>";
+		};
+		6F330A1B22A87703005A7262 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				6F330A1722A847C4005A7262 /* PaintingTableViewCell.swift */,
+				6F330A1F22A87794005A7262 /* PaintingSelectViewController.swift */,
+				6F330A1922A85DEA005A7262 /* PaintingListViewController.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		6F330A1C22A8772C005A7262 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				469AAC45210258C200C0D421 /* Main.storyboard */,
+				469AAC41210258C200C0D421 /* AppDelegate.swift */,
+				469AAC4A210258C300C0D421 /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		6F330A1D22A87755005A7262 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				6F330A1322A84128005A7262 /* Painting.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		6F330A1E22A87767005A7262 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				6F330A1522A84244005A7262 /* PaintingController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -146,6 +181,7 @@
 			files = (
 				6F330A1422A84128005A7262 /* Painting.swift in Sources */,
 				6F330A1622A84244005A7262 /* PaintingController.swift in Sources */,
+				6F330A2022A87794005A7262 /* PaintingSelectViewController.swift in Sources */,
 				6F330A1822A847C4005A7262 /* PaintingTableViewCell.swift in Sources */,
 				6F330A1A22A85DEA005A7262 /* PaintingListViewController.swift in Sources */,
 				469AAC42210258C200C0D421 /* AppDelegate.swift in Sources */,
