@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		8B11A371227A381C00565A79 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B11A370227A381C00565A79 /* AppDelegate.swift */; };
-		8B11A373227A381C00565A79 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B11A372227A381C00565A79 /* ViewController.swift */; };
 		8B11A378227A382100565A79 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B11A377227A382100565A79 /* Assets.xcassets */; };
 		8B11A37B227A382100565A79 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B11A379227A382100565A79 /* LaunchScreen.storyboard */; };
 		8B11A383227A388100565A79 /* Painting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B11A382227A388100565A79 /* Painting.swift */; };
@@ -21,7 +20,6 @@
 /* Begin PBXFileReference section */
 		8B11A36D227A381C00565A79 /* ArtGallery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ArtGallery.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B11A370227A381C00565A79 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8B11A372227A381C00565A79 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		8B11A377227A382100565A79 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8B11A37A227A382100565A79 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8B11A37C227A382100565A79 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -64,7 +62,6 @@
 			children = (
 				8B11A386227A753100565A79 /* Main.storyboard */,
 				8B11A370227A381C00565A79 /* AppDelegate.swift */,
-				8B11A372227A381C00565A79 /* ViewController.swift */,
 				8B11A382227A388100565A79 /* Painting.swift */,
 				8B11A384227A399700565A79 /* PaintingController.swift */,
 				8B11A388227A796600565A79 /* PaintingTableViewCell.swift */,
@@ -150,7 +147,6 @@
 				8B11A383227A388100565A79 /* Painting.swift in Sources */,
 				8B11A385227A399700565A79 /* PaintingController.swift in Sources */,
 				8B11A389227A796600565A79 /* PaintingTableViewCell.swift in Sources */,
-				8B11A373227A381C00565A79 /* ViewController.swift in Sources */,
 				8B11A38B227A7F3F00565A79 /* PaintingListViewController.swift in Sources */,
 				8B11A371227A381C00565A79 /* AppDelegate.swift in Sources */,
 			);
