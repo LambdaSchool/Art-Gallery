@@ -13,8 +13,8 @@ class PaintingListViewController: UIViewController, UITableViewDataSource, UITab
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        tableView.delegate = self
-        tableView.dataSource = self
+        tableView.delegate = self // we ONLY set these and the extensions because we embedded a table view into a UIViewController
+        tableView.dataSource = self // when we use tableViewControllers, we won't need to call these functions or create data source & delegate extensions
 
     }
     
@@ -31,13 +31,7 @@ class PaintingListViewController: UIViewController, UITableViewDataSource, UITab
         tableView.reloadRows(at: [indexPath], with: .none)
     }
     
-//    func updateViews() {
-//        paintingTVC.paintingImageView?.clipsToBounds = false     // I think I needed to update my clip to bounds in order for my coners to be rounded
-//        paintingTVC.paintingImageView?.layer.cornerRadius = 10 // This should allow my UIImage to round its corners
-//        paintingTVC.paintingImageView?.layer.borderWidth = 3    // This sets the border
-//
-//        
-//            }
+
     
     //MARK: -UITableViewDataSource
     
@@ -48,7 +42,7 @@ class PaintingListViewController: UIViewController, UITableViewDataSource, UITab
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "PaintingCell", for: indexPath) as? PaintingTableViewCell else { fatalError("Cell must have reuse identifier PaintingCell, and be of type PaintingTableViewCell") }
     
-    let painting = paintingController.paintings[indexPath.row]
+    let painting = paintingController.paintings[indexPath.row] // this finds the specific painting at the location its at
     
     cell.painting = painting
     cell.delegate = self

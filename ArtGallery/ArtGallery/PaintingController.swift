@@ -28,7 +28,7 @@ class PaintingController {
     }
     
     func toggleIsLiked(for painting: Painting) {
-        painting.isLiked = !painting.isLiked
+        painting.isLiked = !painting.isLiked    // This only works for bools "if its true set it to true, if its false then set it to false
     }
     
     
