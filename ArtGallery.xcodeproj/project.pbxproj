@@ -14,6 +14,8 @@
 		469AAC4C210258C300C0D421 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 469AAC4A210258C300C0D421 /* LaunchScreen.storyboard */; };
 		E3E8B1F822A86262001AD87F /* Painting.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3E8B1F722A86262001AD87F /* Painting.swift */; };
 		E3E8B1FA22A8650A001AD87F /* PaintingControler.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3E8B1F922A8650A001AD87F /* PaintingControler.swift */; };
+		E3E8B20222A88D3D001AD87F /* PaintingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3E8B20122A88D3D001AD87F /* PaintingTableViewCell.swift */; };
+		E3E8B20422A88E53001AD87F /* PaintingListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3E8B20322A88E53001AD87F /* PaintingListViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		469AAC4D210258C300C0D421 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E3E8B1F722A86262001AD87F /* Painting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Painting.swift; sourceTree = "<group>"; };
 		E3E8B1F922A8650A001AD87F /* PaintingControler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaintingControler.swift; sourceTree = "<group>"; };
+		E3E8B20122A88D3D001AD87F /* PaintingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaintingTableViewCell.swift; sourceTree = "<group>"; };
+		E3E8B20322A88E53001AD87F /* PaintingListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaintingListViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,9 +64,11 @@
 			children = (
 				469AAC41210258C200C0D421 /* AppDelegate.swift */,
 				469AAC43210258C200C0D421 /* ViewController.swift */,
-				469AAC45210258C200C0D421 /* Main.storyboard */,
+				E3E8B20322A88E53001AD87F /* PaintingListViewController.swift */,
+				E3E8B20122A88D3D001AD87F /* PaintingTableViewCell.swift */,
 				E3E8B1F722A86262001AD87F /* Painting.swift */,
 				E3E8B1F922A8650A001AD87F /* PaintingControler.swift */,
+				469AAC45210258C200C0D421 /* Main.storyboard */,
 				469AAC48210258C300C0D421 /* Assets.xcassets */,
 				469AAC4A210258C300C0D421 /* LaunchScreen.storyboard */,
 				469AAC4D210258C300C0D421 /* Info.plist */,
@@ -145,6 +151,8 @@
 				E3E8B1F822A86262001AD87F /* Painting.swift in Sources */,
 				469AAC44210258C200C0D421 /* ViewController.swift in Sources */,
 				469AAC42210258C200C0D421 /* AppDelegate.swift in Sources */,
+				E3E8B20422A88E53001AD87F /* PaintingListViewController.swift in Sources */,
+				E3E8B20222A88D3D001AD87F /* PaintingTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
