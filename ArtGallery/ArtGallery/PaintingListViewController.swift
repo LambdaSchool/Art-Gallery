@@ -15,6 +15,7 @@ class PaintingListViewController: UIViewController, UITableViewDataSource, UITab
         
         tableView.delegate = self
         tableView.dataSource = self
+
     }
     
     //MARK: - PaintingTableViewCellDelegate
@@ -30,6 +31,13 @@ class PaintingListViewController: UIViewController, UITableViewDataSource, UITab
         tableView.reloadRows(at: [indexPath], with: .none)
     }
     
+//    func updateViews() {
+//        paintingTVC.paintingImageView?.clipsToBounds = false     // I think I needed to update my clip to bounds in order for my coners to be rounded
+//        paintingTVC.paintingImageView?.layer.cornerRadius = 10 // This should allow my UIImage to round its corners
+//        paintingTVC.paintingImageView?.layer.borderWidth = 3    // This sets the border
+//
+//        
+//            }
     
     //MARK: -UITableViewDataSource
     
@@ -51,6 +59,7 @@ class PaintingListViewController: UIViewController, UITableViewDataSource, UITab
 
     //MARK: -Properties
     let paintingController = PaintingController()
+    let paintingTVC = PaintingTableViewCell()
     
     @IBOutlet var tableView: UITableView!
     

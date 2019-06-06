@@ -26,6 +26,9 @@ class PaintingTableViewCell: UITableViewCell {
         let likeButtonTitle = painting.isLiked ? "Unlike" : "Like"
         likeButton.setTitle(likeButtonTitle, for: .normal)
         
+        paintingImageView.clipsToBounds = false     // I think I needed to update my clip to bounds in order for my coners to be rounded
+        paintingImageView.layer.cornerRadius = 10 // This should allow my UIImage to round its corners
+        paintingImageView.layer.borderWidth = 3    // This sets the border
         paintingImageView.image = painting.image
 
     }
@@ -42,3 +45,4 @@ class PaintingTableViewCell: UITableViewCell {
         }
     }
 }
+
