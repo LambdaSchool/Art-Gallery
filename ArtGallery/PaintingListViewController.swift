@@ -41,6 +41,7 @@ extension PaintingListViewController: UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "GalleryCell", for: indexPath) as? PaintingTableViewCell else { return UITableViewCell() }
         let painting = paintingController.paintings[indexPath.row]
         
+        
         cell.painting = painting
         cell.delegate = self
         return cell
@@ -51,8 +52,12 @@ extension PaintingListViewController: UITableViewDataSource {
 
 extension PaintingListViewController: PaintingTableViewCellDelegate {
     func likeButtonWasTapped(on cell: PaintingTableViewCell) {
-        let index = galleryTableView.indexPath(for: cell)
+        guard let painting = cell.painting,
+            let index = self.galleryTableView.indexPath(for: cell) else { return }
         
+        let newPainting = self.paintingController.paintings[index.row]
         
+        paintingController.toggleIsLiked(for: painting)
+        galleryTableView.reloadRows(at: [index], with: .fade)
     }
 }

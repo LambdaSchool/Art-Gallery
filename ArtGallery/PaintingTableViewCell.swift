@@ -38,9 +38,17 @@ class PaintingTableViewCell: UITableViewCell {
         if let unwwrappedPainting = painting {
             imageViewOutlet.image = unwwrappedPainting.image
             
-            if unwwrappedPainting.isLiked {
-                likeButton.setTitle("Like", for: .normal)
-            }
+            let isLikedString = unwwrappedPainting.isLiked ? "Unlike" : "Like"
+            
+            likeButton.setTitle(isLikedString, for: .normal)
+            
+            
+//            if unwwrappedPainting.isLiked == true {
+//                likeButton.setTitle("Unlike", for: .highlighted)
+//            } else {
+//                likeButton.setTitle("Like", for: .normal)
+//            }
+            
         }
         
         
