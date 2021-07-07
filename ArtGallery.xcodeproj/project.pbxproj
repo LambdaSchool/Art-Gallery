@@ -12,6 +12,10 @@
 		469AAC47210258C200C0D421 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 469AAC45210258C200C0D421 /* Main.storyboard */; };
 		469AAC49210258C300C0D421 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 469AAC48210258C300C0D421 /* Assets.xcassets */; };
 		469AAC4C210258C300C0D421 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 469AAC4A210258C300C0D421 /* LaunchScreen.storyboard */; };
+		A11CA1AA21372CE60086737D /* Painting.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11CA1A921372CE60086737D /* Painting.swift */; };
+		A11CA1AC21372F2C0086737D /* PaintingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11CA1AB21372F2C0086737D /* PaintingController.swift */; };
+		A11CA1AE213736090086737D /* PaintingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11CA1AD213736090086737D /* PaintingTableViewCell.swift */; };
+		A11CA1B021373B870086737D /* PaintingListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11CA1AF21373B870086737D /* PaintingListViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +26,10 @@
 		469AAC48210258C300C0D421 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		469AAC4B210258C300C0D421 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		469AAC4D210258C300C0D421 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A11CA1A921372CE60086737D /* Painting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Painting.swift; sourceTree = "<group>"; };
+		A11CA1AB21372F2C0086737D /* PaintingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaintingController.swift; sourceTree = "<group>"; };
+		A11CA1AD213736090086737D /* PaintingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaintingTableViewCell.swift; sourceTree = "<group>"; };
+		A11CA1AF21373B870086737D /* PaintingListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaintingListViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,9 +65,13 @@
 				469AAC41210258C200C0D421 /* AppDelegate.swift */,
 				469AAC43210258C200C0D421 /* ViewController.swift */,
 				469AAC45210258C200C0D421 /* Main.storyboard */,
+				A11CA1AF21373B870086737D /* PaintingListViewController.swift */,
+				A11CA1AD213736090086737D /* PaintingTableViewCell.swift */,
 				469AAC48210258C300C0D421 /* Assets.xcassets */,
 				469AAC4A210258C300C0D421 /* LaunchScreen.storyboard */,
 				469AAC4D210258C300C0D421 /* Info.plist */,
+				A11CA1A921372CE60086737D /* Painting.swift */,
+				A11CA1AB21372F2C0086737D /* PaintingController.swift */,
 			);
 			path = ArtGallery;
 			sourceTree = "<group>";
@@ -135,7 +147,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A11CA1AA21372CE60086737D /* Painting.swift in Sources */,
+				A11CA1AC21372F2C0086737D /* PaintingController.swift in Sources */,
+				A11CA1AE213736090086737D /* PaintingTableViewCell.swift in Sources */,
 				469AAC44210258C200C0D421 /* ViewController.swift in Sources */,
+				A11CA1B021373B870086737D /* PaintingListViewController.swift in Sources */,
 				469AAC42210258C200C0D421 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
